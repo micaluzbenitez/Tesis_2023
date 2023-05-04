@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Entities
+namespace Entities.Obstacles
 {
     public class Obstacle : MonoBehaviour
     {
