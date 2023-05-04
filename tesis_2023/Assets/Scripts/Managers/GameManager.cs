@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.AI;
 using UnityEngine;
+using Entities.Obstacles;
 
 namespace Managers
 {
