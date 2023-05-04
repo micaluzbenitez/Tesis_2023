@@ -6,16 +6,16 @@ using UnityEngine.AI;
 public class CarNavMesh : MonoBehaviour
 {
     [SerializeField] private Transform goal;
+
     private NavMeshAgent agent;
-    void Start()
+
+    private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         agent.destination = goal.position;
-        
     }
 }
