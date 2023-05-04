@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-// Player controller
-
-public class CarNavMesh : MonoBehaviour
+public class CarController : MonoBehaviour
 {
     [SerializeField] private Transform goal;
 
