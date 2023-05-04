@@ -1,44 +1,90 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 namespace Entities
 {
+    [RequireComponent(typeof(Rigidbody))]
     public class CarController : MonoBehaviour
     {
-        private Transform[] goals;
-        private NavMeshAgent agent;
-
-        private void Start()
+        [System.Serializable]
+        public class AxleData
         {
-            agent = GetComponent<NavMeshAgent>();
+            public WheelCollider rightWheel = null;
+            public WheelCollider leftWheel = null;
+
+            public Transform visualRightWheel = null;
+            public Transform visualLeftWheel = null;
+
+            public bool isBack = false;
+            public bool isFront = false;
         }
 
-        private void Update()
+        [Header("Car data")]
+        public float speed = 20f;
+
+        [Header("Turn data")]
+        public float turnSensitive = 1f;
+        public float maxAngle = 45f;
+
+        [Header("Wheels data")]
+        public List<AxleData> axleData = new List<AxleData>();
+
+        private float inputX = 0; /// Horizontal input
+        private Rigidbody rigidBody = null;
+
+        private void Awake()
         {
-            if (Input.GetMouseButton(0)) GoToGoal();
-            if (Input.GetMouseButton(1)) GoToClick();
+            rigidBody = GetComponent<Rigidbody>();
         }
 
-        private void GoToGoal()
+        private void FixedUpdate()
         {
-            agent.destination = goals[0].position;
+            GetInput();
+            Move();
         }
 
-        private void GoToClick()
+        private void GetInput()
         {
-            Ray movePosition = Camera.main.ScreenPointToRay(Input.mousePosition);
+            inputX = Input.GetAxis("Horizontal");
+        }
 
-            if (Physics.Raycast(movePosition, out var hitInfo))
+        private void Move()
+        {
+            foreach (AxleData data in axleData)
             {
-                agent.SetDestination(hitInfo.point);
+                if (data.isBack)
+                {
+                    data.rightWheel.motorTorque = speed;// * 500 * Time.deltaTime;
+                    data.leftWheel.motorTorque = speed;// * 500 * Time.deltaTime;
+                }
+                if (data.isFront)
+                {
+                    var steerAngle = inputX * turnSensitive * maxAngle;
+                    data.rightWheel.steerAngle = Mathf.Lerp(data.rightWheel.steerAngle, steerAngle, 0.5f);
+                    data.leftWheel.steerAngle = Mathf.Lerp(data.leftWheel.steerAngle, steerAngle, 0.5f);
+                }
+
+                AnimateWheel(data.rightWheel, data.visualRightWheel);
+                AnimateWheel(data.leftWheel, data.visualLeftWheel);
             }
         }
 
-        public void SetGoals(Transform[] goals)
+        private void AnimateWheel(WheelCollider wheelCollider, Transform wheelTransform)
         {
-            this.goals = goals;
+            Quaternion rotation = Quaternion.identity;
+            Vector3 position = Vector3.zero;
+            Vector3 wheelRotation = Vector3.zero;
+
+            wheelCollider.GetWorldPose(out position, out rotation);
+            wheelTransform.transform.rotation = rotation;
+        }
+
+        public void Stop()
+        {
+            rigidBody.useGravity = false;
+            rigidBody.Sleep();
+            Physics.IgnoreLayerCollision(8, 9, true);
         }
     }
 }

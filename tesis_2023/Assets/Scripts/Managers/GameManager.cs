@@ -10,14 +10,14 @@ namespace Managers
     public class GameManager : MonoBehaviour
     {
         [Header("Car")]
-        [SerializeField] private CarController car;
+        [SerializeField] private CarNavMesh car;
 
         [Header("Goals")]
         [SerializeField] private Transform[] goals;
 
         private void Start()
         {
-            CarController carController = Instantiate(car);
+            CarNavMesh carController = Instantiate(car);
             carController.SetGoals(goals);
 
             //NavMeshBuilder.BuildNavMesh(); --> Esto es para cuando intanciemos obstaculos de forma random, se genere el navmesh en tiempo de ejecucion.
