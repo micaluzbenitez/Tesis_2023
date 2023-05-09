@@ -1,90 +1,51 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Entities
 {
-    [RequireComponent(typeof(Rigidbody))]
     public class CarController : MonoBehaviour
     {
-        [System.Serializable]
+        [Serializable]
         public class AxleData
         {
-            public WheelCollider rightWheel = null;
-            public WheelCollider leftWheel = null;
-
-            public Transform visualRightWheel = null;
-            public Transform visualLeftWheel = null;
-
-            public bool isBack = false;
-            public bool isFront = false;
+            public string tag;
+            public WheelCollider rightWheel;
+            public WheelCollider leftWheel;
+            [Tooltip("Is this wheel attached to motor?")] public bool motor;
+            [Tooltip("Does this wheel apply steer angle?")] public bool steering;
         }
 
         [Header("Car data")]
-        public float speed = 20f;
+        [SerializeField, Tooltip("Maximum torque the motor can apply to wheel")] private float maxMotorTorque;
+        [SerializeField, Tooltip("Maximum steer angle the wheel can have")] private float maxSteeringAngle;
 
-        [Header("Turn data")]
-        public float turnSensitive = 1f;
-        public float maxAngle = 45f;
-
-        [Header("Wheels data")]
-        public List<AxleData> axleData = new List<AxleData>();
-
-        private float inputX = 0; /// Horizontal input
-        private Rigidbody rigidBody = null;
-
-        private void Awake()
-        {
-            rigidBody = GetComponent<Rigidbody>();
-        }
+        [Header("Wheels")]
+        [SerializeField] private List<AxleData> axleData;
 
         private void FixedUpdate()
         {
-            GetInput();
-            Move();
+            float motor = maxMotorTorque * Input.GetAxis("Vertical");
+            float steering = maxSteeringAngle * Input.GetAxis("Horizontal");
+            Movement(motor, steering);
         }
 
-        private void GetInput()
+        private void Movement(float motor, float steering)
         {
-            inputX = Input.GetAxis("Horizontal");
-        }
-
-        private void Move()
-        {
-            foreach (AxleData data in axleData)
+            foreach (AxleData axleInfo in axleData)
             {
-                if (data.isBack)
+                if (axleInfo.steering)
                 {
-                    data.rightWheel.motorTorque = speed;// * 500 * Time.deltaTime;
-                    data.leftWheel.motorTorque = speed;// * 500 * Time.deltaTime;
+                    axleInfo.leftWheel.steerAngle = steering;
+                    axleInfo.rightWheel.steerAngle = steering;
                 }
-                if (data.isFront)
+                if (axleInfo.motor)
                 {
-                    var steerAngle = inputX * turnSensitive * maxAngle;
-                    data.rightWheel.steerAngle = Mathf.Lerp(data.rightWheel.steerAngle, steerAngle, 0.5f);
-                    data.leftWheel.steerAngle = Mathf.Lerp(data.leftWheel.steerAngle, steerAngle, 0.5f);
+                    axleInfo.leftWheel.motorTorque = motor;
+                    axleInfo.rightWheel.motorTorque = motor;
                 }
-
-                AnimateWheel(data.rightWheel, data.visualRightWheel);
-                AnimateWheel(data.leftWheel, data.visualLeftWheel);
             }
-        }
-
-        private void AnimateWheel(WheelCollider wheelCollider, Transform wheelTransform)
-        {
-            Quaternion rotation = Quaternion.identity;
-            Vector3 position = Vector3.zero;
-            Vector3 wheelRotation = Vector3.zero;
-
-            wheelCollider.GetWorldPose(out position, out rotation);
-            wheelTransform.transform.rotation = rotation;
-        }
-
-        public void Stop()
-        {
-            rigidBody.useGravity = false;
-            rigidBody.Sleep();
-            Physics.IgnoreLayerCollision(8, 9, true);
         }
     }
 }
