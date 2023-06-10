@@ -1,15 +1,12 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Entities
+namespace Entities.Player
 {
-    public class CarController : MonoBehaviour
+    public class PlayerController : MonoBehaviour
     {
-
         [Serializable]
-
         public class AxleData
         {
             public string tag;

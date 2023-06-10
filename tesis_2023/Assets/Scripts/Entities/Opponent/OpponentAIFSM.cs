@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace Entities.Obstacles
+namespace Entities.Opponent
 { 
-    public class CarAIFSM : MonoBehaviour
+    public class OpponentAIFSM : MonoBehaviour
     {
-        public delegate void GhostDestroyAction(CarAIFSM ghost);
+        public delegate void GhostDestroyAction(OpponentAIFSM ghost);
         public GhostDestroyAction OnGhostDestroy;
 
         public float lifeLostPerShot = 10;

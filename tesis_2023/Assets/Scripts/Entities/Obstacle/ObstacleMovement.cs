@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace Entities.Obstacles
+namespace Entities.Obstacle
 {
-    public class Obstacle : MonoBehaviour
+    public class ObstacleMovement : MonoBehaviour
     {
         [SerializeField] private float speed;
         [SerializeField] private float distance;

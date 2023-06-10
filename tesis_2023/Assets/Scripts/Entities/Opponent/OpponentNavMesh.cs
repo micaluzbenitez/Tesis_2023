@@ -1,13 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Entities.Obstacles
+namespace Entities.Opponent
 {
-    public class CarNavMesh : MonoBehaviour
+    public class OpponentNavMesh : MonoBehaviour
     {
-        private Transform[] goals;
         private NavMeshAgent agent;
 
         private void Start()
@@ -17,13 +14,7 @@ namespace Entities.Obstacles
 
         private void Update()
         {
-            if (Input.GetMouseButton(0)) GoToGoal();
-            if (Input.GetMouseButton(1)) GoToClick();
-        }
-
-        private void GoToGoal()
-        {
-            agent.destination = goals[0].position;
+            if (Input.GetMouseButton(0)) GoToClick();
         }
 
         private void GoToClick()
@@ -34,11 +25,6 @@ namespace Entities.Obstacles
             {
                 agent.SetDestination(hitInfo.point);
             }
-        }
-
-        public void SetGoals(Transform[] goals)
-        {
-            this.goals = goals;
         }
     }
 }
