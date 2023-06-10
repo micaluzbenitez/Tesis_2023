@@ -5,26 +5,20 @@ namespace Entities.Opponent
 {
     public class OpponentNavMesh : MonoBehaviour
     {
-        private NavMeshAgent agent;
+        [SerializeField] private NavMeshAgent agent;
 
-        private void Start()
+        private Vector3 currentDestination;
+
+        public void SetDestination(Vector3 position)
         {
-            agent = GetComponent<NavMeshAgent>();
+            currentDestination = position;
+            agent.SetDestination(currentDestination);
         }
 
-        private void Update()
+        public bool ReachedDestination()
         {
-            if (Input.GetMouseButton(0)) GoToClick();
-        }
-
-        private void GoToClick()
-        {
-            Ray movePosition = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            if (Physics.Raycast(movePosition, out var hitInfo))
-            {
-                agent.SetDestination(hitInfo.point);
-            }
+            float distance = Vector3.Distance(agent.transform.position, currentDestination);
+            return distance < 1;
         }
     }
 }
