@@ -745,9 +745,10 @@ GameObject:
   - component: {fileID: 7681675589738989508}
   - component: {fileID: -1613561878839964390}
   - component: {fileID: -2239124169897655186}
+  - component: {fileID: -2110072898682733947}
   m_Layer: 0
   m_Name: Car
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -825,6 +826,19 @@ MonoBehaviour:
     leftWheel: {fileID: 6367270850498834774}
     motor: 0
     steering: 0
+--- !u!114 &-2110072898682733947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7681675589738989515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fe2c6c33047bf049991f327e27bdac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
 --- !u!1 &8092380440815817087
 GameObject:
   m_ObjectHideFlags: 0
