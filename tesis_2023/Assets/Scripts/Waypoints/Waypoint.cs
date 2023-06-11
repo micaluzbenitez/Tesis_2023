@@ -6,9 +6,9 @@ namespace Waypoints
     public class Waypoint : MonoBehaviour
     {
         [Header("Waypoint")]
-        public Waypoint previousWaypoint;
-        public Waypoint nextWaypoint;
-        [Range(0f, 5f)] public float width = 1f;
+        public float width = 1f;
+        public List<Waypoint> previousWaypoints = new List<Waypoint>();
+        public List<Waypoint> nextWaypoints = new List<Waypoint>();
 
         public Vector3 GetPosition()
         {

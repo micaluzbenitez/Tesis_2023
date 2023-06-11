@@ -6,9 +6,8 @@ namespace Waypoints
     [RequireComponent(typeof(OpponentNavMesh))]
     public class WaypointNavigator : MonoBehaviour
     {
-        public Waypoint currentWaypoint;
-
         private OpponentNavMesh opponentNavMesh;
+        private Waypoint waypoint;
         private int direction;
 
         private void Awake()
@@ -19,44 +18,49 @@ namespace Waypoints
         private void Start()
         {
             direction = Mathf.RoundToInt(Random.Range(0f, 1f));
-            opponentNavMesh.SetDestination(currentWaypoint.GetPosition());
+            opponentNavMesh.SetDestination(waypoint.GetPosition());
         }
 
         private void Update()
         {
             if (opponentNavMesh.ReachedDestination())
             {
-                TakeWaypoint();
-                opponentNavMesh.SetDestination(currentWaypoint.GetPosition());
+                CalculateNextWaypoint();
+                opponentNavMesh.SetDestination(waypoint.GetPosition());
             }
         }
 
-        private void TakeWaypoint()
+        private void CalculateNextWaypoint()
         {
             if (direction == 0)
             {
-                if (currentWaypoint.nextWaypoint)
+                if (waypoint.nextWaypoints != null && waypoint.nextWaypoints.Count > 0)
                 {
-                    currentWaypoint = currentWaypoint.nextWaypoint;
+                    waypoint = waypoint.nextWaypoints[Random.Range(0, waypoint.nextWaypoints.Count)];
                 }
                 else
                 {
-                    currentWaypoint = currentWaypoint.previousWaypoint;
+                    waypoint = waypoint.previousWaypoints[Random.Range(0, waypoint.previousWaypoints.Count)];
                     direction = 1;
                 }
             }
             else if (direction == 1)
             {
-                if (currentWaypoint.previousWaypoint)
+                if (waypoint.previousWaypoints != null && waypoint.previousWaypoints.Count > 0)
                 {
-                    currentWaypoint = currentWaypoint.previousWaypoint;
+                    waypoint = waypoint.previousWaypoints[Random.Range(0, waypoint.previousWaypoints.Count)];
                 }
                 else
                 {
-                    currentWaypoint = currentWaypoint.nextWaypoint;
+                    waypoint = waypoint.nextWaypoints[Random.Range(0, waypoint.nextWaypoints.Count)];
                     direction = 0;
                 }
             }
+        }
+
+        public void SetInitialWaypoint(Waypoint waypoint)
+        {
+            this.waypoint = waypoint;
         }
     }
 }
