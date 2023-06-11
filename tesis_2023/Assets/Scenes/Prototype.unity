@@ -155,8 +155,6 @@ MonoBehaviour:
   previousWaypoint: {fileID: 746669318}
   nextWaypoint: {fileID: 1446405292}
   width: 5
-  branches: []
-  branchRatio: 0.5
 --- !u!4 &56317805
 Transform:
   m_ObjectHideFlags: 0
@@ -235,8 +233,6 @@ MonoBehaviour:
   previousWaypoint: {fileID: 1187465398}
   nextWaypoint: {fileID: 1886697864}
   width: 5
-  branches: []
-  branchRatio: 0.5
 --- !u!4 &111589608
 Transform:
   m_ObjectHideFlags: 0
@@ -284,8 +280,6 @@ MonoBehaviour:
   previousWaypoint: {fileID: 767921188}
   nextWaypoint: {fileID: 805780111}
   width: 5
-  branches: []
-  branchRatio: 0.5
 --- !u!4 &197804349
 Transform:
   m_ObjectHideFlags: 0
@@ -364,8 +358,6 @@ MonoBehaviour:
   previousWaypoint: {fileID: 586845125}
   nextWaypoint: {fileID: 1159764073}
   width: 5
-  branches: []
-  branchRatio: 0.5
 --- !u!4 &542495819
 Transform:
   m_ObjectHideFlags: 0
@@ -498,8 +490,6 @@ MonoBehaviour:
   previousWaypoint: {fileID: 1068491223}
   nextWaypoint: {fileID: 542495818}
   width: 5
-  branches: []
-  branchRatio: 0.5
 --- !u!4 &586845126
 Transform:
   m_ObjectHideFlags: 0
@@ -677,8 +667,6 @@ MonoBehaviour:
   previousWaypoint: {fileID: 805940847}
   nextWaypoint: {fileID: 56317804}
   width: 5
-  branches: []
-  branchRatio: 0.5
 --- !u!1 &767921187
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,8 +699,6 @@ MonoBehaviour:
   previousWaypoint: {fileID: 1836917436}
   nextWaypoint: {fileID: 197804348}
   width: 5
-  branches: []
-  branchRatio: 0.5
 --- !u!4 &767921189
 Transform:
   m_ObjectHideFlags: 0
@@ -760,8 +746,6 @@ MonoBehaviour:
   previousWaypoint: {fileID: 197804348}
   nextWaypoint: {fileID: 2124930020}
   width: 5
-  branches: []
-  branchRatio: 0.5
 --- !u!4 &805780112
 Transform:
   m_ObjectHideFlags: 0
@@ -809,8 +793,6 @@ MonoBehaviour:
   previousWaypoint: {fileID: 2124930020}
   nextWaypoint: {fileID: 746669318}
   width: 5
-  branches: []
-  branchRatio: 0.5
 --- !u!4 &805940848
 Transform:
   m_ObjectHideFlags: 0
@@ -864,8 +846,6 @@ MonoBehaviour:
   previousWaypoint: {fileID: 1233765031}
   nextWaypoint: {fileID: 1631384269}
   width: 5
-  branches: []
-  branchRatio: 0.5
 --- !u!4 &861176927
 Transform:
   m_ObjectHideFlags: 0
@@ -1010,8 +990,6 @@ MonoBehaviour:
   previousWaypoint: {fileID: 1631384269}
   nextWaypoint: {fileID: 1016649719}
   width: 5
-  branches: []
-  branchRatio: 0.5
 --- !u!4 &947143206
 Transform:
   m_ObjectHideFlags: 0
@@ -1090,8 +1068,6 @@ MonoBehaviour:
   previousWaypoint: {fileID: 947143205}
   nextWaypoint: {fileID: 1035858167}
   width: 5
-  branches: []
-  branchRatio: 0.5
 --- !u!4 &1016649720
 Transform:
   m_ObjectHideFlags: 0
@@ -1139,8 +1115,6 @@ MonoBehaviour:
   previousWaypoint: {fileID: 1016649719}
   nextWaypoint: {fileID: 1680324305}
   width: 5
-  branches: []
-  branchRatio: 0.5
 --- !u!4 &1035858168
 Transform:
   m_ObjectHideFlags: 0
@@ -1188,8 +1162,6 @@ MonoBehaviour:
   previousWaypoint: {fileID: 2114833812}
   nextWaypoint: {fileID: 586845125}
   width: 5
-  branches: []
-  branchRatio: 0.5
 --- !u!4 &1068491224
 Transform:
   m_ObjectHideFlags: 0
@@ -1281,8 +1253,6 @@ MonoBehaviour:
   previousWaypoint: {fileID: 1159764073}
   nextWaypoint: {fileID: 1440415474}
   width: 5
-  branches: []
-  branchRatio: 0.5
 --- !u!4 &1111223933
 Transform:
   m_ObjectHideFlags: 0
@@ -1330,8 +1300,6 @@ MonoBehaviour:
   previousWaypoint: {fileID: 542495818}
   nextWaypoint: {fileID: 1111223932}
   width: 5
-  branches: []
-  branchRatio: 0.5
 --- !u!4 &1159764074
 Transform:
   m_ObjectHideFlags: 0
@@ -1379,8 +1347,6 @@ MonoBehaviour:
   previousWaypoint: {fileID: 1446405292}
   nextWaypoint: {fileID: 111589607}
   width: 5
-  branches: []
-  branchRatio: 0.5
 --- !u!4 &1187465399
 Transform:
   m_ObjectHideFlags: 0
@@ -1460,8 +1426,6 @@ MonoBehaviour:
   previousWaypoint: {fileID: 1408687314}
   nextWaypoint: {fileID: 861176926}
   width: 5
-  branches: []
-  branchRatio: 0.5
 --- !u!4 &1233765032
 Transform:
   m_ObjectHideFlags: 0
@@ -1781,8 +1745,6 @@ MonoBehaviour:
   previousWaypoint: {fileID: 1440415474}
   nextWaypoint: {fileID: 1233765031}
   width: 5
-  branches: []
-  branchRatio: 0.5
 --- !u!4 &1408687315
 Transform:
   m_ObjectHideFlags: 0
@@ -1836,8 +1798,6 @@ MonoBehaviour:
   previousWaypoint: {fileID: 1111223932}
   nextWaypoint: {fileID: 1408687314}
   width: 5
-  branches: []
-  branchRatio: 0.5
 --- !u!4 &1440415475
 Transform:
   m_ObjectHideFlags: 0
@@ -1885,8 +1845,6 @@ MonoBehaviour:
   previousWaypoint: {fileID: 56317804}
   nextWaypoint: {fileID: 1187465398}
   width: 5
-  branches: []
-  branchRatio: 0.5
 --- !u!4 &1446405293
 Transform:
   m_ObjectHideFlags: 0
@@ -1967,8 +1925,6 @@ MonoBehaviour:
   previousWaypoint: {fileID: 861176926}
   nextWaypoint: {fileID: 947143205}
   width: 5
-  branches: []
-  branchRatio: 0.5
 --- !u!4 &1631384270
 Transform:
   m_ObjectHideFlags: 0
@@ -2016,8 +1972,6 @@ MonoBehaviour:
   previousWaypoint: {fileID: 1035858167}
   nextWaypoint: {fileID: 1836917436}
   width: 5
-  branches: []
-  branchRatio: 0.5
 --- !u!4 &1680324306
 Transform:
   m_ObjectHideFlags: 0
@@ -2071,8 +2025,6 @@ MonoBehaviour:
   previousWaypoint: {fileID: 1680324305}
   nextWaypoint: {fileID: 767921188}
   width: 5
-  branches: []
-  branchRatio: 0.5
 --- !u!4 &1836917437
 Transform:
   m_ObjectHideFlags: 0
@@ -2120,8 +2072,6 @@ MonoBehaviour:
   previousWaypoint: {fileID: 111589607}
   nextWaypoint: {fileID: 2114833812}
   width: 5
-  branches: []
-  branchRatio: 0.5
 --- !u!4 &1886697865
 Transform:
   m_ObjectHideFlags: 0
@@ -2184,8 +2134,6 @@ MonoBehaviour:
   previousWaypoint: {fileID: 0}
   nextWaypoint: {fileID: 0}
   width: 1
-  branches: []
-  branchRatio: 0.5
 --- !u!4 &2012472088 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4728310445706190489, guid: 309b5e8ef24518b4ea6886a6f3647777,
@@ -2224,8 +2172,6 @@ MonoBehaviour:
   previousWaypoint: {fileID: 1886697864}
   nextWaypoint: {fileID: 1068491223}
   width: 5
-  branches: []
-  branchRatio: 0.5
 --- !u!4 &2114833813
 Transform:
   m_ObjectHideFlags: 0
@@ -2273,8 +2219,6 @@ MonoBehaviour:
   previousWaypoint: {fileID: 805780111}
   nextWaypoint: {fileID: 805940847}
   width: 5
-  branches: []
-  branchRatio: 0.5
 --- !u!4 &2124930021
 Transform:
   m_ObjectHideFlags: 0

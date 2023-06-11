@@ -26,22 +26,9 @@ namespace Waypoints
         {
             if (opponentNavMesh.ReachedDestination())
             {
-                bool shouldBranch = false;
-                if (currentWaypoint.branches != null && currentWaypoint.branches.Count > 0)
-                {
-                    shouldBranch = Random.Range(0f, 1f) <= currentWaypoint.branchRatio ? true : false;
-                }
-
-                if (shouldBranch) TakeBranch();
-                else TakeWaypoint();
-
+                TakeWaypoint();
                 opponentNavMesh.SetDestination(currentWaypoint.GetPosition());
             }
-        }
-
-        private void TakeBranch()
-        {
-            currentWaypoint = currentWaypoint.branches[Random.Range(0, currentWaypoint.branches.Count - 1)];
         }
 
         private void TakeWaypoint()

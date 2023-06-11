@@ -41,15 +41,6 @@ namespace Waypoints.Editor
 
                 Gizmos.DrawLine(waypoint.transform.position + offset, waypoint.nextWaypoint.transform.position + offsetTo);
             }
-
-            if (waypoint.branches != null)
-            {
-                foreach (Waypoint branch in waypoint.branches)
-                {
-                    Gizmos.color = Color.blue;
-                    Gizmos.DrawLine(waypoint.transform.position, branch.transform.position);
-                }
-            }
         }
     }
 }
