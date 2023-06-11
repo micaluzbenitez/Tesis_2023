@@ -6,9 +6,19 @@ namespace Entities.Opponent
     public class OpponentNavMesh : MonoBehaviour
     {
         [SerializeField] private NavMeshAgent agent;
-                
+        [SerializeField] private OpponentAI opponentAI;
+
         private Vector3 previousDestination;
         private Vector3 currentDestination;
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.CompareTag("Car"))
+            {
+                ResetDestination();
+                opponentAI.ResetState();
+            }
+        }
 
         public void SetDestination(Vector3 position)
         {
@@ -25,7 +35,7 @@ namespace Entities.Opponent
 
         public bool ReachedDestination()
         {
-            float distance = Vector3.Distance(agent.transform.position, currentDestination);
+            float distance = Vector3.Distance(transform.position, currentDestination);
             return distance < 1;
         }
     }

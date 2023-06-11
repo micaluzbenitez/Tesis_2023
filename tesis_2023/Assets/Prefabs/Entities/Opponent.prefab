@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7742691227137285227}
   - component: {fileID: 2883565383315376769}
   m_Layer: 0
-  m_Name: PlayerTrigger
+  m_Name: AttackTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,6 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f33c6b76cf0b5c41a28ff0862c2c6da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goAwayDuration: 5
 --- !u!1 &7681675589738989515
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,6 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 7681675589738989505}
+  opponentAI: {fileID: 2883565383315376769}
 --- !u!114 &7988799517927073764
 MonoBehaviour:
   m_ObjectHideFlags: 0

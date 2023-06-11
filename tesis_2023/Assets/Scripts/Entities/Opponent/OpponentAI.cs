@@ -1,46 +1,40 @@
 ﻿using UnityEngine;
+using Toolbox;
 
 namespace Entities.Opponent
 { 
     public class OpponentAI : MonoBehaviour
     {
+        [SerializeField] private float goAwayDuration = 1f;
+
         private OpponentNavMesh opponentNavMesh;
-        private bool goingToTarget = false;
+        private Timer goAwayTimer = new Timer();
 
         private void Awake()
         {
             opponentNavMesh = GetComponentInParent<OpponentNavMesh>();
+            goAwayTimer.SetTimer(goAwayDuration, Timer.TIMER_MODE.DECREASE);
         }
 
         private void Update()
         {
-            if (goingToTarget && opponentNavMesh.ReachedDestination())
-            {
-                ResetOpponentNavMesh();
-            }
+            // Time until attack a new car
+            if (goAwayTimer.Active) goAwayTimer.UpdateTimer();
         }
 
         private void OnTriggerEnter(Collider other)
         {
+            if (goAwayTimer.Active) return;
+
             if (other.CompareTag("Car"))
             {
-                goingToTarget = true;
                 opponentNavMesh.SetDestination(other.gameObject.transform.position);
             }
         }
 
-        private void OnTriggerExit(Collider other)
+        public void ResetState()
         {
-            if (other.CompareTag("Car"))
-            {
-                ResetOpponentNavMesh();
-            }
-        }
-
-        private void ResetOpponentNavMesh()
-        {
-            goingToTarget = false;
-            opponentNavMesh.ResetDestination();
+            goAwayTimer.ActiveTimer();
         }
     }
 }
