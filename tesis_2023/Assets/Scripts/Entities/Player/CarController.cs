@@ -28,6 +28,11 @@ namespace Entities.Player
         [SerializeField] private float maxSteerAngle = 30.0f;       // Direccion del auto
         [SerializeField] private Vector3 centerOfMass;
 
+        [Header("Movement")]
+        [SerializeField] private float moveSpeed = 600.0f;
+        [SerializeField] private float steerSpeed = 0.6f;
+        [SerializeField] private float brakeSpeed = 300.0f;
+
         [Header("Wheels")]
         [SerializeField] private List<Wheel> wheels;
 
@@ -80,7 +85,7 @@ namespace Entities.Player
         {
             foreach (var wheel in wheels)
             {
-                wheel.wheelCollider.motorTorque = moveInput * 600 * maxAcceleration * Time.deltaTime;
+                wheel.wheelCollider.motorTorque = moveInput * moveSpeed * maxAcceleration * Time.deltaTime;
             }
         }
 
@@ -91,7 +96,7 @@ namespace Entities.Player
                 if (wheel.axel == Axel.Front)
                 {
                     var steerAngle = steerInput * turnSensitivity * maxSteerAngle;
-                    wheel.wheelCollider.steerAngle = Mathf.Lerp(wheel.wheelCollider.steerAngle, steerAngle, 0.6f);
+                    wheel.wheelCollider.steerAngle = Mathf.Lerp(wheel.wheelCollider.steerAngle, steerAngle, steerSpeed);
                 }
             }
         }
@@ -102,7 +107,7 @@ namespace Entities.Player
             {
                 foreach (var wheel in wheels)
                 {
-                    wheel.wheelCollider.brakeTorque = 300 * brakeAcceleration * Time.deltaTime;
+                    wheel.wheelCollider.brakeTorque = brakeSpeed * brakeAcceleration * Time.deltaTime;
                 }
             }
             else
