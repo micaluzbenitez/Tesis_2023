@@ -40,8 +40,13 @@ namespace Entities.Player
         private float steerInput;
         private Rigidbody carRigidbody;
 
+        private Vector3 initialPosition;
+        private Quaternion initialRotation;
+
         private void Start()
         {
+            initialPosition = transform.position;
+            initialRotation = transform.rotation;
             carRigidbody = GetComponent<Rigidbody>();
             carRigidbody.centerOfMass = centerOfMass;
             FixWheelColliderVibration();
@@ -66,6 +71,7 @@ namespace Entities.Player
         {
             GetInputs();
             AnimateWheels();
+            CheckRespawn();
         }
 
         private void FixedUpdate()
@@ -128,6 +134,18 @@ namespace Entities.Player
                 wheel.wheelCollider.GetWorldPose(out position, out rotation);
                 wheel.wheelModel.transform.position = position;
                 wheel.wheelModel.transform.rotation = rotation;
+            }
+        }
+        private void CheckRespawn()
+        {
+            if (Mathf.Approximately(180f, transform.eulerAngles.z))
+            {
+                if (Input.GetKeyDown(KeyCode.R))
+                {
+                    transform.position = initialPosition;
+                    transform.rotation = initialRotation;
+                }
+
             }
         }
     }
