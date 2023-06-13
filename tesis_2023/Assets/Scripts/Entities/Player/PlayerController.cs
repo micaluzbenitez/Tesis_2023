@@ -23,6 +23,22 @@ namespace Entities.Player
         [Header("Wheels")]
         [SerializeField] private List<AxleData> axleData;
 
+        // finds the corresponding visual wheel
+        // correctly applies the transform
+        public void ApplyLocalPositionToVisuals(WheelCollider collider)
+        {
+            if (collider.transform.childCount == 0) return;
+
+            Transform visualWheel = collider.transform.GetChild(0);
+
+            Vector3 position;
+            Quaternion rotation;
+            collider.GetWorldPose(out position, out rotation);
+
+            visualWheel.transform.position = position;
+            visualWheel.transform.rotation = rotation;
+        }
+
         private void FixedUpdate()
         {
             float motor = maxMotorTorque * Input.GetAxis("Vertical");
@@ -44,6 +60,8 @@ namespace Entities.Player
                     axleInfo.leftWheel.motorTorque = motor;
                     axleInfo.rightWheel.motorTorque = motor;
                 }
+                ApplyLocalPositionToVisuals(axleInfo.leftWheel);
+                ApplyLocalPositionToVisuals(axleInfo.rightWheel);
             }
         }
     }
