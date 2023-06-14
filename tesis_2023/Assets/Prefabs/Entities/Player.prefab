@@ -742,14 +742,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96999396b83272849a87d7a7b5d05a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAcceleration: 30
+  maxAcceleration: 60
   brakeAcceleration: 50
   turnSensitivity: 1
   maxSteerAngle: 30
   centerOfMass: {x: 0, y: 0, z: 0}
-  moveSpeed: 600
-  steerSpeed: 0.6
-  brakeSpeed: 300
   wheels:
   - wheelModel: {fileID: 2781451325576468141}
     wheelCollider: {fileID: 6533533418257886340}
