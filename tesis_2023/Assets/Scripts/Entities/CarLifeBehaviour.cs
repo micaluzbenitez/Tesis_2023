@@ -9,10 +9,34 @@ namespace Entities
 
         private Rigidbody rb;
 
+        private Vector3 previousPosition;
+        private float previousTime;
+
         private void Start()
         {
             currentHealth = maxHealth;
             rb = GetComponent<Rigidbody>();
+
+
+            previousPosition = transform.position;
+            previousTime = Time.time;
+        }
+        private void Update()
+        {
+
+            Vector3 currentPosition = transform.position;
+            float currentTime = Time.time;
+            Vector3 displacement = currentPosition - previousPosition;
+            Vector3 velocity = displacement / (currentTime - previousTime);
+
+            previousPosition = currentPosition;
+            previousTime = currentTime;
+
+            if (gameObject.name == "Player")
+            {
+                Debug.Log((int)velocity.magnitude);
+
+            }
         }
         private void OnCollisionEnter(Collision collision)
         {
