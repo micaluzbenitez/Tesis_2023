@@ -11,7 +11,8 @@ namespace Entities
 
         private Vector3 previousPosition;
         private float previousTime;
-
+        Vector3 velocity;
+        Vector3 previousVelocity;
         private void Start()
         {
             currentHealth = maxHealth;
@@ -27,16 +28,21 @@ namespace Entities
             Vector3 currentPosition = transform.position;
             float currentTime = Time.time;
             Vector3 displacement = currentPosition - previousPosition;
-            Vector3 velocity = displacement / (currentTime - previousTime);
+            velocity = displacement / (currentTime - previousTime);
 
             previousPosition = currentPosition;
             previousTime = currentTime;
+            if (velocity != Vector3.zero)
+            {
+                previousVelocity = velocity;
+            }
 
             if (gameObject.name == "Player")
             {
                 Debug.Log((int)velocity.magnitude);
 
             }
+
         }
         private void OnCollisionEnter(Collision collision)
         {
@@ -46,26 +52,16 @@ namespace Entities
                 CarLifeBehaviour otherCarLife = collision.gameObject.GetComponent<CarLifeBehaviour>();
                 if (otherCarLife != null)
                 {
-                    float damageA = CalculateDamage(otherCarLife.rb.velocity.magnitude, rb.velocity.magnitude);
-                    float damageB = CalculateDamage(rb.velocity.magnitude, otherCarLife.rb.velocity.magnitude);
-                    TakeDamage(damageB);
-                    otherCarLife.TakeDamage(damageA);
+
+                    otherCarLife.TakeDamage(previousVelocity.magnitude / 2f);
                 }
             }
         }
 
-        private float CalculateDamage(float speedA, float speedB)
-        {
-            float dmgMultiplier = 5f;
-            float damage = dmgMultiplier * speedB / (speedA + speedB);
-
-            return damage;
-        }
         public void TakeDamage(float damage)
         {
             currentHealth -= (int)damage;
             Debug.Log(gameObject.name + " life: " + currentHealth);
-            Debug.Log(gameObject.name + "velocity: " + rb.velocity);
 
             if (currentHealth <= 0)
             {
