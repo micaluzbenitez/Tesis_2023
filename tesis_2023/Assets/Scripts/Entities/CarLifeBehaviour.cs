@@ -49,12 +49,23 @@ namespace Entities
             if (collision.gameObject.CompareTag("Car"))
             {
 
-                CarLifeBehaviour otherCarLife = collision.gameObject.GetComponent<CarLifeBehaviour>();
-                if (otherCarLife != null)
-                {
+                Vector3 collisionNormal = collision.contacts[0].normal;
 
-                    otherCarLife.TakeDamage(previousVelocity.magnitude / 2f);
+                // Calcular el producto punto entre la dirección forward del objeto actual y la normal de la colisión
+                float dotProduct = Vector3.Dot(transform.forward, collisionNormal);
+
+                // Si el resultado del producto punto es mayor a 0.9, el objeto está de frente al colisionar
+                if (dotProduct < -0.8f || dotProduct > 0.8f)
+                {
+                    Debug.Log("de frente");
+                    CarLifeBehaviour otherCarLife = collision.gameObject.GetComponent<CarLifeBehaviour>();
+                    if (otherCarLife != null)
+                    {
+
+                        otherCarLife.TakeDamage(previousVelocity.magnitude / 2f);
+                    }
                 }
+
             }
         }
 
