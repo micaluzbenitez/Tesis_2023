@@ -7,12 +7,13 @@ namespace Entities
         [SerializeField] private int maxHealth;
         private int currentHealth;
 
+        private float previousTime;
+        private float speed;
+        private float previousSpeed;
+
         private Rigidbody rb;
 
         private Vector3 previousPosition;
-        private float previousTime;
-        Vector3 velocity;
-        Vector3 previousVelocity;
         private void Start()
         {
             currentHealth = maxHealth;
@@ -44,14 +45,18 @@ namespace Entities
         {
             Vector3 currentPosition = transform.position;
             float currentTime = Time.time;
-            Vector3 displacement = currentPosition - previousPosition;
-            velocity = displacement / (currentTime - previousTime);
+            float distance = Vector3.Distance(currentPosition, previousPosition);
+            speed = (distance / (currentTime - previousTime)) * 3.6f;
             previousPosition = currentPosition;
             previousTime = currentTime;
 
-            if (velocity != Vector3.zero)
+            if (gameObject.name == "Player")
             {
-                previousVelocity = velocity;
+                Debug.Log(speed);
+            }
+            if (speed != 0)
+            {
+                previousSpeed = speed;
             }
         }
         private void ToDamageOpponent(Collision collision)
@@ -60,7 +65,7 @@ namespace Entities
 
             if (otherCarLife != null)
             {
-                otherCarLife.TakeDamage(previousVelocity.magnitude / 2f);
+                otherCarLife.TakeDamage(previousSpeed / 2f);
             }
         }
 
