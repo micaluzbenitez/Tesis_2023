@@ -42,6 +42,7 @@ namespace Entities.Player
         private const float steerSpeed = 0.6f;
         private const float brakeSpeed = 300.0f;
 
+        private CarLifeBehaviour carLifeBehaviour;
         private void Start()
         {
             initialPosition = transform.position;
@@ -49,6 +50,7 @@ namespace Entities.Player
             carRigidbody = GetComponent<Rigidbody>();
             carRigidbody.centerOfMass = centerOfMass;
             FixWheelColliderVibration();
+            carLifeBehaviour = gameObject.AddComponent<CarLifeBehaviour>();
         }
 
         #region FixWheelCollider
