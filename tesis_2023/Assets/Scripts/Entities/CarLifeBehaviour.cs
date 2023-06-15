@@ -11,14 +11,11 @@ namespace Entities
         private float speed;
         private float previousSpeed;
 
-        private Rigidbody rb;
-
         private Vector3 previousPosition;
         private void Start()
         {
             maxHealth = 100;
             currentHealth = maxHealth;
-            rb = GetComponent<Rigidbody>();
             InitVelocityData();
         }
 
