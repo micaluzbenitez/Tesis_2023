@@ -43,6 +43,8 @@ namespace Entities.Player
         private const float brakeSpeed = 300.0f;
 
         private CarLifeBehaviour carLifeBehaviour;
+
+        public event Action<float> OnSpeedChange;
         private void Start()
         {
             initialPosition = transform.position;
@@ -80,6 +82,7 @@ namespace Entities.Player
             Move();
             Steer();
             Brake();
+            CheckOnSpeedChange();
         }
 
         private void GetInputs()
@@ -148,6 +151,11 @@ namespace Entities.Player
                 }
 
             }
+        }
+
+        private void CheckOnSpeedChange()
+        {
+            OnSpeedChange?.Invoke(carLifeBehaviour.GetSpeed());
         }
     }
 }

@@ -1,18 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using Entities.Player;
+using System;
 
 public class UIManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private TextMeshProUGUI speedText;
+    [SerializeField] private CarController carController;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        carController.OnSpeedChange += SetSpeedText;
+    }
+    private void OnDestroy()
+    {
+        carController.OnSpeedChange -= SetSpeedText;
+    }
+    private void SetSpeedText(float speed)
+    {
+        speedText.text = Math.Round(speed).ToString() + " KM/H";
     }
 }

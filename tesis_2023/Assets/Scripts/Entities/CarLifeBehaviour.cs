@@ -32,6 +32,7 @@ namespace Entities
 
         private void InitVelocityData()
         {
+            speed = 0f;
             previousPosition = transform.position;
             previousTime = 0f;
         }
@@ -84,6 +85,10 @@ namespace Entities
                 }
 
             }
+        }
+        public float GetSpeed()
+        {
+            return speed;
         }
     }
 }
