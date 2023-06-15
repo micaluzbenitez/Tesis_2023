@@ -4,7 +4,7 @@ namespace Entities
 {
     public class CarLifeBehaviour : MonoBehaviour
     {
-        [SerializeField] private int maxHealth;
+        private int maxHealth;
         private int currentHealth;
 
         private float previousTime;
@@ -16,13 +16,10 @@ namespace Entities
         private Vector3 previousPosition;
         private void Start()
         {
+            maxHealth = 100;
             currentHealth = maxHealth;
             rb = GetComponent<Rigidbody>();
             InitVelocityData();
-        }
-        private void Update()
-        {
-            UpdateVelocityData();
         }
 
         private void TakeDamage(float damage)
@@ -40,6 +37,10 @@ namespace Entities
         {
             previousPosition = transform.position;
             previousTime = 0f;
+        }
+        private void FixedUpdate()
+        {
+            UpdateVelocityData();
         }
         private void UpdateVelocityData()
         {
