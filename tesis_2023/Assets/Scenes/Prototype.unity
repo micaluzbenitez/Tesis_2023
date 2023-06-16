@@ -796,10 +796,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1474917948713326741, guid: e71611e629f16d74ab281661799c9ee5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Car
+      objectReference: {fileID: 0}
     - target: {fileID: 1884577340910067485, guid: e71611e629f16d74ab281661799c9ee5,
         type: 3}
       propertyPath: moveSpeed
       value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411270720374402728, guid: e71611e629f16d74ab281661799c9ee5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Car
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463344334608222400, guid: e71611e629f16d74ab281661799c9ee5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Car
+      objectReference: {fileID: 0}
+    - target: {fileID: 4927463888803770314, guid: e71611e629f16d74ab281661799c9ee5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Car
       objectReference: {fileID: 0}
     - target: {fileID: 7681675589738989511, guid: e71611e629f16d74ab281661799c9ee5,
         type: 3}
