@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Entities
@@ -12,6 +13,9 @@ namespace Entities
         private float previousSpeed;
 
         private Vector3 previousPosition;
+
+        public event Action<int> OnTakeDamage;
+        public event Action<int> OnPlayerTakeDamage;
         private void Start()
         {
             maxHealth = 100;
@@ -22,12 +26,16 @@ namespace Entities
         private void TakeDamage(float damage)
         {
             currentHealth -= (int)damage;
+            OnTakeDamage?.Invoke(currentHealth);
+
+            if (gameObject.name == "Player")
+                OnPlayerTakeDamage?.Invoke(currentHealth);
+
             Debug.Log(gameObject.name + " life: " + currentHealth);
 
             if (currentHealth <= 0)
-            {
                 Debug.Log(gameObject.name + " is dead");
-            }
+
         }
 
         private void InitVelocityData()
@@ -49,14 +57,9 @@ namespace Entities
             previousPosition = currentPosition;
             previousTime = currentTime;
 
-            if (gameObject.name == "Player")
-            {
-                Debug.Log(speed);
-            }
             if (speed != 0)
-            {
                 previousSpeed = speed;
-            }
+
         }
         private void ToDamageOpponent(Collision collision)
         {
@@ -85,6 +88,11 @@ namespace Entities
                 }
 
             }
+        }
+
+        public int GetCurrenHealth()
+        {
+            return currentHealth;
         }
         public float GetSpeed()
         {

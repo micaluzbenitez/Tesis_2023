@@ -45,6 +45,12 @@ namespace Entities.Player
         private CarLifeBehaviour carLifeBehaviour;
 
         public event Action<float> OnSpeedChange;
+        public event Action<int> OnRecieveCurrentHealth;
+
+        private void Awake()
+        {
+            carLifeBehaviour = gameObject.AddComponent<CarLifeBehaviour>();
+        }
         private void Start()
         {
             initialPosition = transform.position;
@@ -52,7 +58,6 @@ namespace Entities.Player
             carRigidbody = GetComponent<Rigidbody>();
             carRigidbody.centerOfMass = centerOfMass;
             FixWheelColliderVibration();
-            carLifeBehaviour = gameObject.AddComponent<CarLifeBehaviour>();
         }
 
         #region FixWheelCollider
@@ -156,6 +161,11 @@ namespace Entities.Player
         private void CheckOnSpeedChange()
         {
             OnSpeedChange?.Invoke(carLifeBehaviour.GetSpeed());
+        }
+
+        public void RecieveCurrentHealth(int health)
+        {
+            OnRecieveCurrentHealth?.Invoke(health);
         }
     }
 }
