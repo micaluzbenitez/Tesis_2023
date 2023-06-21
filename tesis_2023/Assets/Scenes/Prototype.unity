@@ -1549,7 +1549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c32c25bf5903c49a41998290d6d37d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opponentPrefab: {fileID: 7681675589738989515, guid: 41deeca9a3fc99347bacacc2d6b608c6,
+  opponentPrefab: {fileID: 399951860463076857, guid: 56d2bfa882dcf254096558cc343749e1,
     type: 3}
   opponentsQuantity: 3
   waypoints:

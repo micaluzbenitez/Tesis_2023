@@ -17,6 +17,9 @@ namespace Entities.Opponent
         [SerializeField] private float patrolSpeed = 0.5f;
         [SerializeField] private float chaseSpeed = 1f;
 
+        [Header("Waypoint")]
+        [SerializeField] private float distancePerWaypoint = 10f;
+
         private State state;
         private NavMeshAgent agent;
         private GameObject[] waypoints;
@@ -64,11 +67,11 @@ namespace Entities.Opponent
         {
             agent.speed = patrolSpeed;
 
-            if (Vector3.Distance(transform.position, waypoints[waypointInd].transform.position) >= 2f)
+            if (Vector3.Distance(transform.position, waypoints[waypointInd].transform.position) >= distancePerWaypoint)
             {
                 agent.SetDestination(waypoints[waypointInd].transform.position);
             }
-            else if (Vector3.Distance(transform.position, waypoints[waypointInd].transform.position) <= 2f)
+            else if (Vector3.Distance(transform.position, waypoints[waypointInd].transform.position) <= distancePerWaypoint)
             {
                 waypointInd = Random.Range(0, waypoints.Length - 1);
                 if (waypointInd > waypoints.Length - 1) waypointInd = 0;
