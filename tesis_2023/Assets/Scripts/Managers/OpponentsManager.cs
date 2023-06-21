@@ -8,7 +8,7 @@ namespace Managers
     public class OpponentsManager : MonoBehaviour
     {
         [Header("Opponents")]
-        [SerializeField] private GameObject opponentPrefab;
+        [SerializeField] private GameObject[] opponentPrefabs;
         [SerializeField] private int opponentsQuantity;
 
         [Header("Waypoints")]
@@ -25,7 +25,9 @@ namespace Managers
 
             while (count < opponentsQuantity)
             {
-                GameObject obj = Instantiate(opponentPrefab);
+                int randomOpponent = Random.Range(0, opponentPrefabs.Length);
+                GameObject obj = Instantiate(opponentPrefabs[randomOpponent]);
+
                 Transform child = transform.GetChild(Random.Range(0, transform.childCount));
                 obj.GetComponent<OpponentAI>().SetWaypoints(waypoints);
                 obj.transform.position = child.position;
