@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1064884388117405507}
   m_Layer: 0
-  m_Name: Auto_Jugador_UVs_V2
+  m_Name: Player1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
