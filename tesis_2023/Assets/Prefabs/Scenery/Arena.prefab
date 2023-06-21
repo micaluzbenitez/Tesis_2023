@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1058879079994517603}
   m_Layer: 0
-  m_Name: Sand
+  m_Name: Arena
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -458,7 +458,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8092562613510776674, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
+  - {fileID: 2100000, guid: 66958fbbdf4956349a69eb4dedd01585, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1862,7 +1862,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8092562613510776674, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
+  - {fileID: 2100000, guid: 66958fbbdf4956349a69eb4dedd01585, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

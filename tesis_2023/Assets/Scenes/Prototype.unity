@@ -2526,7 +2526,7 @@ PrefabInstance:
     - target: {fileID: 430714185955554009, guid: e2ec2f99a161c824f9c54b523fda365a,
         type: 3}
       propertyPath: m_Name
-      value: Sand
+      value: Arena
       objectReference: {fileID: 0}
     - target: {fileID: 1058879079994517603, guid: e2ec2f99a161c824f9c54b523fda365a,
         type: 3}
