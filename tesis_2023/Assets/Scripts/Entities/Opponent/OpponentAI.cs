@@ -20,6 +20,13 @@ namespace Entities.Opponent
         [Header("Waypoint")]
         [SerializeField] private float distancePerWaypoint = 10f;
 
+        [Header("KnockBack")]
+        [SerializeField] private float knockbackInitialSpeed = 2f;
+        [SerializeField] private float knockbackInitialAcceleration = 10f;
+        [SerializeField] private float knockbackSpeed = 25f;
+        [SerializeField] private float knockbackAcceleration = 30f;
+        [SerializeField] private float knockbackAngularSpeed = 300f;
+
         private State state;
         private NavMeshAgent agent;
         private GameObject[] waypoints;
@@ -106,15 +113,15 @@ namespace Entities.Opponent
         private IEnumerator KnockBack()
         {
             knockback = true;
-            agent.speed = 2;
-            agent.acceleration = 10;
+            agent.speed = knockbackInitialSpeed;
+            agent.acceleration = knockbackInitialAcceleration;
 
             yield return new WaitForSeconds(0.2f);
 
             knockback = false;
-            agent.speed = 25;
-            agent.angularSpeed = 300;
-            agent.acceleration = 30;
+            agent.speed = knockbackSpeed;
+            agent.angularSpeed = knockbackAngularSpeed;
+            agent.acceleration = knockbackAcceleration;
             target = null;
             state = State.PATROL;
         }
