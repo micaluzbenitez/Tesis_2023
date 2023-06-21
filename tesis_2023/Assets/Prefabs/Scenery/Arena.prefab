@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5600399891659812640}
   - component: {fileID: 2909791208490507775}
   - component: {fileID: 7431527993820257018}
+  - component: {fileID: 7142660754582080887}
   m_Layer: 0
   m_Name: Arena_Wall_Segment_8
   m_TagString: Untagged
@@ -83,6 +84,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7142660754582080887
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380866988708428746}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8396807417545830314, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &430714185955554009
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,6 +141,7 @@ GameObject:
   - component: {fileID: 868698468152037174}
   - component: {fileID: 3417892192227866425}
   - component: {fileID: 7133420007871209198}
+  - component: {fileID: 2928255149850013175}
   m_Layer: 0
   m_Name: Arena_Wall_Outer_Corner_2
   m_TagString: Untagged
@@ -198,6 +214,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2928255149850013175
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545858908880281164}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1239952402347313996, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &787535006912783405
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,6 +239,7 @@ GameObject:
   - component: {fileID: 5143999630325440334}
   - component: {fileID: 8423035388832137995}
   - component: {fileID: 538849091810749259}
+  - component: {fileID: 5248655994990803564}
   m_Layer: 0
   m_Name: Arena_Wall_Segment_2
   m_TagString: Untagged
@@ -281,6 +312,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5248655994990803564
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787535006912783405}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4990064007903990240, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &803821812303441904
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,6 +370,7 @@ GameObject:
   - component: {fileID: 6337513287003437863}
   - component: {fileID: 2686522321527529405}
   - component: {fileID: 527603154855984850}
+  - component: {fileID: 2801346086692715380}
   m_Layer: 0
   m_Name: Arena_Wall_Sewage_Exit_8
   m_TagString: Untagged
@@ -397,6 +443,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2801346086692715380
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818569183055721259}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4103351555548912748, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &1234683018189266948
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,6 +468,7 @@ GameObject:
   - component: {fileID: 3893966049230956210}
   - component: {fileID: 4317830889266400663}
   - component: {fileID: 5114018661131583851}
+  - component: {fileID: 3703602931865454185}
   m_Layer: 0
   m_Name: Arena_Wall_Drainage_Tunnel_1
   m_TagString: Untagged
@@ -480,6 +541,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3703602931865454185
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234683018189266948}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -762004348501798754, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &1693978023486236087
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,6 +566,7 @@ GameObject:
   - component: {fileID: 1425783028400154535}
   - component: {fileID: 280126062125276674}
   - component: {fileID: 5296561327579014974}
+  - component: {fileID: 4837698158936094039}
   m_Layer: 0
   m_Name: Arena_Wall_Sewage_Exit_3
   m_TagString: Untagged
@@ -563,6 +639,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4837698158936094039
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693978023486236087}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1424865669388667078, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &1872160781470484491
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,6 +664,7 @@ GameObject:
   - component: {fileID: 121265911665733170}
   - component: {fileID: 3029237416860862996}
   - component: {fileID: 9162107029690744056}
+  - component: {fileID: 8370319601954493303}
   m_Layer: 0
   m_Name: Arena_Wall_Inner_Corner_2
   m_TagString: Untagged
@@ -646,6 +737,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8370319601954493303
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872160781470484491}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7499092525962907357, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &2043663481065131814
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,6 +801,7 @@ GameObject:
   - component: {fileID: 6691226211738613709}
   - component: {fileID: 8773903254974367408}
   - component: {fileID: 8973488389850079798}
+  - component: {fileID: 503351751898632003}
   m_Layer: 0
   m_Name: Arena_Wall_Inner_Corner_4
   m_TagString: Untagged
@@ -768,6 +874,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &503351751898632003
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110651220256910644}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4604863811336161541, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &2611557507612826618
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,6 +899,7 @@ GameObject:
   - component: {fileID: 5489165717827946990}
   - component: {fileID: 8242652211025623910}
   - component: {fileID: 5977609178311103462}
+  - component: {fileID: 5400562404703344724}
   m_Layer: 0
   m_Name: Arena_Wall_Sewage_Exit_4
   m_TagString: Untagged
@@ -851,6 +972,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5400562404703344724
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2611557507612826618}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2788120998533771748, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &2951222173366761624
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,6 +997,7 @@ GameObject:
   - component: {fileID: 6916910008417700269}
   - component: {fileID: 2695486649932272262}
   - component: {fileID: 5417790555061821024}
+  - component: {fileID: 6340838061620891707}
   m_Layer: 0
   m_Name: Arena_Wall_Segment_1
   m_TagString: Untagged
@@ -934,6 +1070,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6340838061620891707
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2951222173366761624}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4485504171377883664, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &3115730771583180202
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,6 +1095,7 @@ GameObject:
   - component: {fileID: 5215394174492953917}
   - component: {fileID: 5271514387871343594}
   - component: {fileID: 65500749373464521}
+  - component: {fileID: 4605511939395105930}
   m_Layer: 0
   m_Name: Arena_Wall_Sewage_Exit_2
   m_TagString: Untagged
@@ -1017,6 +1168,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4605511939395105930
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3115730771583180202}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2121816236066203137, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &4731482447335730397
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,6 +1193,7 @@ GameObject:
   - component: {fileID: 6734975965224852600}
   - component: {fileID: 1620750790162383782}
   - component: {fileID: 3493175466513195983}
+  - component: {fileID: 5032243679203122991}
   m_Layer: 0
   m_Name: Arena_Wall_Segment_6
   m_TagString: Untagged
@@ -1100,6 +1266,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5032243679203122991
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4731482447335730397}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6089589844614603472, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &4950995738992101225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,6 +1291,7 @@ GameObject:
   - component: {fileID: 3033626005772982477}
   - component: {fileID: 6202373978312596363}
   - component: {fileID: 5025578474738887184}
+  - component: {fileID: 4133756687472872781}
   m_Layer: 0
   m_Name: Arena_Wall_Inner_Corner_8
   m_TagString: Untagged
@@ -1183,6 +1364,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4133756687472872781
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4950995738992101225}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3939080309726383254, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &4996675079808332438
 GameObject:
   m_ObjectHideFlags: 0
@@ -1231,6 +1426,7 @@ GameObject:
   - component: {fileID: 5816047371561140807}
   - component: {fileID: 4476153117462132670}
   - component: {fileID: 8708687984352383817}
+  - component: {fileID: 4720371794775374234}
   m_Layer: 0
   m_Name: Arena_Wall_Segment_5
   m_TagString: Untagged
@@ -1303,6 +1499,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4720371794775374234
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5271111043220705187}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3509149522739889418, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &5539028464649289259
 GameObject:
   m_ObjectHideFlags: 0
@@ -1314,6 +1524,7 @@ GameObject:
   - component: {fileID: 5852696098750116252}
   - component: {fileID: 5476494024326220110}
   - component: {fileID: 7016085966858285285}
+  - component: {fileID: 6775328123348456120}
   m_Layer: 0
   m_Name: Arena_Wall_Inner_Corner_5
   m_TagString: Untagged
@@ -1386,6 +1597,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6775328123348456120
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5539028464649289259}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -779790025811097282, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &5703251559099257055
 GameObject:
   m_ObjectHideFlags: 0
@@ -1397,6 +1622,7 @@ GameObject:
   - component: {fileID: 1596394555695002478}
   - component: {fileID: 3327103554246416162}
   - component: {fileID: 5573016629824897572}
+  - component: {fileID: 1081975590812588930}
   m_Layer: 0
   m_Name: Arena_Wall_Segment_3
   m_TagString: Untagged
@@ -1469,6 +1695,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1081975590812588930
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5703251559099257055}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5869932233042118593, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &5757080637946276869
 GameObject:
   m_ObjectHideFlags: 0
@@ -1480,6 +1720,7 @@ GameObject:
   - component: {fileID: 1705007148488065124}
   - component: {fileID: 364604998380168313}
   - component: {fileID: 8377031635609854365}
+  - component: {fileID: 7303493823648895235}
   m_Layer: 0
   m_Name: Arena_Wall_Outer_Corner_1
   m_TagString: Untagged
@@ -1552,6 +1793,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7303493823648895235
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5757080637946276869}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5839906932701168470, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &5867911658627135298
 GameObject:
   m_ObjectHideFlags: 0
@@ -1563,6 +1818,7 @@ GameObject:
   - component: {fileID: 6380566327486179779}
   - component: {fileID: 1719528193891255047}
   - component: {fileID: 4901672287091105483}
+  - component: {fileID: 7523742567625005159}
   m_Layer: 0
   m_Name: Arena_Wall_Inner_Corner_7
   m_TagString: Untagged
@@ -1635,6 +1891,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7523742567625005159
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5867911658627135298}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6567101900515129803, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &6174093018059049328
 GameObject:
   m_ObjectHideFlags: 0
@@ -1646,6 +1916,7 @@ GameObject:
   - component: {fileID: 1155748122632978559}
   - component: {fileID: 7715351302394346442}
   - component: {fileID: 409059315808624897}
+  - component: {fileID: 7972632518396952022}
   m_Layer: 0
   m_Name: Arena_Wall_Outer_Corner_3
   m_TagString: Untagged
@@ -1718,6 +1989,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7972632518396952022
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6174093018059049328}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1887272813763424538, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &6186788759390095629
 GameObject:
   m_ObjectHideFlags: 0
@@ -1729,6 +2014,7 @@ GameObject:
   - component: {fileID: 4440944263804014368}
   - component: {fileID: 8034629263253925636}
   - component: {fileID: 1635560056115650421}
+  - component: {fileID: 5001384154354015096}
   m_Layer: 0
   m_Name: Arena_Wall_Segment_4
   m_TagString: Untagged
@@ -1801,6 +2087,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5001384154354015096
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6186788759390095629}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3343847989808245279, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &6415221706912818479
 GameObject:
   m_ObjectHideFlags: 0
@@ -1812,6 +2112,7 @@ GameObject:
   - component: {fileID: 9021362303602776284}
   - component: {fileID: 1793009803736922483}
   - component: {fileID: 7879048661480983290}
+  - component: {fileID: 2204675562324750145}
   m_Layer: 0
   m_Name: Arena_Wall_Drainage_Tunnel_2
   m_TagString: Untagged
@@ -1884,6 +2185,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2204675562324750145
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6415221706912818479}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1110321096088723361, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &6840632848813325537
 GameObject:
   m_ObjectHideFlags: 0
@@ -1934,6 +2249,7 @@ GameObject:
   - component: {fileID: 6411157814885421157}
   - component: {fileID: 4934106373867850458}
   - component: {fileID: 823025898826892865}
+  - component: {fileID: 7357487405162651241}
   m_Layer: 0
   m_Name: Arena_Wall_Inner_Corner_3
   m_TagString: Untagged
@@ -2006,6 +2322,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7357487405162651241
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7199663150421327646}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3595994211993036353, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &7326375374360888382
 GameObject:
   m_ObjectHideFlags: 0
@@ -2017,6 +2347,7 @@ GameObject:
   - component: {fileID: 1574515205553732906}
   - component: {fileID: 5107512698731703783}
   - component: {fileID: 5467076000710665687}
+  - component: {fileID: 3155216740776036830}
   m_Layer: 0
   m_Name: Arena_Wall_Sewage_Exit_7
   m_TagString: Untagged
@@ -2089,6 +2420,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3155216740776036830
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7326375374360888382}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6539724501653270791, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &7475334235163670410
 GameObject:
   m_ObjectHideFlags: 0
@@ -2100,6 +2445,7 @@ GameObject:
   - component: {fileID: 1422539387405800160}
   - component: {fileID: 1270772249529273793}
   - component: {fileID: 735223027538383712}
+  - component: {fileID: 7913556532712598245}
   m_Layer: 0
   m_Name: Arena_Wall_Outer_Corner_4
   m_TagString: Untagged
@@ -2172,6 +2518,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7913556532712598245
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7475334235163670410}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2569102464462203855, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &7865120823965506611
 GameObject:
   m_ObjectHideFlags: 0
@@ -2183,6 +2543,7 @@ GameObject:
   - component: {fileID: 5480200279710186165}
   - component: {fileID: 4722817826114199047}
   - component: {fileID: 7967349365977239610}
+  - component: {fileID: 2636878967244457287}
   m_Layer: 0
   m_Name: Arena_Wall_Inner_Corner_1
   m_TagString: Untagged
@@ -2255,6 +2616,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2636878967244457287
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7865120823965506611}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2200578715724875825, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &8179216326300310708
 GameObject:
   m_ObjectHideFlags: 0
@@ -2266,6 +2641,7 @@ GameObject:
   - component: {fileID: 2386747871557429337}
   - component: {fileID: 379210205510117366}
   - component: {fileID: 7776524535618797715}
+  - component: {fileID: 8829430663003355605}
   m_Layer: 0
   m_Name: Arena_Wall_Sewage_Exit_6
   m_TagString: Untagged
@@ -2338,6 +2714,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8829430663003355605
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8179216326300310708}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3934452927214427093, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &8370301407035981869
 GameObject:
   m_ObjectHideFlags: 0
@@ -2349,6 +2739,7 @@ GameObject:
   - component: {fileID: 4252536126703303433}
   - component: {fileID: 1554454403854002157}
   - component: {fileID: 1784741744512639178}
+  - component: {fileID: 774890122956724637}
   m_Layer: 0
   m_Name: Arena_Wall_Segment_7
   m_TagString: Untagged
@@ -2421,6 +2812,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &774890122956724637
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8370301407035981869}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -9148068751911742626, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &8635488045118493185
 GameObject:
   m_ObjectHideFlags: 0
@@ -2432,6 +2837,7 @@ GameObject:
   - component: {fileID: 38167067458733201}
   - component: {fileID: 7910049166457980248}
   - component: {fileID: 293977014865671095}
+  - component: {fileID: 8557907506735029794}
   m_Layer: 0
   m_Name: Arena_Ground_1
   m_TagString: Untagged
@@ -2504,6 +2910,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8557907506735029794
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8635488045118493185}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7225080041033194507, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &8747720717919824817
 GameObject:
   m_ObjectHideFlags: 0
@@ -2515,6 +2935,7 @@ GameObject:
   - component: {fileID: 4006717395126940989}
   - component: {fileID: 8828348717385978587}
   - component: {fileID: 1641569992406856174}
+  - component: {fileID: 7927219592614158292}
   m_Layer: 0
   m_Name: Arena_Wall_Sewage_Exit_1
   m_TagString: Untagged
@@ -2587,6 +3008,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7927219592614158292
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8747720717919824817}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -976004787886635462, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &8990779014209544205
 GameObject:
   m_ObjectHideFlags: 0
@@ -2598,6 +3033,7 @@ GameObject:
   - component: {fileID: 1662298962104493115}
   - component: {fileID: 7905174951449995994}
   - component: {fileID: 2606173219389012167}
+  - component: {fileID: 1404191029222062008}
   m_Layer: 0
   m_Name: Arena_Wall_Sewage_Exit_5
   m_TagString: Untagged
@@ -2670,6 +3106,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1404191029222062008
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8990779014209544205}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5514437415399418087, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
 --- !u!1 &9019567433710994764
 GameObject:
   m_ObjectHideFlags: 0
@@ -2755,6 +3205,7 @@ GameObject:
   - component: {fileID: 1704231292831237800}
   - component: {fileID: 8912705264810764827}
   - component: {fileID: 8986818835731044137}
+  - component: {fileID: 639703181532545007}
   m_Layer: 0
   m_Name: Arena_Wall_Inner_Corner_6
   m_TagString: Untagged
@@ -2827,3 +3278,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &639703181532545007
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9165419940059179001}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -979991642185094502, guid: 60e8d77d57f316f409a6d08e511daf91, type: 3}
