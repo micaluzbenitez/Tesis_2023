@@ -89,13 +89,5 @@ namespace Entities
             }
         }
 
-        public int GetCurrenHealth()
-        {
-            return currentHealth;
-        }
-        public float GetSpeed()
-        {
-            return speed;
-        }
     }
 }

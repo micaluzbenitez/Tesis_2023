@@ -46,16 +46,8 @@ namespace Entities.Player
 
         private Vector3 initialPosition;
         private Quaternion initialRotation;
-
-        //private CarLifeBehaviour carLifeBehaviour;
-
         public event Action<float> OnSpeedChange;
 
-
-        private void Awake()
-        {
-            //carLifeBehaviour = gameObject.AddComponent<CarLifeBehaviour>();
-        }
         private void Start()
         {
             initialPosition = transform.position;
@@ -152,7 +144,7 @@ namespace Entities.Player
         }
         private void CheckRespawn()
         {
-            if (Mathf.Approximately(180f, transform.eulerAngles.z))
+            if (transform.eulerAngles.z > 90 || transform.eulerAngles.z < -90)
             {
                 if (Input.GetKeyDown(KeyCode.R))
                 {
@@ -162,11 +154,6 @@ namespace Entities.Player
 
             }
         }
-
-        //private void CheckOnSpeedChange()
-        //{
-        //    OnSpeedChange?.Invoke(carLifeBehaviour.GetSpeed());
-        //}
 
     }
 }
