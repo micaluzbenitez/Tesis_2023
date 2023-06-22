@@ -45,6 +45,7 @@ namespace Entities.Player
 
             if (currentSpeed > maxSpeed)
             {
+                maxPitch = carAudio.pitch;
                 carAudio.pitch = maxPitch;
             }
         }

@@ -1150,8 +1150,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSpeed: 0.3
   maxSpeed: 40
-  minPitch: 0.2
-  maxPitch: 0
+  minPitch: 0
+  maxPitch: 0.8
 --- !u!82 &510184693490250806
 AudioSource:
   m_ObjectHideFlags: 0
