@@ -55,9 +55,7 @@ namespace Entities
             previousTime = currentTime;
 
             OnSpeedChange?.Invoke(speed);
-
-            if (speed != 0)
-                previousSpeed = speed;
+            previousSpeed = speed;
 
         }
         private void ToDamageOpponent(Collision collision)
