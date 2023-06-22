@@ -97,7 +97,7 @@ namespace Entities.Player
         {
             foreach (var wheel in wheels)
             {
-                wheel.wheelCollider.motorTorque = moveInput * moveSpeed * maxAcceleration * Time.deltaTime;
+                wheel.wheelCollider.motorTorque = moveInput * moveSpeed * maxAcceleration;
             }
         }
 
@@ -119,7 +119,7 @@ namespace Entities.Player
             {
                 foreach (var wheel in wheels)
                 {
-                    wheel.wheelCollider.brakeTorque = brakeSpeed * brakeAcceleration * Time.deltaTime;
+                    wheel.wheelCollider.brakeTorque = brakeSpeed * brakeAcceleration;
                 }
             }
             else
@@ -144,7 +144,8 @@ namespace Entities.Player
         }
         private void CheckRespawn()
         {
-            if (transform.eulerAngles.z > 90 || transform.eulerAngles.z < -90)
+            Debug.Log(transform.eulerAngles);
+            if ((transform.eulerAngles.z > 90f && transform.eulerAngles.z < 350f) || transform.eulerAngles.z < -90f)
             {
                 if (Input.GetKeyDown(KeyCode.R))
                 {
