@@ -21,12 +21,21 @@ namespace Entities.Player
             public Axel axel;
         }
 
-        [Header("Car data")]
+        [Header("Car")]
+        [SerializeField] private Vector3 centerOfMass;
+
+        [Header("Movement")]
+        [SerializeField] private float moveSpeed = 600.0f;
         [SerializeField] private float maxAcceleration = 30.0f;     // Avanzar
+
+        [Header("Brake")]
         [SerializeField] private float brakeAcceleration = 50.0f;   // Freno
+        [SerializeField] private float brakeSpeed = 300.0f;
+
+        [Header("Turn")]
         [SerializeField] private float turnSensitivity = 1.0f;      // Girar
         [SerializeField] private float maxSteerAngle = 30.0f;       // Direccion del auto
-        [SerializeField] private Vector3 centerOfMass;
+        [SerializeField] private float steerSpeed = 0.6f;
 
         [Header("Wheels")]
         [SerializeField] private List<Wheel> wheels;
@@ -37,10 +46,6 @@ namespace Entities.Player
 
         private Vector3 initialPosition;
         private Quaternion initialRotation;
-
-        private const float moveSpeed = 600.0f;
-        private const float steerSpeed = 0.6f;
-        private const float brakeSpeed = 300.0f;
 
         //private CarLifeBehaviour carLifeBehaviour;
 
