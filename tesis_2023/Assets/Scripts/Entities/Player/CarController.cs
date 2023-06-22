@@ -47,6 +47,10 @@ namespace Entities.Player
         private Vector3 initialPosition;
         private Quaternion initialRotation;
         public event Action<float> OnSpeedChange;
+        public event Action OnCarFlip;
+        public event Action OnCarStraighten;
+
+        private bool isFlipped = false;
 
         private void Start()
         {
@@ -144,15 +148,22 @@ namespace Entities.Player
         }
         private void CheckRespawn()
         {
-            Debug.Log(transform.eulerAngles);
+
             if ((transform.eulerAngles.z > 90f && transform.eulerAngles.z < 350f) || transform.eulerAngles.z < -90f)
             {
+                isFlipped = true;
+                OnCarFlip?.Invoke();
                 if (Input.GetKeyDown(KeyCode.R))
                 {
                     transform.position = initialPosition;
                     transform.rotation = initialRotation;
                 }
 
+            }
+            else if (isFlipped)
+            {
+                isFlipped = false;
+                OnCarStraighten?.Invoke();
             }
         }
 
