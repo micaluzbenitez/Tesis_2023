@@ -42,14 +42,14 @@ namespace Entities.Player
         private const float steerSpeed = 0.6f;
         private const float brakeSpeed = 300.0f;
 
-        private CarLifeBehaviour carLifeBehaviour;
+        //private CarLifeBehaviour carLifeBehaviour;
 
         public event Action<float> OnSpeedChange;
-        public event Action<int> OnRecieveCurrentHealth;
+
 
         private void Awake()
         {
-            carLifeBehaviour = gameObject.AddComponent<CarLifeBehaviour>();
+            //carLifeBehaviour = gameObject.AddComponent<CarLifeBehaviour>();
         }
         private void Start()
         {
@@ -87,7 +87,7 @@ namespace Entities.Player
             Move();
             Steer();
             Brake();
-            CheckOnSpeedChange();
+            //CheckOnSpeedChange();
         }
 
         private void GetInputs()
@@ -158,14 +158,10 @@ namespace Entities.Player
             }
         }
 
-        private void CheckOnSpeedChange()
-        {
-            OnSpeedChange?.Invoke(carLifeBehaviour.GetSpeed());
-        }
+        //private void CheckOnSpeedChange()
+        //{
+        //    OnSpeedChange?.Invoke(carLifeBehaviour.GetSpeed());
+        //}
 
-        public void RecieveCurrentHealth(int health)
-        {
-            OnRecieveCurrentHealth?.Invoke(health);
-        }
     }
 }

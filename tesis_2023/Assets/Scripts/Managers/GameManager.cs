@@ -8,12 +8,19 @@ namespace Managers
     public class GameManager : MonoBehaviour
     {
         [SerializeField] private CarController carController;
-        private CarLifeBehaviour carLifeBehaviour;
+        [SerializeField] private UIManager uiManager;
+        [SerializeField] private CarLifeBehaviour playerLife;
         private void Start()
         {
-            carLifeBehaviour = carController.gameObject.GetComponent<CarLifeBehaviour>();
-            carLifeBehaviour.OnPlayerTakeDamage += carController.RecieveCurrentHealth;
+            playerLife.OnTakeDamage += uiManager.SetHealthBar;
+            playerLife.OnSpeedChange += uiManager.SetSpeedText;
+
             //NavMeshBuilder.BuildNavMesh(); --> Esto es para cuando intanciemos obstaculos de forma random, se genere el navmesh en tiempo de ejecucion.
+        }
+        private void OnDestroy()
+        {
+            playerLife.OnTakeDamage -= uiManager.SetHealthBar;
+            playerLife.OnSpeedChange -= uiManager.SetSpeedText;
         }
     }
 }

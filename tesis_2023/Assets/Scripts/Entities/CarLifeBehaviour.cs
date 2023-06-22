@@ -15,7 +15,7 @@ namespace Entities
         private Vector3 previousPosition;
 
         public event Action<int> OnTakeDamage;
-        public event Action<int> OnPlayerTakeDamage;
+        public event Action<float> OnSpeedChange;
         private void Start()
         {
             maxHealth = 100;
@@ -27,9 +27,6 @@ namespace Entities
         {
             currentHealth -= (int)damage;
             OnTakeDamage?.Invoke(currentHealth);
-
-            if (gameObject.name == "Player")
-                OnPlayerTakeDamage?.Invoke(currentHealth);
 
             Debug.Log(gameObject.name + " life: " + currentHealth);
 
@@ -56,6 +53,8 @@ namespace Entities
             speed = (distance / (currentTime - previousTime)) * 3.6f;
             previousPosition = currentPosition;
             previousTime = currentTime;
+
+            OnSpeedChange?.Invoke(speed);
 
             if (speed != 0)
                 previousSpeed = speed;
