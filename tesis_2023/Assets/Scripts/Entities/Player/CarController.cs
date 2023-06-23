@@ -119,7 +119,7 @@ namespace Entities.Player
 
         private void Brake()
         {
-            if (Input.GetKey(KeyCode.Space) || moveInput == 0)
+            if (Input.GetKey(KeyCode.LeftControl) || moveInput == 0)
             {
                 foreach (var wheel in wheels)
                 {
