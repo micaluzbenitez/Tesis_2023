@@ -5,9 +5,10 @@ namespace Entities
 {
     public class CarLifeBehaviour : MonoBehaviour
     {
+
         private int maxHealth;
         private int currentHealth;
-
+        private int score;
         private float previousTime;
         private float speed;
         private float previousSpeed;
@@ -18,6 +19,7 @@ namespace Entities
         public event Action<float> OnSpeedChange;
         private void Start()
         {
+            score = 0;
             maxHealth = 100;
             currentHealth = maxHealth;
             InitVelocityData();
@@ -65,6 +67,8 @@ namespace Entities
             if (otherCarLife != null)
             {
                 otherCarLife.TakeDamage(previousSpeed / 2f);
+                score += (int)(previousSpeed / 2f);
+
             }
         }
 
