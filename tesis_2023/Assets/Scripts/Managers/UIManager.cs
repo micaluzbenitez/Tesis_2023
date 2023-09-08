@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI speedText;
     [SerializeField] private TextMeshProUGUI respawnText;
+    [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private Slider healthBar;
 
     public void SetSpeedText(float speed)
@@ -18,6 +19,11 @@ public class UIManager : MonoBehaviour
     {
         float result = (float)health / 100f;
         healthBar.value = result;
+    }
+
+    public void SetScoreText(int score)
+    {
+        scoreText.text = "Score: " + score.ToString();
     }
 
     public void EnableRespawnText()

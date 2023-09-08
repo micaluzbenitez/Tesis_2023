@@ -16,6 +16,7 @@ namespace Entities
         private Vector3 previousPosition;
 
         public event Action<int> OnTakeDamage;
+        public event Action<int> OnIncreaseScore;
         public event Action<float> OnSpeedChange;
         private void Start()
         {
@@ -68,6 +69,7 @@ namespace Entities
             {
                 otherCarLife.TakeDamage(previousSpeed / 2f);
                 score += (int)(previousSpeed / 2f);
+                OnIncreaseScore?.Invoke(score);
 
             }
         }

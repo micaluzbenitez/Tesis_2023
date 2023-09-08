@@ -16,6 +16,7 @@ namespace Managers
             playerLife.OnSpeedChange += uiManager.SetSpeedText;
             carController.OnCarFlip += uiManager.EnableRespawnText;
             carController.OnCarStraighten += uiManager.DisableRespawnText;
+            playerLife.OnIncreaseScore += uiManager.SetScoreText;
 
             //NavMeshBuilder.BuildNavMesh(); --> Esto es para cuando intanciemos obstaculos de forma random, se genere el navmesh en tiempo de ejecucion.
         }
@@ -25,6 +26,7 @@ namespace Managers
             playerLife.OnSpeedChange -= uiManager.SetSpeedText;
             carController.OnCarFlip -= uiManager.EnableRespawnText;
             carController.OnCarStraighten -= uiManager.DisableRespawnText;
+            playerLife.OnIncreaseScore -= uiManager.SetScoreText;
         }
     }
 }
