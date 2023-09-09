@@ -17,16 +17,24 @@ namespace Managers
             carController.OnCarFlip += uiManager.EnableRespawnText;
             carController.OnCarStraighten += uiManager.DisableRespawnText;
             playerLife.OnIncreaseScore += uiManager.SetScoreText;
+            playerLife.OnZeroHealth += DisabeCar;
+            playerLife.OnZeroHealth += carController.DisableCarController;
 
             //NavMeshBuilder.BuildNavMesh(); --> Esto es para cuando intanciemos obstaculos de forma random, se genere el navmesh en tiempo de ejecucion.
         }
         private void OnDestroy()
+        {
+
+        }
+        private void DisabeCar()
         {
             playerLife.OnTakeDamage -= uiManager.SetHealthBar;
             playerLife.OnSpeedChange -= uiManager.SetSpeedText;
             carController.OnCarFlip -= uiManager.EnableRespawnText;
             carController.OnCarStraighten -= uiManager.DisableRespawnText;
             playerLife.OnIncreaseScore -= uiManager.SetScoreText;
+            playerLife.OnZeroHealth -= DisabeCar;
+            playerLife.OnZeroHealth -= carController.DisableCarController;
         }
     }
 }

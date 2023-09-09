@@ -13,9 +13,11 @@ namespace Entities
         private float speed;
         private float previousSpeed;
 
+
         private Vector3 previousPosition;
 
         public event Action<int> OnTakeDamage;
+        public event Action OnZeroHealth;
         public event Action<int> OnIncreaseScore;
         public event Action<float> OnSpeedChange;
         private void Start()
@@ -34,7 +36,10 @@ namespace Entities
             Debug.Log(gameObject.name + " life: " + currentHealth);
 
             if (currentHealth <= 0)
-                Debug.Log(gameObject.name + " is dead");
+            {
+                OnZeroHealth?.Invoke();
+                this.enabled = false;
+            }
 
         }
 

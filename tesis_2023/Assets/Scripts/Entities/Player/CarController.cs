@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
+using UnityEngine.Rendering;
 
 namespace Entities.Player
 {
@@ -167,5 +168,10 @@ namespace Entities.Player
             }
         }
 
+        public void DisableCarController()
+        {
+            this.enabled = false;
+        }
     }
+
 }
