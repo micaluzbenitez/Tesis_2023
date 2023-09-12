@@ -102,11 +102,14 @@ namespace Entities.Opponent
 
         private void OnCollisionEnter(Collision collision)
         {
-            if (collision.gameObject.CompareTag("Car"))
+            if (alive)
             {
-                direction = collision.transform.forward;
-                waypointInd = Random.Range(0, waypoints.Length - 1);
-                StartCoroutine(KnockBack());
+                if (collision.gameObject.CompareTag("Car"))
+                {
+                    direction = collision.transform.forward;
+                    waypointInd = Random.Range(0, waypoints.Length - 1);
+                    StartCoroutine(KnockBack());
+                }
             }
         }
 
@@ -130,6 +133,14 @@ namespace Entities.Opponent
         {
             this.waypoints = waypoints;
             waypointInd = Random.Range(0, waypoints.Length - 1);
+        }
+
+        public void DisableIA()
+        {
+            alive = false;
+            enabled = false;
+            agent = null;
+
         }
     }
 }

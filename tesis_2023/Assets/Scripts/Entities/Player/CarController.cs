@@ -170,6 +170,8 @@ namespace Entities.Player
 
         public void DisableCarController()
         {
+            steerSpeed = 0;
+            moveSpeed = 0;
             this.enabled = false;
         }
     }
