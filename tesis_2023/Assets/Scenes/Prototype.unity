@@ -1690,9 +1690,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   opponentPrefabs:
   - {fileID: 399951860463076857, guid: 56d2bfa882dcf254096558cc343749e1, type: 3}
-  - {fileID: 399951860463076857, guid: 088f4ebefa41ad242890df0e768d6d2a, type: 3}
-  - {fileID: 399951860463076857, guid: ce82150ba73d85241823b642ec9a221d, type: 3}
-  opponentsQuantity: 3
+  opponentsQuantity: 1
   waypoints:
   - {fileID: 1554385931}
   - {fileID: 1095786781}

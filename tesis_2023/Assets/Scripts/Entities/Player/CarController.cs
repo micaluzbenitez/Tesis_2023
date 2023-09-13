@@ -1,7 +1,6 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
-using UnityEngine.Rendering;
 
 namespace Entities.Player
 {
@@ -149,7 +148,6 @@ namespace Entities.Player
         }
         private void CheckRespawn()
         {
-
             if ((transform.eulerAngles.z > 90f && transform.eulerAngles.z < 350f) || transform.eulerAngles.z < -90f)
             {
                 isFlipped = true;
@@ -175,5 +173,4 @@ namespace Entities.Player
             this.enabled = false;
         }
     }
-
 }

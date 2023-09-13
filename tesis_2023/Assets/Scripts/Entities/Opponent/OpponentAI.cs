@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -140,7 +139,11 @@ namespace Entities.Opponent
             alive = false;
             enabled = false;
             agent = null;
+        }
 
+        public float GetVelocity()
+        {
+            return agent.velocity.magnitude;
         }
     }
 }
