@@ -19,13 +19,14 @@ namespace Managers
         private List<OpponentAI> opponentIAs;
 
 
+        public event System.Action OnOpponentsLose;
 
         private void Start()
         {
             opponentLifes = new List<CarLifeBehaviour>();
             opponentIAs = new List<OpponentAI>();
             StartCoroutine(Spawn());
-
+            Debug.Log(opponentsQuantity);
 
         }
 
@@ -52,8 +53,18 @@ namespace Managers
             for (int i = 0; i < opponentLifes.Count; i++)
             {
                 opponentLifes[i].OnZeroHealth += opponentIAs[i].DisableIA;
+                opponentLifes[i].OnZeroHealth += CheckOpponentsAlive;
             }
         }
-    
+
+        private void CheckOpponentsAlive()
+        {
+            opponentsQuantity--;
+            if (opponentsQuantity <= 0)
+            {
+                OnOpponentsLose?.Invoke();
+            }
+        }
+
     }
 }
