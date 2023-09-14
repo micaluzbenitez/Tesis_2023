@@ -19,6 +19,7 @@ namespace Entities
         private float previousTime;
         private float speed;
         private float previousSpeed;
+        private bool alive = true;
 
         private Vector3 previousPosition;
 
@@ -34,7 +35,7 @@ namespace Entities
             InitVelocityData();
         }
 
-        private void TakeDamage(float damage)
+            private void TakeDamage(float damage)
         {
             currentHealth -= (int)damage;
             OnTakeDamage?.Invoke(currentHealth);
@@ -51,13 +52,14 @@ namespace Entities
                 smokeParticles.Play();
             }
 
-            if (currentHealth <= 0)
+            if (currentHealth <= 0 && alive)
             {
                 fireParticles.Stop();
                 explosionParticles.Play();
                 destroyParticles.Play();
                 OnZeroHealth?.Invoke();
                 this.enabled = false;
+                alive = false;
             }
         }
 

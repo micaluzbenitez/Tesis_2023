@@ -39,41 +39,50 @@ namespace Entities.Opponent
         private void Update()
         {
             // X rotation
-            float velocity = opponentAI.GetVelocity();
-            float wheelsXRotation = velocity * Time.deltaTime * 1000f; // Adjust the 1000f factor according to your scale
-
-            // Y rotation
-            bool rotating = false;
-            bool leftRotation = false;
-
-            if (Mathf.Abs(actualCarYRotation - car.rotation.eulerAngles.y) > 0.1f) // If the car is turning
+            if (opponentAI.IsAlive())
             {
-                if((carYRotation - car.rotation.eulerAngles.y) > 0) leftRotation = true;
-                rotating = true;
-                actualCarYRotation = car.rotation.eulerAngles.y;
+
+
+                float velocity = opponentAI.GetVelocity();
+                float wheelsXRotation = velocity * Time.deltaTime * 1000f; // Adjust the 1000f factor according to your scale
+
+                // Y rotation
+                bool rotating = false;
+                bool leftRotation = false;
+
+                if (Mathf.Abs(actualCarYRotation - car.rotation.eulerAngles.y) > 0.1f) // If the car is turning
+                {
+                    if ((carYRotation - car.rotation.eulerAngles.y) > 0) leftRotation = true;
+                    rotating = true;
+                    actualCarYRotation = car.rotation.eulerAngles.y;
+                }
+
+                if (!rotating) carYRotation = car.rotation.eulerAngles.y;
+
+                yLeftRotation = Mathf.Clamp(Mathf.Abs(car.rotation.eulerAngles.y - carYRotation), minLimit, maxLimit);
+                yRightRotation = Mathf.Clamp(Mathf.Abs(car.rotation.eulerAngles.y - carYRotation), minLimit, maxLimit);
+
+                if (leftRotation)
+                {
+                    yLeftRotation = -yLeftRotation;
+                    yRightRotation = -yRightRotation;
+                }
+
+                // Apply front wheels rotation (X and Y rotation)
+                Quaternion endLeftRotation = Quaternion.Euler(wheelsXRotation, yLeftRotation, leftZRotation);
+                Quaternion endRightRotation = Quaternion.Euler(wheelsXRotation, yRightRotation, rightZRotation);
+
+                leftFrontWheel.localRotation = Quaternion.Lerp(leftFrontWheel.localRotation, endLeftRotation, Time.deltaTime);
+                rightFrontWheel.localRotation = Quaternion.Lerp(rightFrontWheel.localRotation, endRightRotation, Time.deltaTime);
+
+                // Apply back wheels rotation (X rotation)
+                leftBackWheel.localRotation = Quaternion.Euler(wheelsXRotation, 0, leftZRotation);
+                rightBackWheel.localRotation = Quaternion.Euler(wheelsXRotation, 0, rightZRotation);
             }
-
-            if (!rotating) carYRotation = car.rotation.eulerAngles.y;
-
-            yLeftRotation = Mathf.Clamp(Mathf.Abs(car.rotation.eulerAngles.y - carYRotation), minLimit, maxLimit);
-            yRightRotation = Mathf.Clamp(Mathf.Abs(car.rotation.eulerAngles.y - carYRotation), minLimit, maxLimit);
-
-            if (leftRotation)
+            else
             {
-                yLeftRotation = -yLeftRotation;
-                yRightRotation = -yRightRotation;
+                Destroy(this);
             }
-
-            // Apply front wheels rotation (X and Y rotation)
-            Quaternion endLeftRotation = Quaternion.Euler(wheelsXRotation, yLeftRotation, leftZRotation);
-            Quaternion endRightRotation = Quaternion.Euler(wheelsXRotation, yRightRotation, rightZRotation);
-
-            leftFrontWheel.localRotation = Quaternion.Lerp(leftFrontWheel.localRotation, endLeftRotation, Time.deltaTime);
-            rightFrontWheel.localRotation = Quaternion.Lerp(rightFrontWheel.localRotation, endRightRotation, Time.deltaTime);
-
-            // Apply back wheels rotation (X rotation)
-            leftBackWheel.localRotation = Quaternion.Euler(wheelsXRotation, 0, leftZRotation);
-            rightBackWheel.localRotation = Quaternion.Euler(wheelsXRotation, 0, rightZRotation);
         }
     }
 }

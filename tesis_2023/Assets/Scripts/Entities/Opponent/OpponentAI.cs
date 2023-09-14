@@ -120,12 +120,16 @@ namespace Entities.Opponent
 
             yield return new WaitForSeconds(0.2f);
 
-            knockback = false;
-            agent.speed = knockbackSpeed;
-            agent.angularSpeed = knockbackAngularSpeed;
-            agent.acceleration = knockbackAcceleration;
-            target = null;
-            state = State.PATROL;
+            if (alive)
+            {
+
+                knockback = false;
+                agent.speed = knockbackSpeed;
+                agent.angularSpeed = knockbackAngularSpeed;
+                agent.acceleration = knockbackAcceleration;
+                target = null;
+                state = State.PATROL;
+            }
         }
 
         public void SetWaypoints(GameObject[] waypoints)
@@ -144,6 +148,10 @@ namespace Entities.Opponent
         public float GetVelocity()
         {
             return agent.velocity.magnitude;
+        }
+        public bool IsAlive()
+        {
+            return alive;
         }
     }
 }
