@@ -10,6 +10,7 @@ namespace Managers
         [SerializeField] private CarController carController;
         [SerializeField] private UIManager uiManager;
         [SerializeField] private CarLifeBehaviour playerLife;
+        [SerializeField] private OpponentsManager opponentsManager;
         private void Start()
         {
             playerLife.OnTakeDamage += uiManager.SetHealthBar;
@@ -19,12 +20,13 @@ namespace Managers
             playerLife.OnIncreaseScore += uiManager.SetScoreText;
             playerLife.OnZeroHealth += DisabeCar;
             playerLife.OnZeroHealth += carController.DisableCarController;
+            opponentsManager.OnOpponentsLose += uiManager.EnableVictoryPanel;
 
             //NavMeshBuilder.BuildNavMesh(); --> Esto es para cuando intanciemos obstaculos de forma random, se genere el navmesh en tiempo de ejecucion.
         }
         private void OnDestroy()
         {
-
+            opponentsManager.OnOpponentsLose -= uiManager.EnableVictoryPanel;
         }
         private void DisabeCar()
         {
