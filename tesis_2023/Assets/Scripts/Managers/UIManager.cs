@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI respawnText;
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private Slider healthBar;
+    [SerializeField] private GameObject victoryPanel;
 
     public void SetSpeedText(float speed)
     {
@@ -33,5 +34,9 @@ public class UIManager : MonoBehaviour
     public void DisableRespawnText()
     {
         respawnText.gameObject.SetActive(false);
+    }
+    public void EnableVictoryPanel()
+    {
+        victoryPanel.gameObject.SetActive(true);
     }
 }
