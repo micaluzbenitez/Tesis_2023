@@ -21,6 +21,7 @@ namespace Managers
             playerLife.OnZeroHealth += DisabeCar;
             playerLife.OnZeroHealth += carController.DisableCarController;
             opponentsManager.OnOpponentsLose += uiManager.EnableVictoryPanel;
+            opponentsManager.OnOpponentsLose += uiManager.DisableGameplayUI;
             opponentsManager.OnOpponentsLose += playerLife.Win;
             playerLife.OnWin += uiManager.SetVictoryScoreText;
 
@@ -30,6 +31,7 @@ namespace Managers
         {
             opponentsManager.OnOpponentsLose -= uiManager.EnableVictoryPanel;
             opponentsManager.OnOpponentsLose -= playerLife.Win;
+            opponentsManager.OnOpponentsLose -= uiManager.DisableGameplayUI;
             playerLife.OnWin -= uiManager.SetVictoryScoreText;
         }
         private void DisabeCar()

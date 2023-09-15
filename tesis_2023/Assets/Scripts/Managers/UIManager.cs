@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI victoryScoreText;
     [SerializeField] private Slider healthBar;
     [SerializeField] private GameObject victoryPanel;
+    [SerializeField] private GameObject miniMap;
 
     public void SetSpeedText(float speed)
     {
@@ -43,5 +44,12 @@ public class UIManager : MonoBehaviour
     public void EnableVictoryPanel()
     {
         victoryPanel.gameObject.SetActive(true);
+    }
+    public void DisableGameplayUI()
+    {
+        healthBar.gameObject.SetActive(false);
+        gameplayScoreText.gameObject.SetActive(false);
+        speedText.gameObject.SetActive(false);
+        miniMap.SetActive(false);
     }
 }
