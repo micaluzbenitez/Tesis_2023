@@ -17,16 +17,20 @@ namespace Managers
             playerLife.OnSpeedChange += uiManager.SetSpeedText;
             carController.OnCarFlip += uiManager.EnableRespawnText;
             carController.OnCarStraighten += uiManager.DisableRespawnText;
-            playerLife.OnIncreaseScore += uiManager.SetScoreText;
+            playerLife.OnIncreaseScore += uiManager.SetGameplayScoreText;
             playerLife.OnZeroHealth += DisabeCar;
             playerLife.OnZeroHealth += carController.DisableCarController;
             opponentsManager.OnOpponentsLose += uiManager.EnableVictoryPanel;
+            opponentsManager.OnOpponentsLose += playerLife.Win;
+            playerLife.OnWin += uiManager.SetVictoryScoreText;
 
             //NavMeshBuilder.BuildNavMesh(); --> Esto es para cuando intanciemos obstaculos de forma random, se genere el navmesh en tiempo de ejecucion.
         }
         private void OnDestroy()
         {
             opponentsManager.OnOpponentsLose -= uiManager.EnableVictoryPanel;
+            opponentsManager.OnOpponentsLose -= playerLife.Win;
+            playerLife.OnWin -= uiManager.SetVictoryScoreText;
         }
         private void DisabeCar()
         {
@@ -34,7 +38,7 @@ namespace Managers
             playerLife.OnSpeedChange -= uiManager.SetSpeedText;
             carController.OnCarFlip -= uiManager.EnableRespawnText;
             carController.OnCarStraighten -= uiManager.DisableRespawnText;
-            playerLife.OnIncreaseScore -= uiManager.SetScoreText;
+            playerLife.OnIncreaseScore -= uiManager.SetGameplayScoreText;
             playerLife.OnZeroHealth -= DisabeCar;
             playerLife.OnZeroHealth -= carController.DisableCarController;
         }

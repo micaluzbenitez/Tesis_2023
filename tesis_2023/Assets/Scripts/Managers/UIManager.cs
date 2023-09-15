@@ -8,7 +8,8 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI speedText;
     [SerializeField] private TextMeshProUGUI respawnText;
-    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI gameplayScoreText;
+    [SerializeField] private TextMeshProUGUI victoryScoreText;
     [SerializeField] private Slider healthBar;
     [SerializeField] private GameObject victoryPanel;
 
@@ -22,9 +23,13 @@ public class UIManager : MonoBehaviour
         healthBar.value = result;
     }
 
-    public void SetScoreText(int score)
+    public void SetGameplayScoreText(int score)
     {
-        scoreText.text = "Score: " + score.ToString();
+        gameplayScoreText.text = "Score: " + score.ToString();
+    }
+    public void SetVictoryScoreText(int score)
+    {
+        victoryScoreText.text = score.ToString();
     }
 
     public void EnableRespawnText()

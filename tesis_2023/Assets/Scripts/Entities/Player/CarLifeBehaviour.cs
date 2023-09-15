@@ -23,8 +23,9 @@ namespace Entities
 
         private Vector3 previousPosition;
 
-        public event Action<int> OnTakeDamage;
         public event Action OnZeroHealth;
+        public event Action<int> OnWin;
+        public event Action<int> OnTakeDamage;
         public event Action<int> OnIncreaseScore;
         public event Action<float> OnSpeedChange;
 
@@ -35,7 +36,7 @@ namespace Entities
             InitVelocityData();
         }
 
-            private void TakeDamage(float damage)
+        private void TakeDamage(float damage)
         {
             currentHealth -= (int)damage;
             OnTakeDamage?.Invoke(currentHealth);
@@ -115,6 +116,10 @@ namespace Entities
 
                 }
             }
+        }
+        public void Win()
+        {
+            OnWin?.Invoke(score);
         }
     }
 }
