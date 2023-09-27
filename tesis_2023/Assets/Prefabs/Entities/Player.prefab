@@ -1119,7 +1119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96999396b83272849a87d7a7b5d05a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  centerOfMass: {x: 0, y: -1, z: 0}
+  centerOfMass: {x: 0, y: -5, z: 0}
   moveSpeed: 250
   maxAcceleration: 100
   brakeAcceleration: 150
