@@ -51,6 +51,7 @@ namespace Entities.Player
         public event Action OnCarStraighten;
 
         private bool isFlipped = false;
+        private bool onFloor = false;
 
         private void Start()
         {
@@ -148,6 +149,8 @@ namespace Entities.Player
         }
         private void CheckRespawn()
         {
+            if (!onFloor) return;
+
             if ((transform.eulerAngles.z > 90f && transform.eulerAngles.z < 350f) || transform.eulerAngles.z < -90f)
             {
                 isFlipped = true;
@@ -171,6 +174,16 @@ namespace Entities.Player
             steerSpeed = 0;
             moveSpeed = 0;
             this.enabled = false;
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("Floor")) onFloor = true;
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.CompareTag("Floor")) onFloor = false;
         }
     }
 }
