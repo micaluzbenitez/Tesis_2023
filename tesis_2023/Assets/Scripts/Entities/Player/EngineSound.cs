@@ -25,6 +25,7 @@ namespace Entities.Player
 
         private void Update()
         {
+        
             UpdateEngineSound();
         }
 

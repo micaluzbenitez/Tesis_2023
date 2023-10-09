@@ -95,7 +95,7 @@ namespace Entities
 
             if (otherCarLife != null)
             {
-                otherCarLife.TakeDamage(previousSpeed / 2f);
+                otherCarLife.TakeDamage(previousSpeed / 4f);
                 score += (int)(previousSpeed / 2f);
                 OnIncreaseScore?.Invoke(score);
             }

@@ -53,6 +53,7 @@ namespace Entities.Player
         private bool isFlipped = false;
         private bool onFloor = false;
 
+
         private void Start()
         {
             initialPosition = transform.position;
@@ -171,10 +172,14 @@ namespace Entities.Player
 
         public void DisableCarController()
         {
-            steerSpeed = 0;
-            moveSpeed = 0;
-            carRigidbody.velocity = Vector3.zero;
-            this.enabled = false;
+
+            Destroy(this);
+
+            for (int i = 0; i < wheels.Count; i++)
+            {
+                Destroy(wheels[i].wheelCollider);
+            }
+
         }
 
         private void OnTriggerEnter(Collider other)
