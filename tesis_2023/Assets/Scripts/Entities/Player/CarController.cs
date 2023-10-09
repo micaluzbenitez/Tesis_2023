@@ -173,6 +173,7 @@ namespace Entities.Player
         {
             steerSpeed = 0;
             moveSpeed = 0;
+            carRigidbody.velocity = Vector3.zero;
             this.enabled = false;
         }
 
