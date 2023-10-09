@@ -40,6 +40,12 @@ namespace Entities.Player
         [Header("Wheels")]
         [SerializeField] private List<Wheel> wheels;
 
+        [Header("Turbo")]
+        [SerializeField] private float turboForce = 20000f;
+        [SerializeField] private float turboCapacity = 100.0f;
+        [SerializeField] private float turboRechargeRate = 10.0f;
+        [SerializeField] private float turboConsumptionRate;
+
         private float moveInput;
         private float steerInput;
         private Rigidbody carRigidbody;
@@ -52,6 +58,10 @@ namespace Entities.Player
 
         private bool isFlipped = false;
         private bool onFloor = false;
+
+
+        private float currentTurbo = 0;
+        private bool isTurboActive = false;
 
 
         private void Start()
@@ -83,6 +93,12 @@ namespace Entities.Player
             GetInputs();
             AnimateWheels();
             CheckRespawn();
+            RechargeTurbo();
+
+            if (currentTurbo < turboConsumptionRate)
+                DeactivateTurbo();
+
+            Debug.Log(currentTurbo);
         }
 
         private void FixedUpdate()
@@ -97,6 +113,15 @@ namespace Entities.Player
         {
             moveInput = Input.GetAxis("Vertical");
             steerInput = Input.GetAxis("Horizontal");
+
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                ActivateTurbo();
+            }
+            else
+            {
+                DeactivateTurbo();
+            }
         }
 
         private void Move()
@@ -190,6 +215,30 @@ namespace Entities.Player
         private void OnTriggerExit(Collider other)
         {
             if (other.CompareTag("Floor")) onFloor = false;
+        }
+
+        private void RechargeTurbo()
+        {
+            if (!isTurboActive && currentTurbo < turboCapacity)
+            {
+                currentTurbo += turboRechargeRate * Time.deltaTime / 2;
+                currentTurbo = Mathf.Clamp(currentTurbo, 0f, turboCapacity);
+            }
+        }
+        private void ActivateTurbo()
+        {
+            if (currentTurbo >= turboConsumptionRate)
+            {
+                isTurboActive = true;
+                currentTurbo -= turboConsumptionRate;
+
+                carRigidbody.AddForce(transform.forward * turboForce);
+                Debug.Log("hola");
+            }
+        }
+        private void DeactivateTurbo()
+        {
+            isTurboActive = false;
         }
     }
 }
