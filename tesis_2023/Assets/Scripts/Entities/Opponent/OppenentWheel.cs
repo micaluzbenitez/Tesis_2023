@@ -41,8 +41,6 @@ namespace Entities.Opponent
             // X rotation
             if (opponentAI.IsAlive())
             {
-
-
                 float velocity = opponentAI.GetVelocity();
                 float wheelsXRotation = velocity * Time.deltaTime * 1000f; // Adjust the 1000f factor according to your scale
 
@@ -72,12 +70,12 @@ namespace Entities.Opponent
                 Quaternion endLeftRotation = Quaternion.Euler(wheelsXRotation, yLeftRotation, leftZRotation);
                 Quaternion endRightRotation = Quaternion.Euler(wheelsXRotation, yRightRotation, rightZRotation);
 
-                leftFrontWheel.localRotation = Quaternion.Lerp(leftFrontWheel.localRotation, endLeftRotation, Time.deltaTime);
-                rightFrontWheel.localRotation = Quaternion.Lerp(rightFrontWheel.localRotation, endRightRotation, Time.deltaTime);
-
-                // Apply back wheels rotation (X rotation)
-                leftBackWheel.localRotation = Quaternion.Euler(wheelsXRotation, 0, leftZRotation);
-                rightBackWheel.localRotation = Quaternion.Euler(wheelsXRotation, 0, rightZRotation);
+                //leftFrontWheel.localRotation = Quaternion.Lerp(leftFrontWheel.localRotation, endLeftRotation, Time.deltaTime);
+                //rightFrontWheel.localRotation = Quaternion.Lerp(rightFrontWheel.localRotation, endRightRotation, Time.deltaTime);
+                //
+                //// Apply back wheels rotation (X rotation)
+                //leftBackWheel.localRotation = Quaternion.Euler(wheelsXRotation, 0, leftZRotation);
+                //rightBackWheel.localRotation = Quaternion.Euler(wheelsXRotation, 0, rightZRotation);
             }
             else
             {
