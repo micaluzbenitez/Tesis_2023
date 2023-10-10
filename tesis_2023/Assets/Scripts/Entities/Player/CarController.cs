@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
+using static Entities.Player.CarController;
 
 namespace Entities.Player
 {
@@ -22,20 +23,7 @@ namespace Entities.Player
         }
 
         [Header("Car")]
-        [SerializeField] private Vector3 centerOfMass;
-
-        [Header("Movement")]
-        [SerializeField] private float moveSpeed = 600.0f;
-        [SerializeField] private float maxAcceleration = 30.0f;     // Avanzar
-
-        [Header("Brake")]
-        [SerializeField] private float brakeAcceleration = 50.0f;   // Freno
-        [SerializeField] private float brakeSpeed = 300.0f;
-
-        [Header("Turn")]
-        [SerializeField] private float turnSensitivity = 1.0f;      // Girar
-        [SerializeField] private float maxSteerAngle = 30.0f;       // Direccion del auto
-        [SerializeField] private float steerSpeed = 0.6f;
+        [SerializeField] private Transform centerOfMass;
 
         [Header("Wheels")]
         [SerializeField] private List<Wheel> wheels;
@@ -46,9 +34,13 @@ namespace Entities.Player
         [SerializeField] private float turboRechargeRate = 10.0f;
         [SerializeField] private float turboConsumptionRate;
 
-        private float moveInput;
-        private float steerInput;
         private Rigidbody carRigidbody;
+
+        private bool braked = false;
+        private Vector3 prevPosition;
+        public float currentSpeed = 0.0f;
+        private bool isDead = false;
+        private float maxTorque = 1000;
 
         private Vector3 initialPosition;
         private Quaternion initialRotation;
@@ -59,107 +51,101 @@ namespace Entities.Player
         private bool isFlipped = false;
         private bool onFloor = false;
 
-
         private float currentTurbo = 0;
         private bool isTurboActive = false;
-
 
         private void Start()
         {
             initialPosition = transform.position;
             initialRotation = transform.rotation;
+            prevPosition = transform.position;
             carRigidbody = GetComponent<Rigidbody>();
-            carRigidbody.centerOfMass = centerOfMass;
-            FixWheelColliderVibration();
-        }
-
-        #region FixWheelCollider
-        private void FixWheelColliderVibration()
-        {
-            //https://docs.unity3d.com/ScriptReference/WheelCollider.ConfigureVehicleSubsteps.html
-            const int speedThreshold = 5;
-            const int stepsBelowThreshold = 12;
-            const int stepsAboveThreshold = 15;
-
-            foreach (Wheel wheel in wheels)
-            {
-                wheel.wheelCollider.ConfigureVehicleSubsteps(speedThreshold, stepsBelowThreshold, stepsAboveThreshold);
-            }
-        }
-        #endregion
-
-        private void Update()
-        {
-            GetInputs();
-            AnimateWheels();
-            CheckRespawn();
-            RechargeTurbo();
-
-            if (currentTurbo < turboConsumptionRate)
-                DeactivateTurbo();
-
-            Debug.Log(currentTurbo);
+            carRigidbody.centerOfMass = centerOfMass.transform.localPosition;
         }
 
         private void FixedUpdate()
         {
-            Move();
-            Steer();
+            if (!isDead)
+            {
+                if (!braked)
+                {
+                    foreach (var wheel in wheels)
+                    {
+                        wheel.wheelCollider.brakeTorque = 0;
+                    }
+                }
+
+                // Speed of car, Car will move as you will provide the input to it.
+                foreach (var wheel in wheels)
+                {
+                    wheel.wheelCollider.motorTorque = maxTorque * Input.GetAxis("Vertical");
+                }
+
+                // Changing car direction Here we are changing the steer angle of the front tires of the car so that we can change the car direction.
+                foreach (var wheel in wheels)
+                {
+                    if (wheel.axel == Axel.Front)
+                    {
+                        wheel.wheelCollider.steerAngle = 15 * Input.GetAxis("Horizontal");
+                    }
+                }
+            }
+        }
+
+        private void Update()
+        {
+            Vector3 curMov = transform.position - prevPosition;
+            currentSpeed = curMov.magnitude / Time.deltaTime;
+            prevPosition = transform.position;
+
             Brake();
-            //CheckOnSpeedChange();
-        }
 
-        private void GetInputs()
-        {
-            moveInput = Input.GetAxis("Vertical");
-            steerInput = Input.GetAxis("Horizontal");
-
-            if (Input.GetKey(KeyCode.LeftShift))
-            {
-                ActivateTurbo();
-            }
-            else
-            {
-                DeactivateTurbo();
-            }
-        }
-
-        private void Move()
-        {
+            // For tire rotate
             foreach (var wheel in wheels)
             {
-                wheel.wheelCollider.motorTorque = moveInput * moveSpeed * maxAcceleration;
+                wheel.wheelModel.transform.Rotate(wheel.wheelCollider.rpm / 60 * 360 * Time.deltaTime, 0, 0);
             }
-        }
 
-        private void Steer()
-        {
+            // Changing tire direction
             foreach (var wheel in wheels)
             {
                 if (wheel.axel == Axel.Front)
                 {
-                    var steerAngle = steerInput * turnSensitivity * maxSteerAngle;
-                    wheel.wheelCollider.steerAngle = Mathf.Lerp(wheel.wheelCollider.steerAngle, steerAngle, steerSpeed);
+                    Vector3 temp = wheel.wheelModel.transform.localEulerAngles;
+                    temp.y = wheel.wheelCollider.steerAngle - wheel.wheelModel.transform.localEulerAngles.z;
+                    wheel.wheelModel.transform.localEulerAngles = temp;
                 }
             }
+
+            AnimateWheels();
+            CheckRespawn();
+
+            // Turbo
+            CheckTurbo();
+            RechargeTurbo();
+            if (currentTurbo < turboConsumptionRate) DeactivateTurbo();
+            Debug.Log(currentTurbo);
         }
 
         private void Brake()
         {
-            if (Input.GetKey(KeyCode.LeftControl) || moveInput == 0)
+            if (Input.GetButton("Jump")) braked = true;
+            else braked = false;
+
+            if (braked)
             {
                 foreach (var wheel in wheels)
                 {
-                    wheel.wheelCollider.brakeTorque = brakeSpeed * brakeAcceleration;
+                    wheel.wheelCollider.brakeTorque = 10000;
+                    wheel.wheelCollider.motorTorque = 0;
                 }
             }
-            else
-            {
-                foreach (var wheel in wheels)
-                {
-                    wheel.wheelCollider.brakeTorque = 0;
-                }
-            }
+        }
+
+        private void CheckTurbo()
+        {
+            if (Input.GetKey(KeyCode.LeftShift)) ActivateTurbo();
+            else DeactivateTurbo();
         }
 
         private void AnimateWheels()
@@ -173,9 +159,15 @@ namespace Entities.Player
                 wheel.wheelModel.transform.rotation = rotation;
             }
         }
+
         private void CheckRespawn()
         {
             if (!onFloor) return;
+
+            foreach (var wheel in wheels)
+            {
+                wheel.wheelCollider.brakeTorque = 10000;
+            }
 
             if ((transform.eulerAngles.z > 90f && transform.eulerAngles.z < 350f) || transform.eulerAngles.z < -90f)
             {
@@ -197,14 +189,14 @@ namespace Entities.Player
 
         public void DisableCarController()
         {
-
-            Destroy(this);
+            isDead = true;
 
             for (int i = 0; i < wheels.Count; i++)
             {
                 Destroy(wheels[i].wheelCollider);
             }
 
+            Destroy(this);
         }
 
         private void OnTriggerEnter(Collider other)
@@ -225,6 +217,7 @@ namespace Entities.Player
                 currentTurbo = Mathf.Clamp(currentTurbo, 0f, turboCapacity);
             }
         }
+
         private void ActivateTurbo()
         {
             if (currentTurbo >= turboConsumptionRate)
@@ -236,6 +229,7 @@ namespace Entities.Player
                 Debug.Log("hola");
             }
         }
+
         private void DeactivateTurbo()
         {
             isTurboActive = false;
