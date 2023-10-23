@@ -54,6 +54,14 @@ namespace Entities.Player
         private float currentTurbo = 0;
         private bool isTurboActive = false;
 
+
+        private List<WheelCollider> driveWheels = new List<WheelCollider>();
+        [SerializeField] float driftFactor = 0.95f;
+        [SerializeField] float maxSpeedForDrift = 40;
+
+        private WheelFrictionCurve originalFriction;
+        private bool isDrifting = false;
+
         private void Start()
         {
             initialPosition = transform.position;
@@ -61,6 +69,15 @@ namespace Entities.Player
             prevPosition = transform.position;
             carRigidbody = GetComponent<Rigidbody>();
             carRigidbody.centerOfMass = centerOfMass.transform.localPosition;
+
+            Debug.Log(wheels.Count);
+            for (int i = 0; i < wheels.Count; i++)
+            {
+                driveWheels.Add(wheels[i].wheelCollider);
+            }
+
+            originalFriction = driveWheels[0].sidewaysFriction;
+
         }
 
         private void FixedUpdate()
@@ -90,6 +107,7 @@ namespace Entities.Player
                     }
                 }
             }
+
         }
 
         private void Update()
@@ -123,8 +141,27 @@ namespace Entities.Player
             // Turbo
             CheckTurbo();
             RechargeTurbo();
-            if (currentTurbo < turboConsumptionRate) DeactivateTurbo();
-            Debug.Log(currentTurbo);
+            if (currentTurbo < turboConsumptionRate)
+                DeactivateTurbo();
+
+            Debug.Log(carRigidbody.velocity.magnitude);
+
+
+            if (Input.GetKeyDown(KeyCode.LeftControl) && carRigidbody.velocity.magnitude < maxSpeedForDrift)
+            {
+                StartDrift();
+            }
+
+            if (Input.GetKeyUp(KeyCode.LeftControl))
+            {
+                StopDrift();
+            }
+
+            if (isDrifting)
+            {
+                ApplyDrift();
+            }
+
         }
 
         private void Brake()
@@ -226,13 +263,48 @@ namespace Entities.Player
                 currentTurbo -= turboConsumptionRate;
 
                 carRigidbody.AddForce(transform.forward * turboForce);
-                Debug.Log("hola");
+
             }
         }
 
         private void DeactivateTurbo()
         {
             isTurboActive = false;
+        }
+
+
+        private void StartDrift()
+        {
+            isDrifting = true;
+
+            foreach (WheelCollider wheel in driveWheels)
+            {
+
+                WheelFrictionCurve driftFriction = new WheelFrictionCurve();
+                driftFriction.stiffness = 0.25f;
+                wheel.sidewaysFriction = driftFriction;
+            }
+        }
+
+        private void ApplyDrift()
+        {
+
+            foreach (WheelCollider wheel in driveWheels)
+            {
+
+                wheel.motorTorque = 0f;
+            }
+        }
+
+        private void StopDrift()
+        {
+            isDrifting = false;
+
+            foreach (WheelCollider wheel in driveWheels)
+            {
+
+                wheel.sidewaysFriction = originalFriction;
+            }
         }
     }
 }
