@@ -1151,7 +1151,7 @@ MonoBehaviour:
   turboForce: 20000
   turboCapacity: 100
   turboRechargeRate: 10
-  turboConsumptionRate: 0
+  turboConsumptionRate: 5
   currentSpeed: 0
 --- !u!114 &454184416197507217
 MonoBehaviour:
@@ -3375,6 +3375,86 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4687244633470410796}
     m_Modifications:
+    - target: {fileID: 4035755384217233605, guid: 106a3ea44b3818046850cfa48ddaebc0,
+        type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035755384217233605, guid: 106a3ea44b3818046850cfa48ddaebc0,
+        type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035755384217233605, guid: 106a3ea44b3818046850cfa48ddaebc0,
+        type: 3}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035755384217233605, guid: 106a3ea44b3818046850cfa48ddaebc0,
+        type: 3}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035755384217233607, guid: 106a3ea44b3818046850cfa48ddaebc0,
+        type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035755384217233607, guid: 106a3ea44b3818046850cfa48ddaebc0,
+        type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035755384217233607, guid: 106a3ea44b3818046850cfa48ddaebc0,
+        type: 3}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035755384217233607, guid: 106a3ea44b3818046850cfa48ddaebc0,
+        type: 3}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035755384217233609, guid: 106a3ea44b3818046850cfa48ddaebc0,
+        type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035755384217233609, guid: 106a3ea44b3818046850cfa48ddaebc0,
+        type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035755384217233609, guid: 106a3ea44b3818046850cfa48ddaebc0,
+        type: 3}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035755384217233609, guid: 106a3ea44b3818046850cfa48ddaebc0,
+        type: 3}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035755384217233611, guid: 106a3ea44b3818046850cfa48ddaebc0,
+        type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035755384217233611, guid: 106a3ea44b3818046850cfa48ddaebc0,
+        type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035755384217233611, guid: 106a3ea44b3818046850cfa48ddaebc0,
+        type: 3}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035755384217233611, guid: 106a3ea44b3818046850cfa48ddaebc0,
+        type: 3}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4035755384232439171, guid: 106a3ea44b3818046850cfa48ddaebc0,
         type: 3}
       propertyPath: m_RootOrder
