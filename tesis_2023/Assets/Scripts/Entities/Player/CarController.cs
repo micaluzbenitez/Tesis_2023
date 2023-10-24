@@ -34,11 +34,15 @@ namespace Entities.Player
         [SerializeField] private float turboRechargeRate = 10.0f;
         [SerializeField] private float turboConsumptionRate;
 
+        [Header("Drift")]
+        [SerializeField] float driftFactor = 0.95f;
+        [SerializeField] float maxSpeedForDrift = 40;
+
         private Rigidbody carRigidbody;
 
         private bool braked = false;
         private Vector3 prevPosition;
-        public float currentSpeed = 0.0f;
+        private float currentSpeed = 0.0f;
         private bool isDead = false;
         private float maxTorque = 1000;
 
@@ -56,8 +60,7 @@ namespace Entities.Player
 
 
         private List<WheelCollider> driveWheels = new List<WheelCollider>();
-        [SerializeField] float driftFactor = 0.95f;
-        [SerializeField] float maxSpeedForDrift = 40;
+
 
         private WheelFrictionCurve originalFriction;
         private bool isDrifting = false;
@@ -144,8 +147,6 @@ namespace Entities.Player
             if (currentTurbo < turboConsumptionRate)
                 DeactivateTurbo();
 
-            Debug.Log(carRigidbody.velocity.magnitude);
-
 
             if (Input.GetKeyDown(KeyCode.LeftControl) && carRigidbody.velocity.magnitude < maxSpeedForDrift)
             {
@@ -161,6 +162,7 @@ namespace Entities.Player
             {
                 ApplyDrift();
             }
+            Debug.Log(currentTurbo);
 
         }
 
