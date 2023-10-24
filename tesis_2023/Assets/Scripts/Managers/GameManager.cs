@@ -24,6 +24,7 @@ namespace Managers
             opponentsManager.OnOpponentsLose += uiManager.DisableGameplayUI;
             opponentsManager.OnOpponentsLose += playerLife.Win;
             playerLife.OnWin += uiManager.SetVictoryScoreText;
+            carController.OnTurboChange += uiManager.SetTurboSlider;
 
             //NavMeshBuilder.BuildNavMesh(); --> Esto es para cuando intanciemos obstaculos de forma random, se genere el navmesh en tiempo de ejecucion.
         }
@@ -43,6 +44,8 @@ namespace Managers
             playerLife.OnIncreaseScore -= uiManager.SetGameplayScoreText;
             playerLife.OnZeroHealth -= DisabeCar;
             playerLife.OnZeroHealth -= carController.DisableCarController;
+            carController.OnTurboChange -= uiManager.SetTurboSlider;
+
         }
     }
 }

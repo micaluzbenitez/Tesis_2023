@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI gameplayScoreText;
     [SerializeField] private TextMeshProUGUI victoryScoreText;
     [SerializeField] private Slider healthBar;
+    [SerializeField] private Slider turboSlider;
     [SerializeField] private GameObject victoryPanel;
     [SerializeField] private GameObject miniMap;
 
@@ -22,6 +23,11 @@ public class UIManager : MonoBehaviour
     {
         float result = (float)health / 100f;
         healthBar.value = result;
+    }
+    public void SetTurboSlider(float value)
+    {
+
+        turboSlider.value = value / 100f;
     }
 
     public void SetGameplayScoreText(int score)
@@ -51,5 +57,6 @@ public class UIManager : MonoBehaviour
         gameplayScoreText.gameObject.SetActive(false);
         speedText.gameObject.SetActive(false);
         miniMap.SetActive(false);
+        turboSlider.gameObject.SetActive(false);
     }
 }

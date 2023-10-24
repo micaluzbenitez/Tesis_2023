@@ -51,6 +51,7 @@ namespace Entities.Player
         public event Action<float> OnSpeedChange;
         public event Action OnCarFlip;
         public event Action OnCarStraighten;
+        public event Action<float> OnTurboChange;
 
         private bool isFlipped = false;
         private bool onFloor = false;
@@ -162,7 +163,7 @@ namespace Entities.Player
             {
                 ApplyDrift();
             }
-            Debug.Log(currentTurbo);
+
 
         }
 
@@ -254,6 +255,10 @@ namespace Entities.Player
             {
                 currentTurbo += turboRechargeRate * Time.deltaTime / 2;
                 currentTurbo = Mathf.Clamp(currentTurbo, 0f, turboCapacity);
+
+                OnTurboChange?.Invoke(currentTurbo);
+
+                Debug.Log("recargando");
             }
         }
 
@@ -266,6 +271,8 @@ namespace Entities.Player
 
                 carRigidbody.AddForce(transform.forward * turboForce);
 
+                OnTurboChange?.Invoke(currentTurbo);
+                Debug.Log("se activo el turbo");
             }
         }
 

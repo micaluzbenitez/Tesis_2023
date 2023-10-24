@@ -3048,6 +3048,7 @@ MonoBehaviour:
   gameplayScoreText: {fileID: 761539547}
   victoryScoreText: {fileID: 855913302}
   healthBar: {fileID: 774794543}
+  turboSlider: {fileID: 179066680}
   victoryPanel: {fileID: 7492634}
   miniMap: {fileID: 1375795203}
 --- !u!4 &1445638160
