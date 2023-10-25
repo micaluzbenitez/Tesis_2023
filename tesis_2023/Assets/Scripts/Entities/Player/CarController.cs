@@ -38,6 +38,9 @@ namespace Entities.Player
         [SerializeField] float driftFactor = 0.95f;
         [SerializeField] float maxSpeedForDrift = 40;
 
+        [Header("Feedbacks")]
+        [SerializeField] private ParticleSystem DriftParticles;
+
         private Rigidbody carRigidbody;
 
         private bool braked = false;
@@ -59,9 +62,7 @@ namespace Entities.Player
         private float currentTurbo = 0;
         private bool isTurboActive = false;
 
-
         private List<WheelCollider> driveWheels = new List<WheelCollider>();
-
 
         private WheelFrictionCurve originalFriction;
         private bool isDrifting = false;
@@ -81,7 +82,6 @@ namespace Entities.Player
             }
 
             originalFriction = driveWheels[0].sidewaysFriction;
-
         }
 
         private void FixedUpdate()
@@ -111,7 +111,6 @@ namespace Entities.Player
                     }
                 }
             }
-
         }
 
         private void Update()
@@ -145,9 +144,7 @@ namespace Entities.Player
             // Turbo
             CheckTurbo();
             RechargeTurbo();
-            if (currentTurbo < turboConsumptionRate)
-                DeactivateTurbo();
-
+            if (currentTurbo < turboConsumptionRate) DeactivateTurbo();
 
             if (Input.GetKeyDown(KeyCode.LeftControl) && carRigidbody.velocity.magnitude < maxSpeedForDrift)
             {
@@ -163,8 +160,6 @@ namespace Entities.Player
             {
                 ApplyDrift();
             }
-
-
         }
 
         private void Brake()
@@ -213,12 +208,12 @@ namespace Entities.Player
             {
                 isFlipped = true;
                 OnCarFlip?.Invoke();
+
                 if (Input.GetKeyDown(KeyCode.R))
                 {
                     transform.position = initialPosition;
                     transform.rotation = initialRotation;
                 }
-
             }
             else if (isFlipped)
             {
@@ -241,12 +236,20 @@ namespace Entities.Player
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Floor")) onFloor = true;
+            if (other.CompareTag("Floor"))
+            {
+                onFloor = true;
+                if (isDrifting) DriftParticles.Play();
+            }
         }
 
         private void OnTriggerExit(Collider other)
         {
-            if (other.CompareTag("Floor")) onFloor = false;
+            if (other.CompareTag("Floor"))
+            {
+                onFloor = false;
+                DriftParticles.Stop();
+            }
         }
 
         private void RechargeTurbo()
@@ -281,14 +284,13 @@ namespace Entities.Player
             isTurboActive = false;
         }
 
-
         private void StartDrift()
         {
             isDrifting = true;
+            DriftParticles.Play();
 
             foreach (WheelCollider wheel in driveWheels)
             {
-
                 WheelFrictionCurve driftFriction = new WheelFrictionCurve();
                 driftFriction.stiffness = 0.25f;
                 wheel.sidewaysFriction = driftFriction;
@@ -297,10 +299,8 @@ namespace Entities.Player
 
         private void ApplyDrift()
         {
-
             foreach (WheelCollider wheel in driveWheels)
             {
-
                 wheel.motorTorque = 0f;
             }
         }
@@ -308,6 +308,7 @@ namespace Entities.Player
         private void StopDrift()
         {
             isDrifting = false;
+            DriftParticles.Stop();
 
             foreach (WheelCollider wheel in driveWheels)
             {
