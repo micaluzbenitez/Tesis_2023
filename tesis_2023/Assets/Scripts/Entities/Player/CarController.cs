@@ -100,6 +100,7 @@ namespace Entities.Player
                 foreach (var wheel in wheels)
                 {
                     wheel.wheelCollider.motorTorque = maxTorque * Input.GetAxis("Vertical");
+                    if (Input.GetAxis("Vertical") != 0) carRigidbody.AddForce(transform.forward * 100); // Fix - add more force
                 }
 
                 // Changing car direction Here we are changing the steer angle of the front tires of the car so that we can change the car direction.
