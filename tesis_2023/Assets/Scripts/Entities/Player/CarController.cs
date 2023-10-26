@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using System.Collections.Generic;
 using static Entities.Player.CarController;
+using Unity.VisualScripting;
 
 namespace Entities.Player
 {
@@ -41,6 +42,8 @@ namespace Entities.Player
         [Header("Feedbacks")]
         [SerializeField] private ParticleSystem DriftParticles;
 
+        [SerializeField] private ParticleSystem turboParticles;
+
         private Rigidbody carRigidbody;
 
         private bool braked = false;
@@ -60,7 +63,7 @@ namespace Entities.Player
         private bool onFloor = false;
 
         private float currentTurbo = 0;
-        private bool isTurboActive = false;
+        private bool isTurboActive;
 
         private List<WheelCollider> driveWheels = new List<WheelCollider>();
 
@@ -69,6 +72,7 @@ namespace Entities.Player
 
         private void Start()
         {
+            isTurboActive = false;
             initialPosition = transform.position;
             initialRotation = transform.rotation;
             prevPosition = transform.position;
@@ -145,7 +149,7 @@ namespace Entities.Player
             // Turbo
             CheckTurbo();
             RechargeTurbo();
-            if (currentTurbo < turboConsumptionRate) DeactivateTurbo();
+
 
             if (Input.GetKeyDown(KeyCode.LeftControl) && carRigidbody.velocity.magnitude < maxSpeedForDrift)
             {
@@ -180,8 +184,19 @@ namespace Entities.Player
 
         private void CheckTurbo()
         {
-            if (Input.GetKey(KeyCode.LeftShift)) ActivateTurbo();
-            else DeactivateTurbo();
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+
+                ActivateTurbo();
+
+            }
+
+            else if (isTurboActive)
+            {
+                DeactivateTurbo();
+            }
+
+
         }
 
         private void AnimateWheels()
@@ -262,7 +277,7 @@ namespace Entities.Player
 
                 OnTurboChange?.Invoke(currentTurbo);
 
-                Debug.Log("recargando");
+
             }
         }
 
@@ -270,19 +285,24 @@ namespace Entities.Player
         {
             if (currentTurbo >= turboConsumptionRate)
             {
+
+                turboParticles.Play();
                 isTurboActive = true;
                 currentTurbo -= turboConsumptionRate;
 
                 carRigidbody.AddForce(transform.forward * turboForce);
 
                 OnTurboChange?.Invoke(currentTurbo);
-                Debug.Log("se activo el turbo");
+                Debug.Log(turboParticles.isPlaying);
+                //Debug.Log("se activo el turbo");
             }
+            
         }
 
         private void DeactivateTurbo()
         {
             isTurboActive = false;
+            turboParticles.Stop();
         }
 
         private void StartDrift()
