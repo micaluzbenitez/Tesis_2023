@@ -1,7 +1,9 @@
-using System.Collections.Generic;
-using System;
 using UnityEngine;
-using UnityEngine.Events;
+using System;
+using System.Collections.Generic;
+using static Entities.Player.CarController;
+using Unity.VisualScripting;
+using Unity.Burst.CompilerServices;
 
 namespace Entities.Player
 {
@@ -40,11 +42,8 @@ namespace Entities.Player
 
         [Header("Feedbacks")]
         [SerializeField] private ParticleSystem DriftParticles;
-        [SerializeField] private ParticleSystem turboParticles;
 
-        [Header("Unity events")]
-        [SerializeField] private UnityEvent OnActiveTurbo;
-        [SerializeField] private UnityEvent OnDesactiveTurbo;
+        [SerializeField] private ParticleSystem turboParticles;
 
         private Rigidbody carRigidbody;
 
@@ -72,6 +71,8 @@ namespace Entities.Player
         private WheelFrictionCurve originalFriction;
         private bool isDrifting = false;
 
+
+        [SerializeField] LayerMask groundLayer;
         private void Start()
         {
             isTurboActive = false;
@@ -105,15 +106,13 @@ namespace Entities.Player
                 // Speed of car, Car will move as you will provide the input to it.
                 foreach (var wheel in wheels)
                 {
-                    float verticalInput = Input.GetAxis("Vertical");
+                    wheel.wheelCollider.motorTorque = maxTorque * Input.GetAxis("Vertical");
+                    if (Input.GetAxis("Vertical") != 0) carRigidbody.AddForce(transform.forward * 100); // Fix - add more force
+                }
 
-                    // Cambia esta línea para permitir que el auto se mueva hacia atrás inmediatamente al presionar la tecla "S"
-                    wheel.wheelCollider.motorTorque = maxTorque * verticalInput;
-
-                    // Agrega fuerza hacia adelante o hacia atrás al cuerpo del auto según la entrada vertical
-                    carRigidbody.AddForce(transform.forward * maxTorque * verticalInput);
-
-                    // Changing car direction Here we are changing the steer angle of the front tires of the car so that we can change the car direction.
+                // Changing car direction Here we are changing the steer angle of the front tires of the car so that we can change the car direction.
+                foreach (var wheel in wheels)
+                {
                     if (wheel.axel == Axel.Front)
                     {
                         wheel.wheelCollider.steerAngle = 15 * Input.GetAxis("Horizontal");
@@ -190,13 +189,17 @@ namespace Entities.Player
         {
             if (Input.GetKey(KeyCode.LeftShift))
             {
+
                 ActivateTurbo();
+
             }
 
             else if (isTurboActive)
             {
                 DeactivateTurbo();
             }
+
+
         }
 
         private void AnimateWheels()
@@ -220,7 +223,13 @@ namespace Entities.Player
                 wheel.wheelCollider.brakeTorque = 10000;
             }
 
-            if ((transform.eulerAngles.z > 90f && transform.eulerAngles.z < 350f) || transform.eulerAngles.z < -90f)
+            Vector3 upDirection = transform.TransformDirection(Vector3.up);
+
+            Vector3 linecastStart = transform.position;
+
+            Vector3 linecastEnd = transform.position + upDirection * 6f;
+
+            if (Physics.Linecast(linecastStart, linecastEnd, out RaycastHit hit, groundLayer))
             {
                 isFlipped = true;
                 OnCarFlip?.Invoke();
@@ -236,6 +245,8 @@ namespace Entities.Player
                 isFlipped = false;
                 OnCarStraighten?.Invoke();
             }
+            Debug.DrawLine(linecastStart, linecastEnd, Color.red);
+
         }
 
         public void DisableCarController()
@@ -276,6 +287,8 @@ namespace Entities.Player
                 currentTurbo = Mathf.Clamp(currentTurbo, 0f, turboCapacity);
 
                 OnTurboChange?.Invoke(currentTurbo);
+
+
             }
         }
 
@@ -283,6 +296,7 @@ namespace Entities.Player
         {
             if (currentTurbo >= turboConsumptionRate)
             {
+
                 turboParticles.Play();
                 isTurboActive = true;
                 currentTurbo -= turboConsumptionRate;
@@ -292,16 +306,14 @@ namespace Entities.Player
                 OnTurboChange?.Invoke(currentTurbo);
                 Debug.Log(turboParticles.isPlaying);
                 //Debug.Log("se activo el turbo");
+            }
 
-                OnActiveTurbo?.Invoke();
-            }            
         }
 
         private void DeactivateTurbo()
         {
             isTurboActive = false;
             turboParticles.Stop();
-            OnDesactiveTurbo?.Invoke();
         }
 
         private void StartDrift()
