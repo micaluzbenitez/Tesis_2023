@@ -1,8 +1,7 @@
-using UnityEngine;
-using System;
 using System.Collections.Generic;
-using static Entities.Player.CarController;
-using Unity.VisualScripting;
+using System;
+using UnityEngine;
+using UnityEngine.Events;
 
 namespace Entities.Player
 {
@@ -41,8 +40,11 @@ namespace Entities.Player
 
         [Header("Feedbacks")]
         [SerializeField] private ParticleSystem DriftParticles;
-
         [SerializeField] private ParticleSystem turboParticles;
+
+        [Header("Unity events")]
+        [SerializeField] private UnityEvent OnActiveTurbo;
+        [SerializeField] private UnityEvent OnDesactiveTurbo;
 
         private Rigidbody carRigidbody;
 
@@ -188,17 +190,13 @@ namespace Entities.Player
         {
             if (Input.GetKey(KeyCode.LeftShift))
             {
-
                 ActivateTurbo();
-
             }
 
             else if (isTurboActive)
             {
                 DeactivateTurbo();
             }
-
-
         }
 
         private void AnimateWheels()
@@ -278,8 +276,6 @@ namespace Entities.Player
                 currentTurbo = Mathf.Clamp(currentTurbo, 0f, turboCapacity);
 
                 OnTurboChange?.Invoke(currentTurbo);
-
-
             }
         }
 
@@ -287,7 +283,6 @@ namespace Entities.Player
         {
             if (currentTurbo >= turboConsumptionRate)
             {
-
                 turboParticles.Play();
                 isTurboActive = true;
                 currentTurbo -= turboConsumptionRate;
@@ -297,14 +292,16 @@ namespace Entities.Player
                 OnTurboChange?.Invoke(currentTurbo);
                 Debug.Log(turboParticles.isPlaying);
                 //Debug.Log("se activo el turbo");
-            }
-            
+
+                OnActiveTurbo?.Invoke();
+            }            
         }
 
         private void DeactivateTurbo()
         {
             isTurboActive = false;
             turboParticles.Stop();
+            OnDesactiveTurbo?.Invoke();
         }
 
         private void StartDrift()

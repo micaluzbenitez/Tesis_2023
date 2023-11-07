@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13040014, g: 0.09601523, b: 0.06181486, a: 1}
+  m_IndirectSpecularColor: {r: 0.13040014, g: 0.096015215, b: 0.06181486, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -847,7 +847,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSmoothness: 5
-  moveOffset: {x: 0, y: 20, z: -40}
+  moveOffset: {x: 0, y: 15, z: -40}
+  turboDistance: 5
   rotationSmoothness: 7
   rotationOffset: {x: 0, y: 0, z: 0}
   carTarget: {fileID: 1064884388770396080}
@@ -4316,6 +4317,81 @@ PrefabInstance:
         type: 3}
       propertyPath: turboConsumptionRate
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148378324530037996, guid: b0dbea7574a4f1a4fbf9de68fd811b3f,
+        type: 3}
+      propertyPath: OnActiveTurbo.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148378324530037996, guid: b0dbea7574a4f1a4fbf9de68fd811b3f,
+        type: 3}
+      propertyPath: OnDesactiveTurbo.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148378324530037996, guid: b0dbea7574a4f1a4fbf9de68fd811b3f,
+        type: 3}
+      propertyPath: OnActiveTurbo.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148378324530037996, guid: b0dbea7574a4f1a4fbf9de68fd811b3f,
+        type: 3}
+      propertyPath: OnActiveTurbo.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 189273642}
+    - target: {fileID: 5148378324530037996, guid: b0dbea7574a4f1a4fbf9de68fd811b3f,
+        type: 3}
+      propertyPath: OnDesactiveTurbo.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148378324530037996, guid: b0dbea7574a4f1a4fbf9de68fd811b3f,
+        type: 3}
+      propertyPath: OnActiveTurbo.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148378324530037996, guid: b0dbea7574a4f1a4fbf9de68fd811b3f,
+        type: 3}
+      propertyPath: OnDesactiveTurbo.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 189273642}
+    - target: {fileID: 5148378324530037996, guid: b0dbea7574a4f1a4fbf9de68fd811b3f,
+        type: 3}
+      propertyPath: OnActiveTurbo.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TurbeState
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148378324530037996, guid: b0dbea7574a4f1a4fbf9de68fd811b3f,
+        type: 3}
+      propertyPath: OnDesactiveTurbo.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148378324530037996, guid: b0dbea7574a4f1a4fbf9de68fd811b3f,
+        type: 3}
+      propertyPath: OnDesactiveTurbo.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TurbeState
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148378324530037996, guid: b0dbea7574a4f1a4fbf9de68fd811b3f,
+        type: 3}
+      propertyPath: OnActiveTurbo.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Entities.Camera.CameraController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148378324530037996, guid: b0dbea7574a4f1a4fbf9de68fd811b3f,
+        type: 3}
+      propertyPath: OnActiveTurbo.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148378324530037996, guid: b0dbea7574a4f1a4fbf9de68fd811b3f,
+        type: 3}
+      propertyPath: OnDesactiveTurbo.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Entities.Camera.CameraController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148378324530037996, guid: b0dbea7574a4f1a4fbf9de68fd811b3f,
+        type: 3}
+      propertyPath: OnActiveTurbo.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148378324530037996, guid: b0dbea7574a4f1a4fbf9de68fd811b3f,
+        type: 3}
+      propertyPath: OnDesactiveTurbo.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0dbea7574a4f1a4fbf9de68fd811b3f, type: 3}
