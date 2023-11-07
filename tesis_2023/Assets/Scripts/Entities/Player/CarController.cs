@@ -103,13 +103,15 @@ namespace Entities.Player
                 // Speed of car, Car will move as you will provide the input to it.
                 foreach (var wheel in wheels)
                 {
-                    wheel.wheelCollider.motorTorque = maxTorque * Input.GetAxis("Vertical");
-                    if (Input.GetAxis("Vertical") != 0) carRigidbody.AddForce(transform.forward * 100); // Fix - add more force
-                }
+                    float verticalInput = Input.GetAxis("Vertical");
 
-                // Changing car direction Here we are changing the steer angle of the front tires of the car so that we can change the car direction.
-                foreach (var wheel in wheels)
-                {
+                    // Cambia esta línea para permitir que el auto se mueva hacia atrás inmediatamente al presionar la tecla "S"
+                    wheel.wheelCollider.motorTorque = maxTorque * verticalInput;
+
+                    // Agrega fuerza hacia adelante o hacia atrás al cuerpo del auto según la entrada vertical
+                    carRigidbody.AddForce(transform.forward * maxTorque * verticalInput);
+
+                    // Changing car direction Here we are changing the steer angle of the front tires of the car so that we can change the car direction.
                     if (wheel.axel == Axel.Front)
                     {
                         wheel.wheelCollider.steerAngle = 15 * Input.GetAxis("Horizontal");
