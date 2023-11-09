@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Slider healthBar;
     [SerializeField] private Slider turboSlider;
     [SerializeField] private GameObject victoryPanel;
+    [SerializeField] private GameObject defeatPanel;
     [SerializeField] private GameObject miniMap;
 
     public void SetSpeedText(float speed)
@@ -50,6 +51,10 @@ public class UIManager : MonoBehaviour
     public void EnableVictoryPanel()
     {
         victoryPanel.gameObject.SetActive(true);
+    }
+    public void EnableDefeatPanel()
+    {
+        defeatPanel.gameObject.SetActive(true);
     }
     public void DisableGameplayUI()
     {
