@@ -1156,6 +1156,16 @@ MonoBehaviour:
   driftFactor: 0.95
   maxSpeedForDrift: 40
   DriftParticles: {fileID: 8339889947646156504}
+  turboParticles: {fileID: 0}
+  OnActiveTurbo:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDesactiveTurbo:
+    m_PersistentCalls:
+      m_Calls: []
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!114 &454184416197507217
 MonoBehaviour:
   m_ObjectHideFlags: 0
