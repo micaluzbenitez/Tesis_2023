@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13040014, g: 0.09601523, b: 0.06181486, a: 1}
+  m_IndirectSpecularColor: {r: 0.13040014, g: 0.096015215, b: 0.06181486, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1081,7 +1081,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189273641}
-  m_LocalRotation: {x: 0.19317894, y: -0.000000008441137, z: 0.0000000016619551, w: 0.98116356}
+  m_LocalRotation: {x: 0.19317895, y: 0.000000008441137, z: -0.0000000016619552, w: 0.98116356}
   m_LocalPosition: {x: -4.8, y: 23.700016, z: -241.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1690,7 +1690,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 502635837}
-  m_LocalRotation: {x: 0.19317894, y: -0.000000008441137, z: 0.0000000016619551, w: 0.98116356}
+  m_LocalRotation: {x: 0.19317895, y: 0.000000008441137, z: -0.0000000016619552, w: 0.98116356}
   m_LocalPosition: {x: -4.8, y: 23.700016, z: -241.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3987,7 +3987,7 @@ MonoBehaviour:
   healthBar: {fileID: 774794543}
   turboSlider: {fileID: 179066680}
   victoryPanel: {fileID: 7492634}
-  defeatPanel: {fileID: 1653907183}
+  defeatPanel: {fileID: 0}
   miniMap: {fileID: 1375795203}
 --- !u!4 &1445638160
 Transform:
