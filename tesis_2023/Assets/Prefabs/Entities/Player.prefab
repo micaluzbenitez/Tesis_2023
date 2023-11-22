@@ -299,6 +299,7 @@ GameObject:
   - component: {fileID: 2334666846339638611}
   - component: {fileID: 8175807582602975222}
   - component: {fileID: 6241877104035205135}
+  - component: {fileID: 6829504936458261421}
   m_Layer: 0
   m_Name: Car_Acessory_Fender_Armour
   m_TagString: Untagged
@@ -372,6 +373,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6829504936458261421
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174879651207734659}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1288718949608336957
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,6 +546,7 @@ GameObject:
   - component: {fileID: 1293421784602690510}
   - component: {fileID: 8820290055028654761}
   - component: {fileID: 7658498169646129100}
+  - component: {fileID: 2469144868254709483}
   m_Layer: 0
   m_Name: Car_Body_Tire_Left_Front
   m_TagString: Untagged
@@ -602,6 +620,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &2469144868254709483
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378913177917883629}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1504891038938378057
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,6 +746,7 @@ GameObject:
   - component: {fileID: 4784937928024452149}
   - component: {fileID: 2425838235919866989}
   - component: {fileID: 6833505769518778418}
+  - component: {fileID: 4580194576019852108}
   m_Layer: 0
   m_Name: Car_Body_Tire_Right_Front
   m_TagString: Untagged
@@ -785,6 +820,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &4580194576019852108
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030602264163999633}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2617194882899877380
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,6 +879,7 @@ GameObject:
   - component: {fileID: 3420653481586237258}
   - component: {fileID: 6330627943995465913}
   - component: {fileID: 1778625135991875806}
+  - component: {fileID: 4458874205489429735}
   m_Layer: 0
   m_Name: Car_Accessory_AP_Windshield
   m_TagString: Untagged
@@ -901,6 +953,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &4458874205489429735
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2771003780744151835}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2801844997562530600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1179,6 +1247,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  parts:
+  - {fileID: 5402262249717986845}
+  - {fileID: 3191143067724498599}
+  - {fileID: 8996969083930437550}
+  - {fileID: 6577792325412354292}
+  - {fileID: 6033019316685864916}
+  - {fileID: 4458874205489429735}
+  - {fileID: 2542067797588785490}
+  - {fileID: 3691466530260997508}
+  - {fileID: 6829504936458261421}
+  - {fileID: 6325688854460824695}
+  - {fileID: 7881062910558243979}
+  - {fileID: 4135156420381667013}
+  - {fileID: 7172809631838374005}
+  - {fileID: 4777904819861600724}
+  - {fileID: 3658622091731457765}
+  - {fileID: 3984779319928945673}
+  - {fileID: 2469144868254709483}
+  - {fileID: 4580194576019852108}
+  - {fileID: 3621969492137775389}
+  - {fileID: 1870813455580397940}
   smokeParticles: {fileID: 2244069912662227931}
   fireParticles: {fileID: 1473148754203941563}
   explosionParticles: {fileID: 3994587274621961713}
@@ -1472,6 +1561,7 @@ GameObject:
   - component: {fileID: 2182383446126425257}
   - component: {fileID: 5943581819706366772}
   - component: {fileID: 8222680864810844539}
+  - component: {fileID: 3691466530260997508}
   m_Layer: 0
   m_Name: Car_Accessory_AP_Taillights
   m_TagString: Untagged
@@ -1545,6 +1635,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &3691466530260997508
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5192901884596674401}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5249908599961106760
 GameObject:
   m_ObjectHideFlags: 0
@@ -1556,6 +1662,7 @@ GameObject:
   - component: {fileID: 1357673608872903063}
   - component: {fileID: 4500144856580446389}
   - component: {fileID: 1904304575354184968}
+  - component: {fileID: 4777904819861600724}
   m_Layer: 0
   m_Name: Car_Accessory_Strap_2
   m_TagString: Untagged
@@ -1629,6 +1736,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &4777904819861600724
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5249908599961106760}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5598342687525623758
 GameObject:
   m_ObjectHideFlags: 0
@@ -1672,6 +1795,7 @@ GameObject:
   - component: {fileID: 6778328247713269798}
   - component: {fileID: 4671089658687613861}
   - component: {fileID: 2580751362899469660}
+  - component: {fileID: 3658622091731457765}
   m_Layer: 0
   m_Name: Car_Accessory_Strap_3
   m_TagString: Untagged
@@ -1745,6 +1869,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &3658622091731457765
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5682885250611707398}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6026798119000374233
 GameObject:
   m_ObjectHideFlags: 0
@@ -1756,6 +1896,7 @@ GameObject:
   - component: {fileID: 8356895906232944367}
   - component: {fileID: 2194783867798688179}
   - component: {fileID: 6438364118020828871}
+  - component: {fileID: 5402262249717986845}
   m_Layer: 0
   m_Name: Car_Accessory_AP_Hood
   m_TagString: Untagged
@@ -1829,6 +1970,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &5402262249717986845
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6026798119000374233}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6074056284795225971
 GameObject:
   m_ObjectHideFlags: 0
@@ -1934,6 +2091,7 @@ GameObject:
   - component: {fileID: 1551481462312405462}
   - component: {fileID: 1479765944905637831}
   - component: {fileID: 1302502647313409822}
+  - component: {fileID: 3984779319928945673}
   m_Layer: 0
   m_Name: Car_Body_Tire_Top
   m_TagString: Untagged
@@ -2007,6 +2165,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &3984779319928945673
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6163423037772002429}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6291337667823366588
 GameObject:
   m_ObjectHideFlags: 0
@@ -2018,6 +2192,7 @@ GameObject:
   - component: {fileID: 3781979599296052213}
   - component: {fileID: 7737112594474674733}
   - component: {fileID: 3727302185734078247}
+  - component: {fileID: 6577792325412354292}
   m_Layer: 0
   m_Name: Car_Accessory_AP_Right_Door
   m_TagString: Untagged
@@ -2091,6 +2266,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6577792325412354292
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291337667823366588}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6317990677228813035
 GameObject:
   m_ObjectHideFlags: 0
@@ -2102,6 +2293,7 @@ GameObject:
   - component: {fileID: 720235842131571673}
   - component: {fileID: 6311898199156458710}
   - component: {fileID: 520978388761957173}
+  - component: {fileID: 1870813455580397940}
   m_Layer: 0
   m_Name: Car_Body_Tire_Right_Back
   m_TagString: Untagged
@@ -2175,6 +2367,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &1870813455580397940
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6317990677228813035}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6323517236037797507
 GameObject:
   m_ObjectHideFlags: 0
@@ -2186,6 +2394,7 @@ GameObject:
   - component: {fileID: 31909931874374637}
   - component: {fileID: 6969100242361164054}
   - component: {fileID: 4991082030560575915}
+  - component: {fileID: 6325688854460824695}
   m_Layer: 0
   m_Name: Car_Accessory_Exhaust_1
   m_TagString: Untagged
@@ -2259,6 +2468,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6325688854460824695
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6323517236037797507}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6465203091746153171
 GameObject:
   m_ObjectHideFlags: 0
@@ -2422,6 +2647,7 @@ GameObject:
   - component: {fileID: 542690272633282587}
   - component: {fileID: 1621606076011186291}
   - component: {fileID: 8781478775813406800}
+  - component: {fileID: 7172809631838374005}
   m_Layer: 0
   m_Name: Car_Accessory_Strap_1
   m_TagString: Untagged
@@ -2495,6 +2721,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &7172809631838374005
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7057227033577252002}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7089830057091333296
 GameObject:
   m_ObjectHideFlags: 0
@@ -2539,6 +2781,7 @@ GameObject:
   - component: {fileID: 1619518368449432751}
   - component: {fileID: 3994652212476434536}
   - component: {fileID: 422201238997112002}
+  - component: {fileID: 3191143067724498599}
   m_Layer: 0
   m_Name: Car_Accessory_AP_Left_Back
   m_TagString: Untagged
@@ -2612,6 +2855,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &3191143067724498599
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7145885331719342667}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7148368508864220645
 GameObject:
   m_ObjectHideFlags: 0
@@ -2754,6 +3013,7 @@ GameObject:
   - component: {fileID: 2572061743369587527}
   - component: {fileID: 9160554763253847236}
   - component: {fileID: 7068140365022036228}
+  - component: {fileID: 8996969083930437550}
   m_Layer: 0
   m_Name: Car_Accessory_AP_Left_Door
   m_TagString: Untagged
@@ -2827,6 +3087,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &8996969083930437550
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7438069123894162949}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7500874794153043902
 GameObject:
   m_ObjectHideFlags: 0
@@ -2939,6 +3215,7 @@ GameObject:
   - component: {fileID: 598630426709125549}
   - component: {fileID: 772115516930148432}
   - component: {fileID: 1512331709725165350}
+  - component: {fileID: 7881062910558243979}
   m_Layer: 0
   m_Name: Car_Accessory_Exhaust_2
   m_TagString: Untagged
@@ -3012,6 +3289,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &7881062910558243979
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7898768597764569953}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7914974439799271448
 GameObject:
   m_ObjectHideFlags: 0
@@ -3023,6 +3316,7 @@ GameObject:
   - component: {fileID: 9015931029462030300}
   - component: {fileID: 5031333783255564333}
   - component: {fileID: 6654388954942812392}
+  - component: {fileID: 3621969492137775389}
   m_Layer: 0
   m_Name: Car_Body_Tire_Left_Back
   m_TagString: Untagged
@@ -3096,6 +3390,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &3621969492137775389
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7914974439799271448}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8033132848053812056
 GameObject:
   m_ObjectHideFlags: 0
@@ -3107,6 +3417,7 @@ GameObject:
   - component: {fileID: 7461169124957871184}
   - component: {fileID: 8610043209326260864}
   - component: {fileID: 889051171682442832}
+  - component: {fileID: 2542067797588785490}
   m_Layer: 0
   m_Name: Car_Accessory_AP_Headlights
   m_TagString: Untagged
@@ -3180,6 +3491,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &2542067797588785490
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8033132848053812056}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8169105769718995895
 GameObject:
   m_ObjectHideFlags: 0
@@ -3224,6 +3551,7 @@ GameObject:
   - component: {fileID: 8821166836484255447}
   - component: {fileID: 3230237655019802383}
   - component: {fileID: 5166507575832948923}
+  - component: {fileID: 4135156420381667013}
   m_Layer: 0
   m_Name: Car_Accessory_Roof_Rack
   m_TagString: Untagged
@@ -3297,6 +3625,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &4135156420381667013
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8182014792123574113}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &9135431642207012632
 GameObject:
   m_ObjectHideFlags: 0
@@ -3308,6 +3652,7 @@ GameObject:
   - component: {fileID: 8719669259277934067}
   - component: {fileID: 8596047643195394855}
   - component: {fileID: 2780812650627080400}
+  - component: {fileID: 6033019316685864916}
   m_Layer: 0
   m_Name: Car_Accessory_AP_Right_Window
   m_TagString: Untagged
@@ -3381,6 +3726,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6033019316685864916
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9135431642207012632}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1111964515890638130
 PrefabInstance:
   m_ObjectHideFlags: 0

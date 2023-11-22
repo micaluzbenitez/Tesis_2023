@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Entities
 {
@@ -7,6 +8,9 @@ namespace Entities
     {
         [Header("HP")]
         [SerializeField] private int maxHealth = 100;
+
+        [Header("Car parts")]
+        [SerializeField] private Rigidbody[] parts = null;
 
         [Header("Feedbacks")]
         [SerializeField] private ParticleSystem smokeParticles;
@@ -59,8 +63,9 @@ namespace Entities
                 explosionParticles.Play();
                 destroyParticles.Play();
                 OnZeroHealth?.Invoke();
-                this.enabled = false;
                 alive = false;
+                DestroyCarParts();
+                this.enabled = false;
             }
         }
 
@@ -74,6 +79,8 @@ namespace Entities
         private void FixedUpdate()
         {
             UpdateVelocityData();
+
+            if (Input.GetKeyDown(KeyCode.M)) DestroyCarParts();
         }
 
         private void UpdateVelocityData()
@@ -117,6 +124,23 @@ namespace Entities
                 }
             }
         }
+
+        private void DestroyCarParts()
+        {
+            for (int i = 0; i < parts.Length; i++)
+            {
+                parts[i].gameObject.transform.SetParent(null);
+                parts[i].gameObject.transform.rotation = Random.rotation;
+
+                parts[i].isKinematic = false;
+                parts[i].useGravity = true;
+
+                Vector3 explosionDirection = (parts[i].position - transform.position).normalized;
+                parts[i].AddForce(explosionDirection * Random.Range(10, 20), ForceMode.VelocityChange);
+                parts[i].AddTorque(Random.insideUnitSphere * Random.Range(10, 20), ForceMode.VelocityChange);
+            }
+        }
+
         public void Win()
         {
             OnWin?.Invoke(score);

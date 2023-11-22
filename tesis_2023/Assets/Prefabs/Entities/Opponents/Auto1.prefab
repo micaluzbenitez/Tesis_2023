@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5218090094685079632}
   - component: {fileID: 4693426065313288065}
   - component: {fileID: 2410975711539412756}
+  - component: {fileID: 9040029211701039926}
   m_Layer: 0
   m_Name: wheel_left_front
   m_TagString: Untagged
@@ -84,6 +85,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &9040029211701039926
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280395908471092848}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &306030171081062172
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,6 +147,7 @@ GameObject:
   - component: {fileID: 4924233554743327520}
   - component: {fileID: 5309830070873660676}
   - component: {fileID: 8007169889184025007}
+  - component: {fileID: 6707904425188629601}
   m_Layer: 0
   m_Name: pCube8
   m_TagString: Untagged
@@ -203,6 +221,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6707904425188629601
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340031155460052948}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &462431276786579489
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,6 +330,7 @@ GameObject:
   - component: {fileID: 6047225678951584961}
   - component: {fileID: 747043066920874095}
   - component: {fileID: 2926940741146328406}
+  - component: {fileID: 5789388940024002504}
   m_Layer: 0
   m_Name: wheel_left_back
   m_TagString: Untagged
@@ -369,6 +404,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &5789388940024002504
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308236616054730055}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1357556572333720590
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,6 +735,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  parts:
+  - {fileID: 2631882308512735100}
+  - {fileID: 8244252436613895638}
+  - {fileID: 6164663722684751756}
+  - {fileID: 5707037719741558532}
+  - {fileID: 1983283528711034335}
+  - {fileID: 6707904425188629601}
+  - {fileID: 5278395788449353562}
+  - {fileID: 368481116302335945}
+  - {fileID: 3974207992312036221}
+  - {fileID: 3524843693063413482}
+  - {fileID: 6607680696796624781}
+  - {fileID: 6331450392177391049}
+  - {fileID: 5789388940024002504}
+  - {fileID: 9040029211701039926}
+  - {fileID: 1334434892568535577}
+  - {fileID: 3122858327451068581}
   smokeParticles: {fileID: 8052928931914929669}
   fireParticles: {fileID: 3479220197815081571}
   explosionParticles: {fileID: 2267034554678338506}
@@ -699,6 +767,7 @@ GameObject:
   - component: {fileID: 3011264067372728788}
   - component: {fileID: 1881971411711277410}
   - component: {fileID: 6380090262681870446}
+  - component: {fileID: 1983283528711034335}
   m_Layer: 0
   m_Name: pCube6
   m_TagString: Untagged
@@ -772,6 +841,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &1983283528711034335
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2524166691120420942}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2528467010724552988
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,6 +868,7 @@ GameObject:
   - component: {fileID: 5245706569180869885}
   - component: {fileID: 9200017281655871249}
   - component: {fileID: 8906006295783062680}
+  - component: {fileID: 1334434892568535577}
   m_Layer: 0
   m_Name: wheel_right_back
   m_TagString: Untagged
@@ -856,6 +942,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &1334434892568535577
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2528467010724552988}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3470461214141176189
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,6 +1053,7 @@ GameObject:
   - component: {fileID: 3911355186587854796}
   - component: {fileID: 6342728137404802844}
   - component: {fileID: 5281379539044006231}
+  - component: {fileID: 6331450392177391049}
   m_Layer: 0
   m_Name: pCylinder4
   m_TagString: Untagged
@@ -1024,6 +1127,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6331450392177391049
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3565142464555958089}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4214534659803653525
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,6 +1238,7 @@ GameObject:
   - component: {fileID: 9031002056046798116}
   - component: {fileID: 829053480274823146}
   - component: {fileID: 3899099289878263047}
+  - component: {fileID: 3974207992312036221}
   m_Layer: 0
   m_Name: pCube11
   m_TagString: Untagged
@@ -1192,6 +1312,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &3974207992312036221
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4798775034508051872}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4966047140235552189
 GameObject:
   m_ObjectHideFlags: 0
@@ -1203,6 +1339,7 @@ GameObject:
   - component: {fileID: 2908180118532459913}
   - component: {fileID: 5192088622828420582}
   - component: {fileID: 132686731110758167}
+  - component: {fileID: 6607680696796624781}
   m_Layer: 0
   m_Name: pCube7
   m_TagString: Untagged
@@ -1276,6 +1413,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6607680696796624781
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4966047140235552189}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4984637078680244042
 GameObject:
   m_ObjectHideFlags: 0
@@ -1371,6 +1524,7 @@ GameObject:
   - component: {fileID: 3699186687401350806}
   - component: {fileID: 6199229734661925182}
   - component: {fileID: 5040069850648207133}
+  - component: {fileID: 6164663722684751756}
   m_Layer: 0
   m_Name: pCube4
   m_TagString: Untagged
@@ -1444,6 +1598,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6164663722684751756
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5183562444692221146}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5241344455616565683
 GameObject:
   m_ObjectHideFlags: 0
@@ -1455,6 +1625,7 @@ GameObject:
   - component: {fileID: 7644706650343062440}
   - component: {fileID: 6820708730947396763}
   - component: {fileID: 5900047866039357737}
+  - component: {fileID: 3122858327451068581}
   m_Layer: 0
   m_Name: wheel_right_front
   m_TagString: Untagged
@@ -1528,6 +1699,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &3122858327451068581
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5241344455616565683}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6140649871660162973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,6 +1726,7 @@ GameObject:
   - component: {fileID: 5152780677720771715}
   - component: {fileID: 2851392557180939252}
   - component: {fileID: 3491594149244620792}
+  - component: {fileID: 3524843693063413482}
   m_Layer: 0
   m_Name: pCube12
   m_TagString: Untagged
@@ -1612,6 +1800,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &3524843693063413482
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6140649871660162973}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6399773006127845326
 GameObject:
   m_ObjectHideFlags: 0
@@ -1707,6 +1911,7 @@ GameObject:
   - component: {fileID: 2708884527816423933}
   - component: {fileID: 4656129109033120756}
   - component: {fileID: 9145172262322614473}
+  - component: {fileID: 2631882308512735100}
   m_Layer: 0
   m_Name: bandera
   m_TagString: Untagged
@@ -1780,6 +1985,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &2631882308512735100
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6802001991460278342}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6857439456851052793
 GameObject:
   m_ObjectHideFlags: 0
@@ -1826,6 +2047,7 @@ GameObject:
   - component: {fileID: 7438768270343907376}
   - component: {fileID: 1877117227220473397}
   - component: {fileID: 269890892616825401}
+  - component: {fileID: 368481116302335945}
   m_Layer: 0
   m_Name: pCube10
   m_TagString: Untagged
@@ -1899,6 +2121,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &368481116302335945
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6958982613000966931}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7966174604274552304
 GameObject:
   m_ObjectHideFlags: 0
@@ -1910,6 +2148,7 @@ GameObject:
   - component: {fileID: 322045448329140848}
   - component: {fileID: 572821402028455236}
   - component: {fileID: 9083168619083272976}
+  - component: {fileID: 5278395788449353562}
   m_Layer: 0
   m_Name: pCube9
   m_TagString: Untagged
@@ -1983,6 +2222,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &5278395788449353562
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7966174604274552304}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8342167944642862629
 GameObject:
   m_ObjectHideFlags: 0
@@ -1994,6 +2249,7 @@ GameObject:
   - component: {fileID: 2270473953416939856}
   - component: {fileID: 2342376274063236940}
   - component: {fileID: 2024560521815449291}
+  - component: {fileID: 8244252436613895638}
   m_Layer: 0
   m_Name: pCube1
   m_TagString: Untagged
@@ -2067,6 +2323,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &8244252436613895638
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8342167944642862629}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8475969368688148328
 GameObject:
   m_ObjectHideFlags: 0
@@ -2078,6 +2350,7 @@ GameObject:
   - component: {fileID: 8782664378737852590}
   - component: {fileID: 4358580058541421920}
   - component: {fileID: 1849367685107455351}
+  - component: {fileID: 5707037719741558532}
   m_Layer: 0
   m_Name: pCube5
   m_TagString: Untagged
@@ -2151,6 +2424,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &5707037719741558532
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8475969368688148328}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &2844020730268486409
 PrefabInstance:
   m_ObjectHideFlags: 0
