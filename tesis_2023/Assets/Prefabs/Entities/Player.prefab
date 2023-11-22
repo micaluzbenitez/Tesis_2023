@@ -1068,7 +1068,7 @@ GameObject:
   - component: {fileID: 9105109400279112050}
   - component: {fileID: 510184693490250806}
   m_Layer: 0
-  m_Name: Auto2
+  m_Name: Player
   m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
