@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2909791208490507775}
   - component: {fileID: 7431527993820257018}
   - component: {fileID: 7142660754582080887}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Segment_8
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1058879079994517603
 Transform:
   m_ObjectHideFlags: 0
@@ -122,10 +122,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430714185955554009}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 185650658103933458}
   m_Father: {fileID: 0}
@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 3417892192227866425}
   - component: {fileID: 7133420007871209198}
   - component: {fileID: 2928255149850013175}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Outer_Corner_2
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 8423035388832137995}
   - component: {fileID: 538849091810749259}
   - component: {fileID: 5248655994990803564}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Segment_2
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -374,7 +374,7 @@ GameObject:
   - component: {fileID: 2686522321527529405}
   - component: {fileID: 527603154855984850}
   - component: {fileID: 2801346086692715380}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Sewage_Exit_8
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -473,7 +473,7 @@ GameObject:
   - component: {fileID: 4317830889266400663}
   - component: {fileID: 5114018661131583851}
   - component: {fileID: 3703602931865454185}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Drainage_Tunnel_1
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -572,7 +572,7 @@ GameObject:
   - component: {fileID: 280126062125276674}
   - component: {fileID: 5296561327579014974}
   - component: {fileID: 4837698158936094039}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Sewage_Exit_3
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -671,7 +671,7 @@ GameObject:
   - component: {fileID: 3029237416860862996}
   - component: {fileID: 9162107029690744056}
   - component: {fileID: 8370319601954493303}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Inner_Corner_2
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -809,7 +809,7 @@ GameObject:
   - component: {fileID: 8773903254974367408}
   - component: {fileID: 8973488389850079798}
   - component: {fileID: 503351751898632003}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Inner_Corner_4
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -908,7 +908,7 @@ GameObject:
   - component: {fileID: 8242652211025623910}
   - component: {fileID: 5977609178311103462}
   - component: {fileID: 5400562404703344724}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Sewage_Exit_4
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -1007,7 +1007,7 @@ GameObject:
   - component: {fileID: 2695486649932272262}
   - component: {fileID: 5417790555061821024}
   - component: {fileID: 6340838061620891707}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Segment_1
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -1106,7 +1106,7 @@ GameObject:
   - component: {fileID: 5271514387871343594}
   - component: {fileID: 65500749373464521}
   - component: {fileID: 4605511939395105930}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Sewage_Exit_2
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -1205,7 +1205,7 @@ GameObject:
   - component: {fileID: 1620750790162383782}
   - component: {fileID: 3493175466513195983}
   - component: {fileID: 5032243679203122991}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Segment_6
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -1304,7 +1304,7 @@ GameObject:
   - component: {fileID: 6202373978312596363}
   - component: {fileID: 5025578474738887184}
   - component: {fileID: 4133756687472872781}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Inner_Corner_8
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -1440,7 +1440,7 @@ GameObject:
   - component: {fileID: 4476153117462132670}
   - component: {fileID: 8708687984352383817}
   - component: {fileID: 4720371794775374234}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Segment_5
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -1539,7 +1539,7 @@ GameObject:
   - component: {fileID: 5476494024326220110}
   - component: {fileID: 7016085966858285285}
   - component: {fileID: 6775328123348456120}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Inner_Corner_5
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -1638,7 +1638,7 @@ GameObject:
   - component: {fileID: 3327103554246416162}
   - component: {fileID: 5573016629824897572}
   - component: {fileID: 1081975590812588930}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Segment_3
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -1737,7 +1737,7 @@ GameObject:
   - component: {fileID: 364604998380168313}
   - component: {fileID: 8377031635609854365}
   - component: {fileID: 7303493823648895235}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Outer_Corner_1
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -1836,7 +1836,7 @@ GameObject:
   - component: {fileID: 1719528193891255047}
   - component: {fileID: 4901672287091105483}
   - component: {fileID: 7523742567625005159}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Inner_Corner_7
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -1935,7 +1935,7 @@ GameObject:
   - component: {fileID: 7715351302394346442}
   - component: {fileID: 409059315808624897}
   - component: {fileID: 7972632518396952022}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Outer_Corner_3
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -2034,7 +2034,7 @@ GameObject:
   - component: {fileID: 8034629263253925636}
   - component: {fileID: 1635560056115650421}
   - component: {fileID: 5001384154354015096}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Segment_4
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -2133,7 +2133,7 @@ GameObject:
   - component: {fileID: 1793009803736922483}
   - component: {fileID: 7879048661480983290}
   - component: {fileID: 2204675562324750145}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Drainage_Tunnel_2
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -2271,7 +2271,7 @@ GameObject:
   - component: {fileID: 4934106373867850458}
   - component: {fileID: 823025898826892865}
   - component: {fileID: 7357487405162651241}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Inner_Corner_3
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -2370,7 +2370,7 @@ GameObject:
   - component: {fileID: 5107512698731703783}
   - component: {fileID: 5467076000710665687}
   - component: {fileID: 3155216740776036830}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Sewage_Exit_7
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -2469,7 +2469,7 @@ GameObject:
   - component: {fileID: 1270772249529273793}
   - component: {fileID: 735223027538383712}
   - component: {fileID: 7913556532712598245}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Outer_Corner_4
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -2568,7 +2568,7 @@ GameObject:
   - component: {fileID: 4722817826114199047}
   - component: {fileID: 7967349365977239610}
   - component: {fileID: 2636878967244457287}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Inner_Corner_1
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -2667,7 +2667,7 @@ GameObject:
   - component: {fileID: 379210205510117366}
   - component: {fileID: 7776524535618797715}
   - component: {fileID: 8829430663003355605}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Sewage_Exit_6
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -2766,7 +2766,7 @@ GameObject:
   - component: {fileID: 1554454403854002157}
   - component: {fileID: 1784741744512639178}
   - component: {fileID: 774890122956724637}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Segment_7
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -2865,7 +2865,7 @@ GameObject:
   - component: {fileID: 7910049166457980248}
   - component: {fileID: 293977014865671095}
   - component: {fileID: 8557907506735029794}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Ground_1
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -2963,7 +2963,7 @@ GameObject:
   - component: {fileID: 8828348717385978587}
   - component: {fileID: 1641569992406856174}
   - component: {fileID: 7927219592614158292}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Sewage_Exit_1
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -3062,7 +3062,7 @@ GameObject:
   - component: {fileID: 7905174951449995994}
   - component: {fileID: 2606173219389012167}
   - component: {fileID: 1404191029222062008}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Sewage_Exit_5
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -3235,7 +3235,7 @@ GameObject:
   - component: {fileID: 8912705264810764827}
   - component: {fileID: 8986818835731044137}
   - component: {fileID: 639703181532545007}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena_Wall_Inner_Corner_6
   m_TagString: Floor
   m_Icon: {fileID: 0}

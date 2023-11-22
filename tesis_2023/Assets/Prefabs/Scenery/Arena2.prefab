@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 1900775703505178653}
   - component: {fileID: 7666361754901003830}
   - component: {fileID: 3220399471460915334}
-  m_Layer: 0
+  - component: {fileID: 1925744390314066970}
+  m_Layer: 3
   m_Name: Gen_Flatbed_metal_STATUC
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1900775703505178653
 Transform:
@@ -83,6 +84,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1925744390314066970
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152308744016119876}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1847797301769214400, guid: 285c405049952f9499431c263c07f6a4, type: 3}
 --- !u!1 &379169535273140701
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,9 +107,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1011273630978104167}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena2
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,10 +121,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 379169535273140701}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.049999997, y: 0.049999997, z: 0.049999997}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7402805742388479791}
   - {fileID: 7669527878105769103}
@@ -127,12 +142,13 @@ GameObject:
   - component: {fileID: 326986895712695751}
   - component: {fileID: 4763782767575269229}
   - component: {fileID: 2043603578245226561}
-  m_Layer: 0
+  - component: {fileID: 7338638948253060695}
+  m_Layer: 3
   m_Name: Gen_Props_varied_STATIC
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &326986895712695751
 Transform:
@@ -199,6 +215,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7338638948253060695
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218610931664838897}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1187936231980217226, guid: 285c405049952f9499431c263c07f6a4, type: 3}
 --- !u!1 &2236852468253323517
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,9 +238,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7669527878105769103}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Generator_World_ORIGINAL1
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -244,9 +274,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7402805742388479791}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ARENA_Original1
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -281,12 +311,13 @@ GameObject:
   - component: {fileID: 7244183211364338222}
   - component: {fileID: 2312616500922992077}
   - component: {fileID: 1934347637112680199}
-  m_Layer: 0
+  - component: {fileID: 342452503116150574}
+  m_Layer: 3
   m_Name: Arena_Concrete_Walls_STATIC
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7244183211364338222
 Transform:
@@ -353,6 +384,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &342452503116150574
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3818633779222382348}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8420021949473256195, guid: 285c405049952f9499431c263c07f6a4, type: 3}
 --- !u!1 &4157055950533462747
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,12 +409,13 @@ GameObject:
   - component: {fileID: 1305484701245931795}
   - component: {fileID: 4124894619055431643}
   - component: {fileID: 2878594207156233761}
-  m_Layer: 0
+  - component: {fileID: 821072126106284573}
+  m_Layer: 3
   m_Name: Gen_Structure_metal_STATIC
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1305484701245931795
 Transform:
@@ -436,6 +482,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &821072126106284573
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4157055950533462747}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5872778340916422237, guid: 285c405049952f9499431c263c07f6a4, type: 3}
 --- !u!1 &4649080102777731234
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,12 +507,13 @@ GameObject:
   - component: {fileID: 2060099922705577291}
   - component: {fileID: 6048309807109175899}
   - component: {fileID: 7707478358773335175}
-  m_Layer: 0
+  - component: {fileID: 5187754022476052984}
+  m_Layer: 3
   m_Name: Arena_Entrance_STATIC
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &2060099922705577291
 Transform:
@@ -519,6 +580,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5187754022476052984
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4649080102777731234}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8146312539483997299, guid: 285c405049952f9499431c263c07f6a4, type: 3}
 --- !u!1 &5578798071220818689
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,12 +605,13 @@ GameObject:
   - component: {fileID: 2563097400214112397}
   - component: {fileID: 8318552251568406502}
   - component: {fileID: 1953633352248245065}
-  m_Layer: 0
+  - component: {fileID: 5970277889109169537}
+  m_Layer: 3
   m_Name: Arena_Sand_Walls_sand_STATIC
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &2563097400214112397
 Transform:
@@ -602,6 +678,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5970277889109169537
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5578798071220818689}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6402191229528980423, guid: 285c405049952f9499431c263c07f6a4, type: 3}
 --- !u!1 &6283695640256301454
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,12 +703,13 @@ GameObject:
   - component: {fileID: 344372335048904275}
   - component: {fileID: 6370734119353308326}
   - component: {fileID: 1832920963434700601}
-  m_Layer: 0
+  - component: {fileID: 3034699920910155285}
+  m_Layer: 3
   m_Name: Arena_Ground_sand_STATIC
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &344372335048904275
 Transform:
@@ -685,6 +776,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3034699920910155285
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6283695640256301454}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2935663175876286858, guid: 285c405049952f9499431c263c07f6a4, type: 3}
 --- !u!1 &7032362558400511383
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,12 +801,13 @@ GameObject:
   - component: {fileID: 5338191694030360545}
   - component: {fileID: 148514599472447075}
   - component: {fileID: 2978156437700843462}
-  m_Layer: 0
+  - component: {fileID: 4494220432966899398}
+  m_Layer: 3
   m_Name: Gen_Walls_metal_STATIC
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &5338191694030360545
 Transform:
@@ -768,6 +874,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4494220432966899398
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7032362558400511383}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8853410170391942960, guid: 285c405049952f9499431c263c07f6a4, type: 3}
 --- !u!1 &8884714219627379421
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,12 +899,13 @@ GameObject:
   - component: {fileID: 7414485816521241778}
   - component: {fileID: 2198310861634715434}
   - component: {fileID: 7816935709422254501}
-  m_Layer: 0
+  - component: {fileID: 8592681973559115678}
+  m_Layer: 3
   m_Name: Gen_Barriers_concrete_STATIC
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7414485816521241778
 Transform:
@@ -851,3 +972,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8592681973559115678
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8884714219627379421}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4947671880281763650, guid: 285c405049952f9499431c263c07f6a4, type: 3}
