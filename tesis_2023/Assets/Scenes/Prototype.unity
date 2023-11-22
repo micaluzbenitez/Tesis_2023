@@ -5529,7 +5529,7 @@ PrefabInstance:
     - target: {fileID: 430714185955554009, guid: e2ec2f99a161c824f9c54b523fda365a,
         type: 3}
       propertyPath: m_Name
-      value: Arena
+      value: Arena1
       objectReference: {fileID: 0}
     - target: {fileID: 545858908880281164, guid: e2ec2f99a161c824f9c54b523fda365a,
         type: 3}
