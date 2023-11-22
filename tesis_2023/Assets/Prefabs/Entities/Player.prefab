@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6137811751474951875}
   m_Layer: 0
   m_Name: Car_Body_Bumper_Front_Top
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 8186257469182018548}
   m_Layer: 0
   m_Name: Car_Body_Taillight_Right
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 2836852783793652631}
   m_Layer: 0
   m_Name: Car_Body_Spoiler
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -285,6 +285,7 @@ Transform:
   - {fileID: 3994587274637164721}
   - {fileID: 8069609339767642019}
   - {fileID: 8173881561013365210}
+  - {fileID: 8760420184788061466}
   m_Father: {fileID: 2785860421918777187}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -464,7 +465,7 @@ GameObject:
   - component: {fileID: 7726804544632330323}
   m_Layer: 0
   m_Name: Car_Body_Taillight_Left
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1017,7 +1018,7 @@ GameObject:
   - component: {fileID: 7359442060220381148}
   m_Layer: 0
   m_Name: Car_Body_Bumper_Back
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1183,7 +1184,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3306361102689469913}
   serializedVersion: 2
-  m_Mass: 250
+  m_Mass: 350
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -1217,20 +1218,44 @@ MonoBehaviour:
   - wheelModel: {fileID: 7568875287662841471}
     wheelCollider: {fileID: 4477410998943431153}
     axel: 1
-  turboForce: 20000
+  turboForce: 5000
   turboCapacity: 100
   turboRechargeRate: 10
-  turboConsumptionRate: 5
+  turboConsumptionRate: 0.5
   driftFactor: 0.95
   maxSpeedForDrift: 40
   DriftParticles: {fileID: 8339889947646156504}
-  turboParticles: {fileID: 0}
+  turboParticles: {fileID: 8760420184769710170}
   OnActiveTurbo:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Entities.Camera.CameraController, Assembly-CSharp
+        m_MethodName: TurbeState
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   OnDesactiveTurbo:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Entities.Camera.CameraController, Assembly-CSharp
+        m_MethodName: TurbeState
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -1530,7 +1555,7 @@ GameObject:
   - component: {fileID: 4968827475864125144}
   m_Layer: 0
   m_Name: Tires
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1665,7 +1690,7 @@ GameObject:
   - component: {fileID: 4777904819861600724}
   m_Layer: 0
   m_Name: Car_Accessory_Strap_2
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1798,7 +1823,7 @@ GameObject:
   - component: {fileID: 3658622091731457765}
   m_Layer: 0
   m_Name: Car_Accessory_Strap_3
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2094,7 +2119,7 @@ GameObject:
   - component: {fileID: 3984779319928945673}
   m_Layer: 0
   m_Name: Car_Body_Tire_Top
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2397,7 +2422,7 @@ GameObject:
   - component: {fileID: 6325688854460824695}
   m_Layer: 0
   m_Name: Car_Accessory_Exhaust_1
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2532,7 +2557,7 @@ GameObject:
   - component: {fileID: 433746349015476551}
   m_Layer: 0
   m_Name: Car_Body_Bumper_Front_Bottom
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2650,7 +2675,7 @@ GameObject:
   - component: {fileID: 7172809631838374005}
   m_Layer: 0
   m_Name: Car_Accessory_Strap_1
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3218,7 +3243,7 @@ GameObject:
   - component: {fileID: 7881062910558243979}
   m_Layer: 0
   m_Name: Car_Accessory_Exhaust_2
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3554,7 +3579,7 @@ GameObject:
   - component: {fileID: 4135156420381667013}
   m_Layer: 0
   m_Name: Car_Accessory_Roof_Rack
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4077,6 +4102,107 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5432779323808007421, guid: 89c132c2612847849b0c95e44a0cf86e,
     type: 3}
   m_PrefabInstance: {fileID: 2636891608027468638}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2913380351919990841
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4687244633470410796}
+    m_Modifications:
+    - target: {fileID: 5907918146810476803, guid: abe32027bf11549478075806dbddf3d4,
+        type: 3}
+      propertyPath: m_Name
+      value: TurboParticles
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907918146810897699, guid: abe32027bf11549478075806dbddf3d4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907918146810897699, guid: abe32027bf11549478075806dbddf3d4,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4005
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907918146810897699, guid: abe32027bf11549478075806dbddf3d4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.684
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907918146810897699, guid: abe32027bf11549478075806dbddf3d4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907918146810897699, guid: abe32027bf11549478075806dbddf3d4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907918146810897699, guid: abe32027bf11549478075806dbddf3d4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907918146810897699, guid: abe32027bf11549478075806dbddf3d4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907918146810897699, guid: abe32027bf11549478075806dbddf3d4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907918146810897699, guid: abe32027bf11549478075806dbddf3d4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907918146810897699, guid: abe32027bf11549478075806dbddf3d4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907918146810897699, guid: abe32027bf11549478075806dbddf3d4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907918146810897699, guid: abe32027bf11549478075806dbddf3d4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907918146825052257, guid: abe32027bf11549478075806dbddf3d4,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907918146825052259, guid: abe32027bf11549478075806dbddf3d4,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907918146825052259, guid: abe32027bf11549478075806dbddf3d4,
+        type: 3}
+      propertyPath: ShapeModule.angle
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: abe32027bf11549478075806dbddf3d4, type: 3}
+--- !u!198 &8760420184769710170 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5907918146825052259, guid: abe32027bf11549478075806dbddf3d4,
+    type: 3}
+  m_PrefabInstance: {fileID: 2913380351919990841}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8760420184788061466 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5907918146810897699, guid: abe32027bf11549478075806dbddf3d4,
+    type: 3}
+  m_PrefabInstance: {fileID: 2913380351919990841}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3271014669627991997
 PrefabInstance:
