@@ -73,6 +73,7 @@ namespace Entities.Player
 
         [SerializeField] LayerMask groundLayer;
 
+        [SerializeField] private GameObject hitParticles;
         private void Start()
         {
             isTurboActive = false;
@@ -301,7 +302,7 @@ namespace Entities.Player
                 //Debug.Log("se activo el turbo");
 
                 OnActiveTurbo?.Invoke();
-            }            
+            }
         }
 
         private void DeactivateTurbo()
@@ -341,6 +342,13 @@ namespace Entities.Player
             {
 
                 wheel.sidewaysFriction = originalFriction;
+            }
+        }
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.CompareTag("Car"))
+            {
+                Instantiate(hitParticles, collision.contacts[0].point, Quaternion.identity);
             }
         }
     }

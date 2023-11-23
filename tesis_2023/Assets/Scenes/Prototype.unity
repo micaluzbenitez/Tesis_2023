@@ -5697,6 +5697,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5148378324530037996, guid: b0dbea7574a4f1a4fbf9de68fd811b3f,
         type: 3}
+      propertyPath: hitParticles
+      value: 
+      objectReference: {fileID: 6192724089161036641, guid: e17d9a3f04750764c8c0a7a0461e4c3b,
+        type: 3}
+    - target: {fileID: 5148378324530037996, guid: b0dbea7574a4f1a4fbf9de68fd811b3f,
+        type: 3}
       propertyPath: OnActiveTurbo.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 189273642}
