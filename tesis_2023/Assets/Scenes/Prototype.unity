@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13040014, g: 0.096015215, b: 0.06181486, a: 1}
+  m_IndirectSpecularColor: {r: 0.13040014, g: 0.09601523, b: 0.06181486, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -808,7 +808,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -334.6, y: 84.3}
+  m_AnchoredPosition: {x: -334.59998, y: 84.299805}
   m_SizeDelta: {x: 160, y: 19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &179066680
@@ -875,7 +875,6 @@ GameObject:
   - component: {fileID: 189273644}
   - component: {fileID: 189273643}
   - component: {fileID: 189273642}
-  - component: {fileID: 189273647}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: Untagged
@@ -1000,40 +999,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &189273647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 189273641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShowDebugText: 0
-  m_ShowCameraFrustum: 1
-  m_IgnoreTimeScale: 0
-  m_WorldUpOverride: {fileID: 0}
-  m_UpdateMethod: 0
-  m_BlendUpdateMethod: 1
-  m_DefaultBlend:
-    m_Style: 1
-    m_Time: 2
-    m_CustomCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-  m_CustomBlends: {fileID: 0}
-  m_CameraCutEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_CameraActivatedEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1001 &313703048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2277,7 +2242,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -269.7, y: -114.2}
+  m_AnchoredPosition: {x: -269.7, y: -114.200195}
   m_SizeDelta: {x: 441.2415, y: 145.3029}
   m_Pivot: {x: 0.5000001, y: 0.5000005}
 --- !u!114 &761539547
@@ -2919,6 +2884,7 @@ MonoBehaviour:
   uiManager: {fileID: 1445638159}
   playerLife: {fileID: 8006504248611335234}
   opponentsManager: {fileID: 1342829444}
+  gravity: 45
 --- !u!4 &1076251720
 Transform:
   m_ObjectHideFlags: 0
@@ -4950,7 +4916,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -484.9, y: 103.2}
+  m_AnchoredPosition: {x: -484.9, y: 103.200195}
   m_SizeDelta: {x: 642.014, y: 174.27}
   m_Pivot: {x: 0.5000001, y: 0.5000005}
 --- !u!114 &2109517752

@@ -11,8 +11,10 @@ namespace Managers
         [SerializeField] private UIManager uiManager;
         [SerializeField] private CarLifeBehaviour playerLife;
         [SerializeField] private OpponentsManager opponentsManager;
+        [SerializeField] private float gravity;
         private void Start()
         {
+            Physics.gravity = new Vector3(0, -gravity, 0);
             playerLife.OnTakeDamage += uiManager.SetHealthBar;
             playerLife.OnSpeedChange += uiManager.SetSpeedText;
             carController.OnCarFlip += uiManager.EnableRespawnText;
