@@ -36,7 +36,6 @@ namespace Entities.Player
 
         [Header("Drift")]
         [SerializeField] float driftFactor = 0.95f;
-        [SerializeField] float maxSpeedForDrift = 40;
 
         [Header("Feedbacks")]
         [SerializeField] private ParticleSystem DriftParticles;
@@ -157,7 +156,7 @@ namespace Entities.Player
             RechargeTurbo();
 
 
-            if (Input.GetKeyDown(KeyCode.LeftControl) && carRigidbody.velocity.magnitude < maxSpeedForDrift)
+            if (Input.GetKeyDown(KeyCode.LeftControl))
             {
                 StartDrift();
             }
