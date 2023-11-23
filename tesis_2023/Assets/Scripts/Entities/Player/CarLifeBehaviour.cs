@@ -1,4 +1,8 @@
 using System;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
+using UnityEditor.Animations;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -18,6 +22,10 @@ namespace Entities
         [SerializeField] private ParticleSystem explosionParticles;
         [SerializeField] private ParticleSystem destroyParticles;
 
+        public List<Transform> childs;
+        public List<Renderer> renderers;
+
+
         private int currentHealth;
         private int score;
         private float previousTime;
@@ -35,9 +43,14 @@ namespace Entities
 
         private void Start()
         {
+
             score = 0;
             currentHealth = maxHealth;
             InitVelocityData();
+            FindAllChilds(transform);
+            FindAllRenderers();
+            ChangeRenderersColors(1, 1, 1);
+
         }
 
         private void TakeDamage(float damage)
@@ -66,6 +79,7 @@ namespace Entities
                 alive = false;
                 DestroyCarParts();
                 this.enabled = false;
+                ChangeRenderersColors(0, 0, 0);
             }
         }
 
@@ -144,6 +158,49 @@ namespace Entities
         public void Win()
         {
             OnWin?.Invoke(score);
+        }
+
+        private void FindAllChilds(Transform objTransform)
+        {
+            childs.Add(objTransform);
+
+            if (objTransform.childCount > 0)
+            {
+                for (int i = 0; i < objTransform.childCount; i++)
+                {
+                    FindAllChilds(objTransform.GetChild(i));
+                }
+            }
+        }
+        private void FindAllRenderers()
+        {
+            foreach (var child in childs)
+            {
+                Renderer renderer = child.GetComponent<Renderer>();
+                if (renderer != null)
+                {
+                    renderers.Add(renderer);
+                }
+            }
+        }
+
+        private void ChangeRenderersColors(float r, float g, float b)
+        {
+
+            foreach (var renderer in renderers)
+            {
+                Material[] materials = renderer.sharedMaterials;
+                Color newColor = new Color(r, g, b);
+
+                foreach (var material in materials)
+                {
+                    if (material.name != "OutlineShader")
+                    {
+                        material.color = newColor;
+                    }
+
+                }
+            }
         }
     }
 }
