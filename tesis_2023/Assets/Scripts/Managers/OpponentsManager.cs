@@ -15,10 +15,11 @@ namespace Managers
 
         [Header("Waypoints")]
         [SerializeField] private GameObject[] waypoints;
+
         private List<CarLifeBehaviour> opponentLifes;
         private List<OpponentAI> opponentIAs;
-
-
+        private int carModelIndex = 0;
+        
         public event System.Action OnOpponentsLose;
 
         private void Start()
@@ -36,9 +37,11 @@ namespace Managers
 
             while (count < opponentsQuantity)
             {
-                int randomOpponent = Random.Range(0, opponentPrefabs.Length);
-                GameObject obj = Instantiate(opponentPrefabs[randomOpponent]);
+                //int randomOpponent = Random.Range(0, opponentPrefabs.Length);
 
+                GameObject obj = Instantiate(opponentPrefabs[carModelIndex]);
+                carModelIndex++;
+                if (carModelIndex == opponentPrefabs.Length) carModelIndex = 0;
 
                 Transform child = transform.GetChild(Random.Range(0, transform.childCount));
                 obj.GetComponent<OpponentAI>().SetWaypoints(waypoints);
