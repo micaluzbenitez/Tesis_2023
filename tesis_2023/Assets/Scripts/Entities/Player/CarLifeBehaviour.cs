@@ -21,12 +21,14 @@ namespace Entities
         [SerializeField] private ParticleSystem fireParticles;
         [SerializeField] private ParticleSystem explosionParticles;
         [SerializeField] private ParticleSystem destroyParticles;
+        [SerializeField] private ParticleSystem lava;
+        [SerializeField] private ParticleSystem redSmoke;
 
         public List<Transform> childs;
         public List<Renderer> renderers;
 
 
-        private int currentHealth;
+        public int currentHealth;
         private int score;
         private float previousTime;
         private float speed;
@@ -80,6 +82,8 @@ namespace Entities
                 DestroyCarParts();
                 this.enabled = false;
                 ChangeRenderersColors(0, 0, 0);
+                redSmoke.Play();
+                lava.Play();
             }
         }
 
