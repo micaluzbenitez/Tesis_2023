@@ -60,12 +60,12 @@ namespace Entities
 
             Debug.Log(gameObject.name + " life: " + currentHealth);
 
-            if ((currentHealth / maxHealth) <= 0.25f)
+            if (currentHealth <= 25f)
             {
                 smokeParticles.Stop();
                 fireParticles.Play();
             }
-            else if ((currentHealth / maxHealth) <= 0.5f)
+            else if (currentHealth <= 50f)
             {
                 smokeParticles.Play();
             }
@@ -192,14 +192,22 @@ namespace Entities
                 Material[] materials = renderer.sharedMaterials;
                 Color newColor = new Color(r, g, b);
 
+
                 foreach (var material in materials)
                 {
-                    if (material.name != "OutlineShader" || material.name != "OutlineShader2")
+                    if (material != null)
                     {
-                        material.color = newColor;
+                        if (material.name != "OutlineShader" && material.name != "OutlineShader2")
+                        {
+                            material.color = newColor;
+                        }
+                        else
+                        {
+                            material.color = new Color(0, 0, 0);
+                        }
                     }
-
                 }
+
             }
         }
     }
