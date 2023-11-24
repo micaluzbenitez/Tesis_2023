@@ -194,7 +194,7 @@ namespace Entities
 
                 foreach (var material in materials)
                 {
-                    if (material.name != "OutlineShader")
+                    if (material.name != "OutlineShader" || material.name != "OutlineShader2")
                     {
                         material.color = newColor;
                     }
