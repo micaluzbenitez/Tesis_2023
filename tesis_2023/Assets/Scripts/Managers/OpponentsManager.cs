@@ -2,8 +2,8 @@ using Entities;
 using Entities.Opponent;
 using System.Collections;
 using System.Collections.Generic;
+using UI;
 using UnityEngine;
-using Waypoints;
 
 namespace Managers
 {
@@ -16,6 +16,9 @@ namespace Managers
         [Header("Waypoints")]
         [SerializeField] private GameObject[] waypoints;
 
+        [Header("Minimap")]
+        [SerializeField] private Minimap minimap;
+
         private List<CarLifeBehaviour> opponentLifes;
         private List<OpponentAI> opponentIAs;
         private int carModelIndex = 0;
@@ -27,7 +30,6 @@ namespace Managers
             opponentLifes = new List<CarLifeBehaviour>();
             opponentIAs = new List<OpponentAI>();
             StartCoroutine(Spawn());
-            Debug.Log(opponentsQuantity);
 
         }
 
@@ -50,6 +52,9 @@ namespace Managers
 
                 opponentIAs.Add(obj.GetComponent<OpponentAI>());
                 opponentLifes.Add(obj.GetComponent<CarLifeBehaviour>());
+
+                minimap.InitOpponentMark(obj.transform);
+
                 yield return new WaitForEndOfFrame();
                 count++;
             }

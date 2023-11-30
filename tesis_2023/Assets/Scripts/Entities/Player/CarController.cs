@@ -83,7 +83,6 @@ namespace Entities.Player
             carRigidbody = GetComponent<Rigidbody>();
             carRigidbody.centerOfMass = centerOfMass.transform.localPosition;
 
-            Debug.Log(wheels.Count);
             for (int i = 0; i < wheels.Count; i++)
             {
                 driveWheels.Add(wheels[i].wheelCollider);
