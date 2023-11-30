@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ToolBox
+namespace Toolbox
 {
     public static class DrawArrow
     {

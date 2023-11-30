@@ -1,6 +1,6 @@
 using UnityEditor;
 using UnityEngine;
-using ToolBox;
+using Toolbox;
 
 namespace Waypoints.Editor
 {
