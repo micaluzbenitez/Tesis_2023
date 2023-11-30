@@ -631,7 +631,7 @@ GameObject:
   - component: {fileID: 1373010180}
   - component: {fileID: 1373010179}
   m_Layer: 5
-  m_Name: ExitButton
+  m_Name: MainMenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -687,7 +687,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: 230b2bdfa28123647b42cf0d78d1e80a, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: d5853c8e6ffd2a9489b4988cb339a997, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -733,7 +733,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d5d664fa9129ba34d9c540a9c432fa8a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f13d62b05e197c5408e96fff4c59ac75, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
