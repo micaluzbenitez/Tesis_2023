@@ -1303,6 +1303,7 @@ MonoBehaviour:
   redSmoke: {fileID: 4606585185235262286}
   childs: []
   renderers: []
+  currentHealth: 0
 --- !u!114 &9105109400279112050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1328,7 +1329,8 @@ AudioSource:
   m_GameObject: {fileID: 3306361102689469913}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: f4120b84426a6c2479591c867871056d,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: e360e9ec944377f43a2b50de8d7ff589, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2

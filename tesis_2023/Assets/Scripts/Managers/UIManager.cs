@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI speedText;
     [SerializeField] private TextMeshProUGUI respawnText;
-    [SerializeField] private TextMeshProUGUI gameplayScoreText;
+    [SerializeField] private Text gameplayScoreText;
     [SerializeField] private TextMeshProUGUI victoryScoreText;
     [SerializeField] private Slider healthBar;
     [SerializeField] private Slider turboSlider;
