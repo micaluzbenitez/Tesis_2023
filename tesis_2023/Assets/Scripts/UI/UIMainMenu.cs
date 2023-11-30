@@ -7,11 +7,17 @@ namespace UI
     {
         [Header("Scenes")]
         [SerializeField] private string gameSceneName = "";
+        [SerializeField] private string optionsSceneName = "";
         [SerializeField] private string creditsSceneName = "";
 
         public void LoadGameScene()
         {
             LoaderManager.Get().LoadScene(gameSceneName);
+        }
+
+        public void LoadOptionsScene()
+        {
+            LoaderManager.Get().LoadScene(optionsSceneName);
         }
 
         public void LoadCreditsScene()
