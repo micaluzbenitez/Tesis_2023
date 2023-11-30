@@ -2,9 +2,9 @@
 <img src="logo.png" alt="PONER NOMBRE DEL JUEGO ACA"/>
 </p>
 
-# PONER NOMBRE DEL JUEGO ACA
+# WRECKING DAY
 
-PONER LA DESCRIPCION LARGA DEL JUEGO ACA.
+Wrecking Day is a Demolition Derby videogame in which you must be the sole competitor to remain in the arena by destroying your opponents. Players will have to display and prove their driving and skidding skills and make use of ramps in order to take advantage and win the game..
 
 This is a game being developed by students from <a href="https://www.imagecampus.edu.ar/">Image Campus</a>
 
@@ -17,27 +17,22 @@ This is a game being developed by students from <a href="https://www.imagecampus
 
 ## Credits
 
-- **Nombre Apellido (ORDENAR IGUAL QUE CREDITOS EN JUEGO)** - *Programming*
-- **Nombre Apellido** - *Programming*
-- **Nombre Apellido** - *Art*
-- **Nombre Apellido** - *Art*
-- **Nombre Apellido** - *Audio*
-- **Nombre Apellido** - *Audio*
-- **Nombre Apellido** - *Testing*
-- **Nombre Apellido** - *Testing*
+- **Lucas Pich** - *Programming*
+- **Micaela Luz Benitez** - *Programming*
+- **Juan Martin Fernandez** - *Art*
+- **Melina Klurfan** - *Art*
+- **Facundo Vieyra** - *Art*
+- **Lucas Quiñones** - *Art*
 
 
 This game was also possible thanks to the support of these professors:
 
-- **NOMBRE APELLIDO DEL PROFESOR**
-- **NOMBRE APELLIDO DEL PROFESOR**
+- **Rodrigo Andres Magariños**
+- **Matias Ruiz Torres**
+- **Julian Uriel Bega Milrad**
 
-
-## Acknowledgements
-
-OTRAS PERSONAS A LAS QUE QUIERAN AGRADECERLES ACÁ, SINO SACAR ESTE TEXTO Y EL TITULO
 
 
 ## Links
 
-Download it from itch.io: PONER LINK AL JUEGO DE ITCH ACA
+https://wrecking-day.itch.io/wrecking-day
