@@ -1,8 +1,10 @@
 using Managers;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 namespace Entities.Opponent
 {
@@ -37,6 +39,8 @@ namespace Entities.Opponent
         private Vector3 direction;
         private bool knockback;
         private bool alive;
+
+        public Action<GameObject> OnDeath;
 
         private void Awake()
         {
@@ -145,7 +149,7 @@ namespace Entities.Opponent
             alive = false;
             enabled = false;
             agent = null;
-            OpponentsManager.Instance.DeleteWaypoint(waypoints[waypointInd]);
+            OnDeath?.Invoke(waypoints[waypointInd]);
         }
 
         public float GetVelocity()

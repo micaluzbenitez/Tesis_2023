@@ -1222,7 +1222,7 @@ MonoBehaviour:
     axel: 1
   turboForce: 5000
   turboCapacity: 100
-  turboRechargeRate: 15
+  turboRechargeRate: 20
   turboConsumptionRate: 0.1
   driftFactor: 0.95
   DriftParticles: {fileID: 8339889947646156504}

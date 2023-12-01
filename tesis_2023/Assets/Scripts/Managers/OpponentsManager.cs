@@ -4,11 +4,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UI;
 using UnityEngine;
-using Toolbox;
 
 namespace Managers
 {
-    public class OpponentsManager : MonoBehaviourSingleton<OpponentsManager>
+    public class OpponentsManager : MonoBehaviour
     {
         [Header("Opponents")]
         [SerializeField] private GameObject[] opponentPrefabs;
@@ -47,12 +46,13 @@ namespace Managers
 
                 Transform child = transform.GetChild(Random.Range(0, transform.childCount));
                 obj.GetComponent<OpponentAI>().SetWaypoints(waypoints);
+                obj.GetComponent<OpponentAI>().OnDeath += DeleteWaypoint;
 
                 obj.transform.position = child.position;
 
                 opponentIAs.Add(obj.GetComponent<OpponentAI>());
                 opponentLifes.Add(obj.GetComponent<CarLifeBehaviour>());
-
+                                
                 minimap.InitOpponentMark(obj.transform);
 
                 yield return new WaitForEndOfFrame();
@@ -74,7 +74,7 @@ namespace Managers
             }
         }
 
-        public void DeleteWaypoint(GameObject waypoint)
+        private void DeleteWaypoint(GameObject waypoint)
         {
             waypoints.Remove(waypoint);
         }
