@@ -82,6 +82,7 @@ namespace Entities.Player
             prevPosition = transform.position;
             carRigidbody = GetComponent<Rigidbody>();
             carRigidbody.centerOfMass = centerOfMass.transform.localPosition;
+            currentTurbo = turboCapacity;
 
             for (int i = 0; i < wheels.Count; i++)
             {
