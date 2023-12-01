@@ -1,4 +1,6 @@
+using Managers;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -28,7 +30,7 @@ namespace Entities.Opponent
 
         private State state;
         private NavMeshAgent agent;
-        private GameObject[] waypoints;
+        private List<GameObject> waypoints;
         private int waypointInd;
 
         private GameObject target;
@@ -79,8 +81,8 @@ namespace Entities.Opponent
             }
             else if (Vector3.Distance(transform.position, waypoints[waypointInd].transform.position) <= distancePerWaypoint)
             {
-                waypointInd = Random.Range(0, waypoints.Length - 1);
-                if (waypointInd > waypoints.Length - 1) waypointInd = 0;
+                waypointInd = Random.Range(0, waypoints.Count - 1);
+                if (waypointInd > waypoints.Count - 1) waypointInd = 0;
             }
         }
 
@@ -106,7 +108,7 @@ namespace Entities.Opponent
                 if (collision.gameObject.CompareTag("Car"))
                 {
                     direction = collision.transform.forward;
-                    waypointInd = Random.Range(0, waypoints.Length - 1);
+                    waypointInd = Random.Range(0, waypoints.Count - 1);
                     StartCoroutine(KnockBack());
                 }
             }
@@ -132,10 +134,10 @@ namespace Entities.Opponent
             }
         }
 
-        public void SetWaypoints(GameObject[] waypoints)
+        public void SetWaypoints(List<GameObject> waypoints)
         {
             this.waypoints = waypoints;
-            waypointInd = Random.Range(0, waypoints.Length - 1);
+            waypointInd = Random.Range(0, waypoints.Count - 1);
         }
 
         public void DisableIA()
@@ -143,6 +145,7 @@ namespace Entities.Opponent
             alive = false;
             enabled = false;
             agent = null;
+            OpponentsManager.Instance.DeleteWaypoint(waypoints[waypointInd]);
         }
 
         public float GetVelocity()

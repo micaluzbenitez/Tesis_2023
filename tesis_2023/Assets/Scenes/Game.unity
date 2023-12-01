@@ -7757,16 +7757,6 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 5148378324530037996, guid: b0dbea7574a4f1a4fbf9de68fd811b3f,
         type: 3}
-      propertyPath: turboRechargeRate
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 5148378324530037996, guid: b0dbea7574a4f1a4fbf9de68fd811b3f,
-        type: 3}
-      propertyPath: turboConsumptionRate
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5148378324530037996, guid: b0dbea7574a4f1a4fbf9de68fd811b3f,
-        type: 3}
       propertyPath: OnActiveTurbo.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 189273642}

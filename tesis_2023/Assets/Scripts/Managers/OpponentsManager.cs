@@ -4,17 +4,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UI;
 using UnityEngine;
+using Toolbox;
 
 namespace Managers
 {
-    public class OpponentsManager : MonoBehaviour
+    public class OpponentsManager : MonoBehaviourSingleton<OpponentsManager>
     {
         [Header("Opponents")]
         [SerializeField] private GameObject[] opponentPrefabs;
         [SerializeField] private int opponentsQuantity;
 
         [Header("Waypoints")]
-        [SerializeField] private GameObject[] waypoints;
+        [SerializeField] private List<GameObject> waypoints = new List<GameObject>();
 
         [Header("Minimap")]
         [SerializeField] private Minimap minimap;
@@ -30,7 +31,6 @@ namespace Managers
             opponentLifes = new List<CarLifeBehaviour>();
             opponentIAs = new List<OpponentAI>();
             StartCoroutine(Spawn());
-
         }
 
         private IEnumerator Spawn()
@@ -74,5 +74,9 @@ namespace Managers
             }
         }
 
+        public void DeleteWaypoint(GameObject waypoint)
+        {
+            waypoints.Remove(waypoint);
+        }
     }
 }
