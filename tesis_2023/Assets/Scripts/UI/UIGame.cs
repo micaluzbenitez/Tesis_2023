@@ -23,8 +23,21 @@ namespace UI
             }
         }
 
+        private void ShowCursor()
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+
+        private void HideCursor()
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+
         public void LoadGameScene()
         {
+            ShowCursor();
             pauseGame = false;
             Time.timeScale = 1;
             LoaderManager.Get().LoadScene(gameSceneName);
@@ -32,6 +45,7 @@ namespace UI
 
         public void LoadMainMenuScene()
         {
+            ShowCursor();
             pauseGame = false;
             Time.timeScale = 1;
             LoaderManager.Get().LoadScene(mainMenuSceneName);
@@ -39,6 +53,7 @@ namespace UI
 
         public void Pause()
         {
+            ShowCursor();
             pauseGame = true;
             optionsPanel.SetActive(true);
             Time.timeScale = 0;
@@ -46,6 +61,7 @@ namespace UI
 
         public void Resume()
         {
+            HideCursor();
             pauseGame = false;
             optionsPanel.SetActive(false);
             Time.timeScale = 1;

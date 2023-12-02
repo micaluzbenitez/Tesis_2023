@@ -50,10 +50,12 @@ public class UIManager : MonoBehaviour
     }
     public void EnableVictoryPanel()
     {
+        ShowCursor();
         victoryPanel.gameObject.SetActive(true);
     }
     public void EnableDefeatPanel()
     {
+        ShowCursor();
         defeatPanel.gameObject.SetActive(true);
     }
     public void DisableGameplayUI()
@@ -63,5 +65,11 @@ public class UIManager : MonoBehaviour
         speedText.gameObject.SetActive(false);
         miniMap.SetActive(false);
         turboSlider.gameObject.SetActive(false);
+    }
+
+    private void ShowCursor()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }
