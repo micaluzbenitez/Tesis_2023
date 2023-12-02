@@ -51,7 +51,7 @@ namespace Entities.Player
         private Vector3 prevPosition;
         private float currentSpeed = 0.0f;
         private bool isDead = false;
-        private float maxTorque = 2000;
+        private float maxTorque = 3000;
 
         private Vector3 initialPosition;
         private Quaternion initialRotation;
