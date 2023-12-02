@@ -113,7 +113,8 @@ namespace Entities.Player
                     wheel.wheelCollider.motorTorque = maxTorque * verticalInput;
 
                     // Agrega fuerza hacia adelante o hacia atrás al cuerpo del auto según la entrada vertical
-                    carRigidbody.AddForce(transform.forward * maxTorque * verticalInput);
+                    float currentForce = carRigidbody.mass * carRigidbody.velocity.magnitude;
+                    if (currentForce < 1000) carRigidbody.AddForce(transform.forward * maxTorque * verticalInput);
 
                     // Changing car direction Here we are changing the steer angle of the front tires of the car so that we can change the car direction.
                     if (wheel.axel == Axel.Front)
