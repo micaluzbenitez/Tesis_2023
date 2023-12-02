@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.Audio;
 using Toolbox;
 
-public class AudioManager : MonoBehaviourSingleton<AudioManager>
+public class AudioManager : MonoBehaviour
 {
     [Header("Audio data")]
     [SerializeField] private Slider sfxSlider = null;
@@ -25,6 +25,23 @@ public class AudioManager : MonoBehaviourSingleton<AudioManager>
     private AudioSource MusicSource => audioSources[(int)MixerType.Music];
 
     private float LinearToDecibel(float linearValue) => LinearToDecibelCoefficient * Mathf.Log10(linearValue);
+
+    #region SINGLETON
+    public static AudioManager Instance;
+    public static AudioManager Get()
+    {
+        return Instance;
+    }
+    public virtual void Awake()
+    {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this as AudioManager;
+    }
+    #endregion
 
     private void Start()
     {
