@@ -35,6 +35,7 @@ namespace Entities
         private Vector3 previousPosition;
 
         public event Action OnZeroHealth;
+        public event Action<int> OnPlayerLose;
         public event Action<int> OnWin;
         public event Action<int> OnTakeDamage;
         public event Action<int> OnIncreaseScore;
@@ -75,6 +76,7 @@ namespace Entities
                 explosionParticles.Play();
                 destroyParticles.Play();
                 OnZeroHealth?.Invoke();
+                OnPlayerLose?.Invoke(score);
                 alive = false;
                 DestroyCarParts();
                 this.enabled = false;

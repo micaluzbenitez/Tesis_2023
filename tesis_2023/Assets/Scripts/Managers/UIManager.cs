@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI respawnText;
     [SerializeField] private Text gameplayScoreText;
     [SerializeField] private TextMeshProUGUI victoryScoreText;
+    [SerializeField] private TextMeshProUGUI defeatScoreText;
     [SerializeField] private Slider healthBar;
     [SerializeField] private Slider turboSlider;
     [SerializeField] private GameObject victoryPanel;
@@ -38,6 +39,10 @@ public class UIManager : MonoBehaviour
     public void SetVictoryScoreText(int score)
     {
         victoryScoreText.text = score.ToString();
+    }
+    public void SetDefeatScoreText(int score)
+    {
+        defeatScoreText.text = score.ToString();
     }
 
     public void EnableRespawnText()
