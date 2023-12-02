@@ -18,11 +18,13 @@ namespace UI
         [SerializeField] private GameObject backButton;
 
         private bool pauseGame = false;
+        private bool controlsOpen = false;
 
         private void Start()
         {
             controlsPanel.SetActive(true);
             pauseGame = true;
+            controlsOpen = true;
             ShowCursor();
             Time.timeScale = 0;
         }
@@ -31,8 +33,22 @@ namespace UI
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                if (!pauseGame) Pause();
-                else Resume();
+                if (!pauseGame)
+                {
+                    Pause();
+                }
+                else
+                {
+                    if (controlsOpen)
+                    {
+                        StartGame();
+                        CloseControlsPopup();
+                    }
+                    else
+                    {
+                        Resume();
+                    }
+                }
             }
         }
 
