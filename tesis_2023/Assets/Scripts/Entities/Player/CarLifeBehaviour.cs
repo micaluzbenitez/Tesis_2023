@@ -20,6 +20,7 @@ namespace Entities
         [SerializeField] private ParticleSystem destroyParticles;
         [SerializeField] private ParticleSystem lava;
         [SerializeField] private ParticleSystem redSmoke;
+        [SerializeField] private AudioSource crash;
 
         public List<Transform> childs;
         public List<Renderer> renderers;
@@ -132,6 +133,8 @@ namespace Entities
                 Vector3 collisionNormal = collision.contacts[0].normal;
                 float dotProduct = Vector3.Dot(transform.forward, collisionNormal);
                 float allowedAngle = 0.8f;
+                if (crash != null)
+                    crash.Play();
 
                 if (dotProduct < -allowedAngle || dotProduct > allowedAngle)
                 {
