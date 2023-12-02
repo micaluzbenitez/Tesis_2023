@@ -9,10 +9,23 @@ namespace UI
         [SerializeField] private string gameSceneName = "";
         [SerializeField] private string mainMenuSceneName = "";
 
-        [Header("Pause")]
-        [SerializeField] private GameObject optionsPanel = null;
+        [Header("Panels")]
+        [SerializeField] private GameObject controlsPanel;
+        [SerializeField] private GameObject optionsPanel;
+
+        [Header("Control panel buttons")]
+        [SerializeField] private GameObject startButton;
+        [SerializeField] private GameObject backButton;
 
         private bool pauseGame = false;
+
+        private void Start()
+        {
+            controlsPanel.SetActive(true);
+            pauseGame = true;
+            ShowCursor();
+            Time.timeScale = 0;
+        }
 
         private void Update()
         {
@@ -65,6 +78,24 @@ namespace UI
             pauseGame = false;
             optionsPanel.SetActive(false);
             Time.timeScale = 1;
+        }
+
+        public void StartGame()
+        {
+            Resume();
+            controlsPanel.SetActive(false);
+            startButton.SetActive(false);
+            backButton.SetActive(true);
+        }
+
+        public void OpenControlsPopup()
+        {
+            controlsPanel.SetActive(true);
+        }
+
+        public void CloseControlsPopup()
+        {
+            controlsPanel.SetActive(false);
         }
     }
 }
