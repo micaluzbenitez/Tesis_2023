@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Managers;
+using UnityEditor.AI;
 
 namespace Arena
 {
@@ -18,6 +19,7 @@ namespace Arena
 
         private void Awake()
         {
+            NavMeshBuilder.BuildNavMesh();
             opponentsManager.SetWaypoints(waypoints);
             musicSource.clip = musicClip;
         }
