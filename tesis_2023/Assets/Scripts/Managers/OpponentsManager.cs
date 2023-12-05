@@ -2,8 +2,8 @@ using Entities;
 using Entities.Opponent;
 using System.Collections;
 using System.Collections.Generic;
-using UI;
 using UnityEngine;
+using UI;
 
 namespace Managers
 {
@@ -77,6 +77,11 @@ namespace Managers
         private void DeleteWaypoint(GameObject waypoint)
         {
             waypoints.Remove(waypoint);
+        }
+
+        public void SetWaypoints(List<GameObject> waypoints)
+        {
+            this.waypoints = waypoints;
         }
     }
 }
