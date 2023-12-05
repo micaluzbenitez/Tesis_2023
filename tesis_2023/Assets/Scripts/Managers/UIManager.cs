@@ -1,8 +1,8 @@
 using UnityEngine;
 using TMPro;
-using Entities.Player;
 using System;
 using UnityEngine.UI;
+using UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject victoryPanel;
     [SerializeField] private GameObject defeatPanel;
     [SerializeField] private GameObject miniMap;
+    [SerializeField] private UIGame uiGame;
 
     public void SetSpeedText(float speed)
     {
@@ -56,11 +57,15 @@ public class UIManager : MonoBehaviour
     public void EnableVictoryPanel()
     {
         ShowCursor();
+        Time.timeScale = 0;
+        uiGame.EndGame = true;
         victoryPanel.gameObject.SetActive(true);
     }
     public void EnableDefeatPanel()
     {
         ShowCursor();
+        Time.timeScale = 0;
+        uiGame.EndGame = true;
         defeatPanel.gameObject.SetActive(true);
     }
     public void DisableGameplayUI()

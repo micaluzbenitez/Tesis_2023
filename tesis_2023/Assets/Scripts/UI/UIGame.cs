@@ -19,9 +19,17 @@ namespace UI
 
         private bool pauseGame = false;
         private bool controlsOpen = false;
+        private bool endGame = false;
+
+        public bool EndGame
+        {
+            get { return endGame; }
+            set { endGame = value; }
+        }
 
         private void Start()
         {
+            endGame = false;
             controlsPanel.SetActive(true);
             pauseGame = true;
             controlsOpen = true;
@@ -33,6 +41,8 @@ namespace UI
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
+                if (endGame) return;
+
                 if (!pauseGame)
                 {
                     Pause();
