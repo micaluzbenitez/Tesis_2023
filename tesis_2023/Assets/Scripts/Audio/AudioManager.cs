@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
 using Toolbox;
+using UnityEngine.Rendering;
 
 public class AudioManager : MonoBehaviour
 {
@@ -42,6 +43,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+        // Music
         MusicSource musicSource = FindObjectOfType<MusicSource>();
 
         if (musicSource)
@@ -55,6 +57,10 @@ public class AudioManager : MonoBehaviour
                 music.Play();
             }
         }
+
+        // Sliders
+        if (sfxSlider) sfxSlider.value = GetVolume(MixerType.Sfx);
+        if (musicSlider) musicSlider.value = GetVolume(MixerType.Music);
     }
 
     public void PlaySfx(AudioClip clip)
@@ -99,6 +105,22 @@ public class AudioManager : MonoBehaviour
         float desiredMixerDecibels = LinearToDecibel(volumeLevel);
 
         audioMixers[(int)mixerType].SetFloat(VolumeKeyName, desiredMixerDecibels);
+    }
+
+    private float GetVolume(MixerType mixerType)
+    {
+        float currentMixerValue;
+        audioMixers[(int)mixerType].GetFloat(VolumeKeyName, out currentMixerValue);
+
+        // El valor devuelto por GetFloat es en decibelios, así que puedes convertirlo a lineal si es necesario
+        float currentVolumeLevel = DecibelToLinear(currentMixerValue);
+
+        return currentVolumeLevel;
+    }
+
+    private float DecibelToLinear(float decibels)
+    {
+        return Mathf.Pow(10.0f, decibels / 20.0f);
     }
 
     public void MuteSFX()
