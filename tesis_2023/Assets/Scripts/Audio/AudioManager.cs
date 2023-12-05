@@ -11,9 +11,6 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource[] audioSources;
     [SerializeField] private AudioMixer[] audioMixers;
 
-    [Header("Music")]
-    [SerializeField] private AudioClip backgroundMusic = null;
-
     private const string VolumeKeyName = "Volume";
     private const float LinearToDecibelCoefficient = 20f;
     private const float MinLinearValue = 0.00001f;
@@ -42,11 +39,6 @@ public class AudioManager : MonoBehaviour
         Instance = this as AudioManager;
     }
     #endregion
-
-    private void Start()
-    {
-        PlayMusic(backgroundMusic);
-    }
 
     public void PlaySfx(AudioClip clip)
     {
