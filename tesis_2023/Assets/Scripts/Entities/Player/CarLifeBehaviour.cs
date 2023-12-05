@@ -20,13 +20,14 @@ namespace Entities
         [SerializeField] private ParticleSystem destroyParticles;
         [SerializeField] private ParticleSystem lava;
         [SerializeField] private ParticleSystem redSmoke;
-        [SerializeField] private AudioSource crash;
+        [SerializeField] private AudioSource source;
+        [SerializeField] private List<AudioClip> clips;
 
         public List<Transform> childs;
         public List<Renderer> renderers;
 
 
-        public int currentHealth;
+        private int currentHealth;
         private int score;
         private float previousTime;
         private float speed;
@@ -84,6 +85,10 @@ namespace Entities
                 ChangeRenderersColors(0, 0, 0);
                 redSmoke.Play();
                 lava.Play();
+                if (source != null)
+                {
+                    PlaySound("Explosion");
+                }
             }
         }
 
@@ -123,6 +128,11 @@ namespace Entities
                 otherCarLife.TakeDamage(previousSpeed / 4f);
                 score += (int)(previousSpeed / 2f);
                 OnIncreaseScore?.Invoke(score);
+
+                if (otherCarLife.GetCurrentHealth() <= 0 && source != null)
+                {
+                    PlaySound("Explosion");
+                }
             }
         }
 
@@ -133,8 +143,8 @@ namespace Entities
                 Vector3 collisionNormal = collision.contacts[0].normal;
                 float dotProduct = Vector3.Dot(transform.forward, collisionNormal);
                 float allowedAngle = 0.8f;
-                if (crash != null)
-                    crash.Play();
+                if (source != null && alive)
+                    PlaySound("Crash");
 
                 if (dotProduct < -allowedAngle || dotProduct > allowedAngle)
                 {
@@ -215,6 +225,17 @@ namespace Entities
                 }
 
             }
+        }
+        private void PlaySound(string name)
+        {
+            int index = clips.FindIndex(i => i.name == name);
+            source.clip = clips[index];
+            source.Play();
+        }
+
+        public int GetCurrentHealth()
+        {
+            return currentHealth;
         }
     }
 }
