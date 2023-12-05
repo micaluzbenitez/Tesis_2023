@@ -40,6 +40,23 @@ public class AudioManager : MonoBehaviour
     }
     #endregion
 
+    private void Start()
+    {
+        MusicSource musicSource = FindObjectOfType<MusicSource>();
+
+        if (musicSource)
+        {
+            AudioSource music = musicSource.GetComponent<AudioSource>();
+
+            if (MusicSource.clip != music.clip)
+            {
+                music.Stop();
+                music.clip = MusicSource.clip;
+                music.Play();
+            }
+        }
+    }
+
     public void PlaySfx(AudioClip clip)
     {
         SfxSource.PlayOneShot(clip);
