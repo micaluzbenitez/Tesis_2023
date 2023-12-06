@@ -899,8 +899,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21f36a3625410594884f90f266a7fb09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolSpeed: 25
-  chaseSpeed: 30
+  patrolSpeed: 50
+  chaseSpeed: 40
   distancePerWaypoint: 10
   knockbackInitialSpeed: 2
   knockbackInitialAcceleration: 10
@@ -956,9 +956,13 @@ MonoBehaviour:
   destroyParticles: {fileID: 7625058088292232837}
   lava: {fileID: 5672610339021982343}
   redSmoke: {fileID: 724151045328907474}
+  source: {fileID: 0}
+  clips: []
+  backCar:
+    serializedVersion: 2
+    m_Bits: 0
   childs: []
   renderers: []
-  currentHealth: 0
 --- !u!1 &4593993718554020844
 GameObject:
   m_ObjectHideFlags: 0

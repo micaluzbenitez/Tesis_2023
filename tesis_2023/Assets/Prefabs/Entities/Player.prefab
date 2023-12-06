@@ -1269,7 +1269,7 @@ MonoBehaviour:
   turboForce: 5000
   turboCapacity: 100
   turboRechargeRate: 20
-  turboConsumptionRate: 0.1
+  turboConsumptionRate: 0.2
   driftFactor: 0.95
   DriftParticles: {fileID: 8339889947646156504}
   turboParticles: {fileID: 8760420184769710170}
@@ -1352,6 +1352,9 @@ MonoBehaviour:
   clips:
   - {fileID: 8300000, guid: 3880977cfea24e44e93c331305238d17, type: 3}
   - {fileID: 8300000, guid: e3bf792c2f7121945a09d8f8be26ae29, type: 3}
+  backCar:
+    serializedVersion: 2
+    m_Bits: 0
   childs: []
   renderers: []
 --- !u!114 &9105109400279112050

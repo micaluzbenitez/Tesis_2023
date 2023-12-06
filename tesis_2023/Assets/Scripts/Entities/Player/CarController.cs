@@ -51,7 +51,7 @@ namespace Entities.Player
         private Vector3 prevPosition;
         private float currentSpeed = 0.0f;
         private bool isDead = false;
-        private float maxTorque = 3000;
+        private float maxTorque = 4000;
 
         private Vector3 initialPosition;
         private Quaternion initialRotation;
@@ -183,7 +183,7 @@ namespace Entities.Player
             {
                 foreach (var wheel in wheels)
                 {
-                    wheel.wheelCollider.brakeTorque = 10000;
+                    wheel.wheelCollider.brakeTorque = 100000;
                     wheel.wheelCollider.motorTorque = 0;
                 }
             }
