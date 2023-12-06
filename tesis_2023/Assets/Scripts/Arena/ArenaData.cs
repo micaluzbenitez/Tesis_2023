@@ -1,12 +1,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Managers;
-using UnityEditor.AI;
+using UnityEngine.AI;
 
 namespace Arena
 {
     public class ArenaData : MonoBehaviour
     {
+        [Header("AI")]
+        [SerializeField] private NavMeshData navMeshData_A;
+
         [Header("Opponents manager")]
         [SerializeField] private OpponentsManager opponentsManager;
 
@@ -19,7 +22,9 @@ namespace Arena
 
         private void Awake()
         {
-            NavMeshBuilder.BuildNavMesh();
+            NavMesh.RemoveAllNavMeshData();
+            NavMesh.AddNavMeshData(navMeshData_A);
+
             opponentsManager.SetWaypoints(waypoints);
             musicSource.clip = musicClip;
         }
