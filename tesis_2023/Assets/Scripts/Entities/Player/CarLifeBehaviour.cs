@@ -66,11 +66,7 @@ namespace Entities
                     currentHealth -= (int)damage;
                     OnTakeDamage?.Invoke(currentHealth);
                 }
-                else
-                {
-                    currentHealth -= (int)damage / 5;
-                    OnTakeDamage?.Invoke(currentHealth);
-                }
+
             }
             else
             {
@@ -103,7 +99,6 @@ namespace Entities
                 OnPlayerLose?.Invoke(score);
                 alive = false;
                 DestroyCarParts();
-                this.enabled = false;
                 ChangeRenderersColors(0, 0, 0);
                 redSmoke.Play();
                 lava.Play();
@@ -111,6 +106,7 @@ namespace Entities
                 {
                     PlaySound("Explosion");
                 }
+                Destroy(this);
             }
         }
 
