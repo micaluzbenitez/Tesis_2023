@@ -22,7 +22,6 @@ namespace Entities
         [SerializeField] private ParticleSystem redSmoke;
         [SerializeField] private AudioSource source;
         [SerializeField] private List<AudioClip> clips;
-        [SerializeField] private LayerMask backCar;
 
         public List<Transform> childs;
         public List<Renderer> renderers;
@@ -56,31 +55,10 @@ namespace Entities
 
         }
 
-        private void TakeDamage(float damage, CarLifeBehaviour other = null, bool sameDirection = false)
+        private void TakeDamage(float damage)
         {
-
-            if (sameDirection)
-            {
-                if (other.GetSpeed() > GetSpeed())
-                {
-                    currentHealth -= (int)damage;
-                    OnTakeDamage?.Invoke(currentHealth);
-                }
-                else
-                {
-                    currentHealth -= (int)damage / 5;
-                    OnTakeDamage?.Invoke(currentHealth);
-                }
-            }
-            else
-            {
-                currentHealth -= (int)damage;
-                OnTakeDamage?.Invoke(currentHealth);
-            }
-
-
-
-
+            currentHealth -= (int)damage;
+            OnTakeDamage?.Invoke(currentHealth);
 
             Debug.Log(gameObject.name + " life: " + currentHealth);
 
@@ -120,10 +98,7 @@ namespace Entities
             previousPosition = transform.position;
             previousTime = 0f;
         }
-        private void Update()
-        {
-            Debug.DrawLine(transform.position, transform.position + Vector3.forward * 15, Color.red);
-        }
+
         private void FixedUpdate()
         {
             UpdateVelocityData();
@@ -144,18 +119,13 @@ namespace Entities
             previousSpeed = speed;
         }
 
-        private void ToDamageOpponent(Collision collision, bool sameDirection = false)
+        private void ToDamageOpponent(Collision collision)
         {
             CarLifeBehaviour otherCarLife = collision.gameObject.GetComponent<CarLifeBehaviour>();
 
             if (otherCarLife != null)
             {
-                if (sameDirection)
-                    otherCarLife.TakeDamage(previousSpeed / 4f, otherCarLife, true);
-
-                else
-                    otherCarLife.TakeDamage(previousSpeed / 4f);
-
+                otherCarLife.TakeDamage(previousSpeed / 4f);
                 score += (int)(previousSpeed / 2f);
                 OnIncreaseScore?.Invoke(score);
 
@@ -163,7 +133,6 @@ namespace Entities
                 {
                     PlaySound("Explosion");
                 }
-
             }
         }
 
@@ -177,15 +146,10 @@ namespace Entities
                 if (source != null && alive)
                     PlaySound("Crash");
 
-                if (dotProduct < -allowedAngle)
-                {
-                    ToDamageOpponent(collision);
-                }
-
-                else if (dotProduct > allowedAngle)
+                if (dotProduct < -allowedAngle || dotProduct > allowedAngle)
                 {
                     Debug.Log("de frente");
-                    ToDamageOpponent(collision, true);
+                    ToDamageOpponent(collision);
 
                 }
             }
@@ -272,11 +236,6 @@ namespace Entities
         public int GetCurrentHealth()
         {
             return currentHealth;
-        }
-
-        public float GetSpeed()
-        {
-            return speed;
         }
     }
 }
