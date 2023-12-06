@@ -53,7 +53,7 @@ namespace Managers
                 opponentIAs.Add(obj.GetComponent<OpponentAI>());
                 opponentLifes.Add(obj.GetComponent<CarLifeBehaviour>());
                                 
-                minimap.InitOpponentMark(obj.transform);
+                minimap.InitOpponentMark(obj.transform, obj.GetComponent<OpponentAI>());
 
                 yield return new WaitForEndOfFrame();
                 count++;

@@ -1,5 +1,7 @@
+using Entities.Opponent;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UI
 {
@@ -19,6 +21,7 @@ namespace UI
         private RectTransform playerRect;
         private List<Transform> opponents = new List<Transform>();
         private List<RectTransform> opponentsRect = new List<RectTransform>();
+        private List<OpponentAI> opponentsAIs = new List<OpponentAI>();
 
         private void Start()
         {
@@ -32,6 +35,11 @@ namespace UI
             for (int i = 0; i < opponents.Count; i++)
             {
                 MarkEntity(opponentsRect[i], opponents[i]);
+
+                if (!opponentsAIs[i].Alive)
+                {
+                    opponentsRect[i].GetComponent<Image>().enabled = false;
+                }
             }
         }
 
@@ -50,10 +58,11 @@ namespace UI
             rect.transform.localPosition = minimapPos - (Vector3)minimapRect.sizeDelta * 0.5f;
         }
 
-        public void InitOpponentMark(Transform opponent)
+        public void InitOpponentMark(Transform opponent, OpponentAI opponentAI)
         {
             RectTransform opponentRect = Instantiate(opponentMark, transform);
-            
+
+            opponentsAIs.Add(opponentAI);
             opponentsRect.Add(opponentRect);
             opponents.Add(opponent);
         }

@@ -42,6 +42,8 @@ namespace Entities.Opponent
 
         public Action<GameObject> OnDeath;
 
+        public bool Alive => alive;
+
         private void Awake()
         {
             agent = GetComponent<NavMeshAgent>();
