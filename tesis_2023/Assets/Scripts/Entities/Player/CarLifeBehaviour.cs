@@ -66,6 +66,11 @@ namespace Entities
                     currentHealth -= (int)damage;
                     OnTakeDamage?.Invoke(currentHealth);
                 }
+                else
+                {
+                    currentHealth -= (int)damage / 5;
+                    OnTakeDamage?.Invoke(currentHealth);
+                }
 
             }
             else
