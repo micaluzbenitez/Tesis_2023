@@ -1171,6 +1171,12 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &191646569 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8383675713223592317, guid: 9c2972e33409ad0459452934868b7dbd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1231796980}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &264212943
 GameObject:
   m_ObjectHideFlags: 0
@@ -2175,6 +2181,12 @@ Transform:
   m_Father: {fileID: 1342829443}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: -70.433, z: 0}
+--- !u!1 &475549344 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 379169535273140701, guid: 31b7add011b50754eaad8ee72981c60c,
+    type: 3}
+  m_PrefabInstance: {fileID: 685248078118666755}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &477561936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4891,6 +4903,9 @@ MonoBehaviour:
   playerLife: {fileID: 8006504248611335234}
   opponentsManager: {fileID: 1342829444}
   gravity: 45
+  arenas:
+  - {fileID: 475549344}
+  - {fileID: 191646569}
 --- !u!4 &1076251720
 Transform:
   m_ObjectHideFlags: 0
@@ -10948,7 +10963,7 @@ PrefabInstance:
     - target: {fileID: 379169535273140701, guid: 31b7add011b50754eaad8ee72981c60c,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1011273630978104167, guid: 31b7add011b50754eaad8ee72981c60c,
         type: 3}

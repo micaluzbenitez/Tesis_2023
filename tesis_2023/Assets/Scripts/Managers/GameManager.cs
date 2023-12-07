@@ -1,6 +1,5 @@
 using Entities;
 using Entities.Player;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace Managers
@@ -12,6 +11,16 @@ namespace Managers
         [SerializeField] private CarLifeBehaviour playerLife;
         [SerializeField] private OpponentsManager opponentsManager;
         [SerializeField] private float gravity;
+
+        [Header("Arenas")]
+        [SerializeField] private GameObject[] arenas;
+
+        private void Awake()
+        {
+            int arenaIndex = Random.Range(0, arenas.Length);
+            arenas[arenaIndex].SetActive(true);
+        }
+
         private void Start()
         {
             Physics.gravity = new Vector3(0, -gravity, 0);
