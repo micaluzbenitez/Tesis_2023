@@ -405,8 +405,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21f36a3625410594884f90f266a7fb09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolSpeed: 50
-  chaseSpeed: 40
+  patrolSpeed: 40
+  chaseSpeed: 45
   distancePerWaypoint: 10
   knockbackInitialSpeed: 2
   knockbackInitialAcceleration: 10

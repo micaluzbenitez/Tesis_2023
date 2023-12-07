@@ -338,8 +338,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1357a2f06c3f6da4680ef9c7ae6fe3e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  navMeshData_A: {fileID: 23800000, guid: 8dc2dc0f9faf7d948a527ba5498b1e87, type: 2}
   opponentsManager: {fileID: 0}
-  waypoints: []
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  musicSource: {fileID: 0}
+  musicClip: {fileID: 8300000, guid: fbddc31b60f25cf41881f9ebd7a92e6f, type: 3}
 --- !u!1 &7119776978561366651
 GameObject:
   m_ObjectHideFlags: 0
