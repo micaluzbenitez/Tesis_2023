@@ -330,7 +330,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &35975505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -745,7 +745,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &141305628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -777,6 +777,56 @@ Transform:
   m_Father: {fileID: 1342829443}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &149618731
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 149618733}
+  - component: {fileID: 149618732}
+  m_Layer: 0
+  m_Name: Arena4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &149618732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149618731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f256b41c75aa8664eacfc9b9589cf8a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 8
+  previousWaypoints:
+  - {fileID: 1737720919}
+  nextWaypoints:
+  - {fileID: 1737720919}
+  - {fileID: 510554141}
+--- !u!4 &149618733
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149618731}
+  m_LocalRotation: {x: -0, y: -0.87751365, z: -0, w: 0.47955167}
+  m_LocalPosition: {x: 13.3, y: -10.5, z: 264.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1342829443}
+  m_RootOrder: 54
+  m_LocalEulerAnglesHint: {x: 0, y: -122.688, z: 0}
 --- !u!1 &153677974
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,7 +1181,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189273641}
-  m_LocalRotation: {x: 0.17819066, y: 0.000000016931011, z: -0.0000000030660166, w: 0.983996}
+  m_LocalRotation: {x: 0.17819066, y: -0.000000016931011, z: 0.0000000030660166, w: 0.983996}
   m_LocalPosition: {x: -4.8, y: 9, z: -204.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1195,7 +1245,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &264212944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1390,7 +1440,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &352006931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1437,7 +1487,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &355267401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1469,6 +1519,54 @@ Transform:
   m_Father: {fileID: 1342829443}
   m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: -122.688, z: 0}
+--- !u!1 &356620363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 356620365}
+  - component: {fileID: 356620364}
+  m_Layer: 0
+  m_Name: Arena4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &356620364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356620363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f256b41c75aa8664eacfc9b9589cf8a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 8
+  previousWaypoints: []
+  nextWaypoints:
+  - {fileID: 2026043872}
+--- !u!4 &356620365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356620363}
+  m_LocalRotation: {x: -0, y: -0.9762119, z: -0, w: 0.21681881}
+  m_LocalPosition: {x: 137.2, y: -10.5, z: 117.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1342829443}
+  m_RootOrder: 57
+  m_LocalEulerAnglesHint: {x: 0, y: -154.956, z: 0}
 --- !u!1 &394815458
 GameObject:
   m_ObjectHideFlags: 0
@@ -1605,6 +1703,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 394815458}
   m_CullTransparentMesh: 1
+--- !u!1 &401547024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 401547026}
+  - component: {fileID: 401547025}
+  m_Layer: 0
+  m_Name: Arena4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &401547025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401547024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f256b41c75aa8664eacfc9b9589cf8a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 8
+  previousWaypoints:
+  - {fileID: 656135157}
+  nextWaypoints: []
+--- !u!4 &401547026
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401547024}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -136.3, y: -10.5, z: 25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1342829443}
+  m_RootOrder: 53
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &402489773
 GameObject:
   m_ObjectHideFlags: 0
@@ -1908,7 +2054,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &443393931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1957,7 +2103,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &458828913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2151,7 +2297,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &463521562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2301,7 +2447,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &483849699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2496,7 +2642,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &496915315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2605,6 +2751,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 501608310}
   m_CullTransparentMesh: 1
+--- !u!1 &510554140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 510554142}
+  - component: {fileID: 510554141}
+  m_Layer: 0
+  m_Name: Arena4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &510554141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510554140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f256b41c75aa8664eacfc9b9589cf8a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 8
+  previousWaypoints:
+  - {fileID: 1272406473}
+  nextWaypoints:
+  - {fileID: 1272406473}
+  - {fileID: 401547025}
+--- !u!4 &510554142
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510554140}
+  m_LocalRotation: {x: -0, y: -0.9999988, z: -0, w: -0.0015460919}
+  m_LocalPosition: {x: -108.5, y: -10.5, z: 231}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1342829443}
+  m_RootOrder: 52
+  m_LocalEulerAnglesHint: {x: 0, y: -180.177, z: 0}
 --- !u!1 &563514656
 GameObject:
   m_ObjectHideFlags: 0
@@ -2697,7 +2893,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &575169298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2854,6 +3050,55 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 995.913, y: 238.6, z: -246}
   m_TimeToStationary: 0.5
+--- !u!1 &617489498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 617489500}
+  - component: {fileID: 617489499}
+  m_Layer: 0
+  m_Name: Arena4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &617489499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617489498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f256b41c75aa8664eacfc9b9589cf8a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 8
+  previousWaypoints: []
+  nextWaypoints:
+  - {fileID: 1300925904}
+  - {fileID: 656135157}
+--- !u!4 &617489500
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617489498}
+  m_LocalRotation: {x: -0, y: 0.22277194, z: -0, w: 0.9748706}
+  m_LocalPosition: {x: -116, y: -10.5, z: -170.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1342829443}
+  m_RootOrder: 47
+  m_LocalEulerAnglesHint: {x: 0, y: 25.744, z: 0}
 --- !u!1 &621628323
 GameObject:
   m_ObjectHideFlags: 0
@@ -2918,7 +3163,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &624200770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2967,7 +3212,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &638247816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3048,6 +3293,56 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 995.913, y: 238.6, z: -246}
   m_TimeToStationary: 0.5
+--- !u!1 &656135156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 656135158}
+  - component: {fileID: 656135157}
+  m_Layer: 0
+  m_Name: Arena4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &656135157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656135156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f256b41c75aa8664eacfc9b9589cf8a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 8
+  previousWaypoints:
+  - {fileID: 617489499}
+  nextWaypoints:
+  - {fileID: 1272406473}
+  - {fileID: 401547025}
+--- !u!4 &656135158
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656135156}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -91.3, y: -10.5, z: -40.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1342829443}
+  m_RootOrder: 49
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &661580861
 GameObject:
   m_ObjectHideFlags: 0
@@ -3398,7 +3693,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &758087211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3528,7 +3823,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &768489087
 Transform:
   m_ObjectHideFlags: 0
@@ -4039,7 +4334,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &870767402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4497,7 +4792,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &989125421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4545,7 +4840,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &992434176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4626,7 +4921,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1030251023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4795,6 +5090,55 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &1051832371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1051832373}
+  - component: {fileID: 1051832372}
+  m_Layer: 0
+  m_Name: Arena4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1051832372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051832371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f256b41c75aa8664eacfc9b9589cf8a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 8
+  previousWaypoints: []
+  nextWaypoints:
+  - {fileID: 1846218626}
+  - {fileID: 356620364}
+--- !u!4 &1051832373
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051832371}
+  m_LocalRotation: {x: -0, y: -0.24993265, z: -0, w: 0.96826327}
+  m_LocalPosition: {x: 56.5, y: -10.5, z: -30.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1342829443}
+  m_RootOrder: 59
+  m_LocalEulerAnglesHint: {x: 0, y: -28.947, z: 0}
 --- !u!1 &1055325738
 GameObject:
   m_ObjectHideFlags: 0
@@ -5015,7 +5359,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1095786782
 Transform:
   m_ObjectHideFlags: 0
@@ -5064,7 +5408,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1153461033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5113,7 +5457,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1165328821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5260,6 +5604,55 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1212736410
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1212736412}
+  - component: {fileID: 1212736411}
+  m_Layer: 0
+  m_Name: Arena4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1212736411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212736410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f256b41c75aa8664eacfc9b9589cf8a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 8
+  previousWaypoints:
+  - {fileID: 1364376124}
+  - {fileID: 1051832372}
+  nextWaypoints: []
+--- !u!4 &1212736412
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212736410}
+  m_LocalRotation: {x: -0, y: 0.36761206, z: -0, w: 0.92997926}
+  m_LocalPosition: {x: 138.7, y: -10.5, z: 1.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1342829443}
+  m_RootOrder: 56
+  m_LocalEulerAnglesHint: {x: 0, y: 43.137, z: 0}
 --- !u!1 &1215530618
 GameObject:
   m_ObjectHideFlags: 0
@@ -5276,7 +5669,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1215530619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5325,7 +5718,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1216688668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5781,7 +6174,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1235519158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6027,6 +6420,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1253246056}
   m_CullTransparentMesh: 1
+--- !u!1 &1272406472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1272406474}
+  - component: {fileID: 1272406473}
+  m_Layer: 0
+  m_Name: Arena4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1272406473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272406472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f256b41c75aa8664eacfc9b9589cf8a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 8
+  previousWaypoints:
+  - {fileID: 401547025}
+  nextWaypoints: []
+--- !u!4 &1272406474
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272406472}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -55.2, y: -10.5, z: 36.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1342829443}
+  m_RootOrder: 50
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1293553186
 GameObject:
   m_ObjectHideFlags: 0
@@ -6043,7 +6484,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1293553187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6245,6 +6686,55 @@ MonoBehaviour:
   m_Damping: 0
   m_DampingWhenOccluded: 0
   m_OptimalTargetDistance: 0
+--- !u!1 &1300925903
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1300925905}
+  - component: {fileID: 1300925904}
+  m_Layer: 0
+  m_Name: Arena4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1300925904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300925903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f256b41c75aa8664eacfc9b9589cf8a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 8
+  previousWaypoints:
+  - {fileID: 617489499}
+  nextWaypoints:
+  - {fileID: 1944449087}
+--- !u!4 &1300925905
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300925903}
+  m_LocalRotation: {x: -0, y: 0.7948495, z: -0, w: 0.60680664}
+  m_LocalPosition: {x: -30.3, y: -10.5, z: -144.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1342829443}
+  m_RootOrder: 48
+  m_LocalEulerAnglesHint: {x: 0, y: 105.282, z: 0}
 --- !u!1 &1329021317
 GameObject:
   m_ObjectHideFlags: 0
@@ -6261,7 +6751,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1329021318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6390,7 +6880,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1337274402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6536,6 +7026,22 @@ Transform:
   - {fileID: 870767403}
   - {fileID: 1429527960}
   - {fileID: 496915316}
+  - {fileID: 617489500}
+  - {fileID: 1300925905}
+  - {fileID: 656135158}
+  - {fileID: 1272406474}
+  - {fileID: 1737720920}
+  - {fileID: 510554142}
+  - {fileID: 401547026}
+  - {fileID: 149618733}
+  - {fileID: 1846218627}
+  - {fileID: 1212736412}
+  - {fileID: 356620365}
+  - {fileID: 2026043873}
+  - {fileID: 1051832373}
+  - {fileID: 1364376125}
+  - {fileID: 2114558487}
+  - {fileID: 1944449086}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6970,6 +7476,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1364376123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1364376125}
+  - component: {fileID: 1364376124}
+  m_Layer: 0
+  m_Name: Arena4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1364376124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364376123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f256b41c75aa8664eacfc9b9589cf8a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 8
+  previousWaypoints: []
+  nextWaypoints:
+  - {fileID: 1051832372}
+--- !u!4 &1364376125
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364376123}
+  m_LocalRotation: {x: -0, y: -0.5766692, z: -0, w: 0.81697774}
+  m_LocalPosition: {x: 147.6, y: -10.5, z: -175.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1342829443}
+  m_RootOrder: 60
+  m_LocalEulerAnglesHint: {x: 0, y: -70.433, z: 0}
 --- !u!1 &1375795203
 GameObject:
   m_ObjectHideFlags: 0
@@ -7083,7 +7637,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1390453111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7277,7 +7831,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1403358054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7348,7 +7902,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1414370859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7541,7 +8095,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1429527959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7589,7 +8143,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1444887837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7910,7 +8464,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1554385932
 Transform:
   m_ObjectHideFlags: 0
@@ -8095,7 +8649,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1568380803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8286,6 +8840,7 @@ Transform:
   - {fileID: 5669257695149764714}
   - {fileID: 543450653694040420}
   - {fileID: 1231796981}
+  - {fileID: 543450652164800698}
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8385,7 +8940,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1714345120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8495,6 +9050,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1734727081}
   m_CullTransparentMesh: 1
+--- !u!1 &1737720918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1737720920}
+  - component: {fileID: 1737720919}
+  m_Layer: 0
+  m_Name: Arena4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1737720919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737720918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f256b41c75aa8664eacfc9b9589cf8a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 8
+  previousWaypoints: []
+  nextWaypoints:
+  - {fileID: 1272406473}
+--- !u!4 &1737720920
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737720918}
+  m_LocalRotation: {x: -0, y: 0.564437, z: -0, w: 0.82547617}
+  m_LocalPosition: {x: -11, y: -10.5, z: 105.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1342829443}
+  m_RootOrder: 51
+  m_LocalEulerAnglesHint: {x: 0, y: 68.726, z: 0}
 --- !u!1 &1757573130
 GameObject:
   m_ObjectHideFlags: 0
@@ -8648,7 +9251,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1760629896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8696,7 +9299,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1782506056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8744,7 +9347,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1786966091
 Transform:
   m_ObjectHideFlags: 0
@@ -9133,6 +9736,55 @@ AudioSource:
     type: 3}
   m_PrefabInstance: {fileID: 477561936}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1846218625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1846218627}
+  - component: {fileID: 1846218626}
+  m_Layer: 0
+  m_Name: Arena4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1846218626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846218625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f256b41c75aa8664eacfc9b9589cf8a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 8
+  previousWaypoints:
+  - {fileID: 356620364}
+  - {fileID: 149618732}
+  nextWaypoints: []
+--- !u!4 &1846218627
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846218625}
+  m_LocalRotation: {x: -0, y: -0.50864047, z: -0, w: 0.860979}
+  m_LocalPosition: {x: 46, y: -10.5, z: 107.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1342829443}
+  m_RootOrder: 55
+  m_LocalEulerAnglesHint: {x: 0, y: -61.147, z: 0}
 --- !u!1 &1855415118
 GameObject:
   m_ObjectHideFlags: 0
@@ -9149,7 +9801,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1855415119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9516,6 +10168,55 @@ RectTransform:
   m_AnchoredPosition: {x: -150, y: 75}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1944449085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1944449086}
+  - component: {fileID: 1944449087}
+  m_Layer: 0
+  m_Name: Arena4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1944449086
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944449085}
+  m_LocalRotation: {x: -0, y: 0.42322403, z: -0, w: 0.90602505}
+  m_LocalPosition: {x: 11.7, y: -10.5, z: -87.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1342829443}
+  m_RootOrder: 62
+  m_LocalEulerAnglesHint: {x: 0, y: 50.077, z: 0}
+--- !u!114 &1944449087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944449085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f256b41c75aa8664eacfc9b9589cf8a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 8
+  previousWaypoints:
+  - {fileID: 1300925904}
+  nextWaypoints:
+  - {fileID: 2114558486}
 --- !u!1 &1970576703
 GameObject:
   m_ObjectHideFlags: 0
@@ -9532,7 +10233,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1970576704
 Transform:
   m_ObjectHideFlags: 0
@@ -9650,7 +10351,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1985772535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9699,7 +10400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1986677771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9749,7 +10450,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2007483847
 Transform:
   m_ObjectHideFlags: 0
@@ -9798,7 +10499,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2012444056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9830,6 +10531,55 @@ Transform:
   m_Father: {fileID: 1342829443}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 68.726, z: 0}
+--- !u!1 &2026043871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2026043873}
+  - component: {fileID: 2026043872}
+  m_Layer: 0
+  m_Name: Arena4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2026043872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026043871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f256b41c75aa8664eacfc9b9589cf8a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 8
+  previousWaypoints:
+  - {fileID: 1846218626}
+  nextWaypoints:
+  - {fileID: 149618732}
+--- !u!4 &2026043873
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026043871}
+  m_LocalRotation: {x: -0, y: -0.81990457, z: -0, w: 0.5725002}
+  m_LocalPosition: {x: 135.9, y: -10.5, z: 243.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1342829443}
+  m_RootOrder: 58
+  m_LocalEulerAnglesHint: {x: 0, y: -110.15, z: 0}
 --- !u!1 &2052459788
 GameObject:
   m_ObjectHideFlags: 0
@@ -9984,7 +10734,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2057260380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10121,7 +10871,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2063364134}
-  m_LocalRotation: {x: -0.015253112, y: 0.0000000240297, z: -0.000000009418466, w: 0.9998837}
+  m_LocalRotation: {x: -0.015253112, y: -0.000000008009898, z: 0.0000000031394887,
+    w: 0.9998837}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10768,7 +11519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2112307621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10800,6 +11551,55 @@ Transform:
   m_Father: {fileID: 1342829443}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2114558485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2114558487}
+  - component: {fileID: 2114558486}
+  m_Layer: 0
+  m_Name: Arena4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2114558486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114558485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f256b41c75aa8664eacfc9b9589cf8a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 8
+  previousWaypoints: []
+  nextWaypoints:
+  - {fileID: 1212736411}
+  - {fileID: 1364376124}
+--- !u!4 &2114558487
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114558485}
+  m_LocalRotation: {x: -0, y: 0.59617424, z: -0, w: 0.8028551}
+  m_LocalPosition: {x: 68.6, y: -10.5, z: -173.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1342829443}
+  m_RootOrder: 61
+  m_LocalEulerAnglesHint: {x: 0, y: 73.193, z: 0}
 --- !u!1 &2114561410
 GameObject:
   m_ObjectHideFlags: 0
@@ -10848,6 +11648,12 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 995.913, y: 238.6, z: -246}
   m_TimeToStationary: 0.5
+--- !u!4 &543450652164800698 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7703514090599861668, guid: 3e73feb05a712e54c8aed702067d6e48,
+    type: 3}
+  m_PrefabInstance: {fileID: 7882100055419063582}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &543450653694040420 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1011273630978104167, guid: 31b7add011b50754eaad8ee72981c60c,
@@ -11151,6 +11957,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arena1
       objectReference: {fileID: 0}
+    - target: {fileID: 430714185955554009, guid: e2ec2f99a161c824f9c54b523fda365a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 719198219055988076, guid: e2ec2f99a161c824f9c54b523fda365a,
         type: 3}
       propertyPath: musicClip
@@ -11383,6 +12194,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45465c8d009f2f940bd852f60397b2ce, type: 3}
+--- !u!1001 &7882100055419063582
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1625419770}
+    m_Modifications:
+    - target: {fileID: 7035662672315782942, guid: 3e73feb05a712e54c8aed702067d6e48,
+        type: 3}
+      propertyPath: m_Name
+      value: Arena_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7703514090599861668, guid: 3e73feb05a712e54c8aed702067d6e48,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7703514090599861668, guid: 3e73feb05a712e54c8aed702067d6e48,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7703514090599861668, guid: 3e73feb05a712e54c8aed702067d6e48,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7703514090599861668, guid: 3e73feb05a712e54c8aed702067d6e48,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 7703514090599861668, guid: 3e73feb05a712e54c8aed702067d6e48,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7703514090599861668, guid: 3e73feb05a712e54c8aed702067d6e48,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7703514090599861668, guid: 3e73feb05a712e54c8aed702067d6e48,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7703514090599861668, guid: 3e73feb05a712e54c8aed702067d6e48,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7703514090599861668, guid: 3e73feb05a712e54c8aed702067d6e48,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7703514090599861668, guid: 3e73feb05a712e54c8aed702067d6e48,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7703514090599861668, guid: 3e73feb05a712e54c8aed702067d6e48,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3e73feb05a712e54c8aed702067d6e48, type: 3}
 --- !u!114 &8006504248611335231 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5148378324530037996, guid: b0dbea7574a4f1a4fbf9de68fd811b3f,
