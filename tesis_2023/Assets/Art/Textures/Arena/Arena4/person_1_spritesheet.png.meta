@@ -134,7 +134,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2176
+        width: 4200
         height: 3200
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -153,9 +153,9 @@ TextureImporter:
       name: person_1_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 2176
+        x: 4200
         y: 0
-        width: 2176
+        width: 4200
         height: 3200
       alignment: 0
       pivot: {x: 0, y: 0}
