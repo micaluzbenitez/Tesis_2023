@@ -143,8 +143,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1357a2f06c3f6da4680ef9c7ae6fe3e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  navMeshData_A: {fileID: 23800000, guid: 38612f7b858919b4fa69dc5b3a5bab34, type: 2}
   opponentsManager: {fileID: 0}
-  waypoints: []
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  musicSource: {fileID: 0}
+  musicClip: {fileID: 8300000, guid: 16299bcd833a442428d33051b9a10a90, type: 3}
 --- !u!1 &379169535273140701
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,6 +481,7 @@ GameObject:
   - component: {fileID: 4124894619055431643}
   - component: {fileID: 2878594207156233761}
   - component: {fileID: 821072126106284573}
+  - component: {fileID: 1404620686}
   m_Layer: 3
   m_Name: Gen_Structure_metal_STATIC
   m_TagString: Floor
@@ -549,6 +569,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5872778340916422237, guid: 285c405049952f9499431c263c07f6a4, type: 3}
+--- !u!208 &1404620686
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4157055950533462747}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2500, y: 2000, z: 3500}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &4604779772485881987
 GameObject:
   m_ObjectHideFlags: 0
