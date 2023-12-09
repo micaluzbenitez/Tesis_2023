@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 1119310074538251338}
   - component: {fileID: 4888668356090172874}
   - component: {fileID: 5338915813108401882}
+  - component: {fileID: 3435144609821885128}
   m_Layer: 0
   m_Name: Banner_original1_banner_flag
   m_TagString: Untagged
@@ -166,6 +167,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3435144609821885128
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002916223428262678}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5904560870474164017, guid: b5315e9e485843842af015497055a57a, type: 3}
 --- !u!1 &2063653087197711339
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,6 +506,7 @@ GameObject:
   - component: {fileID: 4553091537983319048}
   - component: {fileID: 456946028355804739}
   - component: {fileID: 7040766205556361374}
+  - component: {fileID: 4703837713815943128}
   m_Layer: 0
   m_Name: entrance_1_pCube2
   m_TagString: Untagged
@@ -563,6 +579,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4703837713815943128
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4248454038388272230}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5446060097186978587, guid: b5315e9e485843842af015497055a57a, type: 3}
 --- !u!1 &4940319395435788254
 GameObject:
   m_ObjectHideFlags: 0
@@ -657,6 +687,7 @@ GameObject:
   - component: {fileID: 4070434436944446519}
   - component: {fileID: 8346494903766883468}
   - component: {fileID: 6866601207220644885}
+  - component: {fileID: 2747299431967286764}
   m_Layer: 0
   m_Name: Barrels3_barrel_original3
   m_TagString: Untagged
@@ -729,6 +760,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2747299431967286764
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5013215674644157242}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -9012116701752667900, guid: b5315e9e485843842af015497055a57a, type: 3}
 --- !u!1 &6182497042540155981
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,6 +785,7 @@ GameObject:
   - component: {fileID: 8023967412201146197}
   - component: {fileID: 1281438812675305159}
   - component: {fileID: 5261138620158501281}
+  - component: {fileID: 4367163131104609658}
   m_Layer: 0
   m_Name: Arena_Arena
   m_TagString: Untagged
@@ -812,6 +858,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4367163131104609658
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6182497042540155981}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3069167096089852169, guid: b5315e9e485843842af015497055a57a, type: 3}
 --- !u!1 &7035662672315782942
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,7 +882,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7703514090599861668}
   m_Layer: 0
-  m_Name: Arena_4
+  m_Name: Arena4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -901,7 +961,8 @@ GameObject:
   - component: {fileID: 2603768550411110679}
   - component: {fileID: 5695626728547520831}
   - component: {fileID: 8919206141651337377}
-  m_Layer: 0
+  - component: {fileID: 7798201906730118610}
+  m_Layer: 6
   m_Name: Arena_Cage_Arena
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -973,6 +1034,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7798201906730118610
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8176616209258282368}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8450882933827194749, guid: b5315e9e485843842af015497055a57a, type: 3}
 --- !u!1001 &7882100054800541253
 PrefabInstance:
   m_ObjectHideFlags: 0
