@@ -21,6 +21,7 @@ namespace Entities
         [SerializeField] private ParticleSystem lava;
         [SerializeField] private ParticleSystem redSmoke;
         [SerializeField] private AudioSource source;
+        [SerializeField] private AudioSource fire;
         [SerializeField] private List<AudioClip> clips;
         [SerializeField] private LayerMask backCar;
 
@@ -111,6 +112,7 @@ namespace Entities
                 {
                     PlaySound("Explosion");
                 }
+                fire.Play();
                 Destroy(this);
             }
         }
