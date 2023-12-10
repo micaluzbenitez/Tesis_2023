@@ -1223,12 +1223,6 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &191646569 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8383675713223592317, guid: 9c2972e33409ad0459452934868b7dbd,
-    type: 3}
-  m_PrefabInstance: {fileID: 1231796980}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &264212943
 GameObject:
   m_ObjectHideFlags: 0
@@ -2177,12 +2171,6 @@ Transform:
   m_Father: {fileID: 1342829443}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: -70.433, z: 0}
---- !u!1 &475549344 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 379169535273140701, guid: 31b7add011b50754eaad8ee72981c60c,
-    type: 3}
-  m_PrefabInstance: {fileID: 685248078118666755}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &477561936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4858,9 +4846,6 @@ MonoBehaviour:
   opponentsManager: {fileID: 1342829444}
   gravity: 45
   arenas:
-  - {fileID: 919132148026836626}
-  - {fileID: 475549344}
-  - {fileID: 191646569}
   - {fileID: 919132148442372608}
 --- !u!4 &1076251720
 Transform:
@@ -6359,7 +6344,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1335753068}
-  m_LocalRotation: {x: 0.008044705, y: 8.881784e-16, z: -2.220446e-16, w: 0.9999677}
+  m_LocalRotation: {x: 0.008044705, y: 0.000000015869173, z: -0.0000000066504775,
+    w: 0.9999677}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -11207,12 +11193,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31b7add011b50754eaad8ee72981c60c, type: 3}
---- !u!1 &919132148026836626 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5671700151398257132, guid: e2ec2f99a161c824f9c54b523fda365a,
-    type: 3}
-  m_PrefabInstance: {fileID: 4788598459329894270}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &919132148442372608 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7035662672315782942, guid: 3e73feb05a712e54c8aed702067d6e48,

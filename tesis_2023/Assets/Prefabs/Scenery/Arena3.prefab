@@ -108,7 +108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 338353063}
   - component: {fileID: 338353064}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GameObject (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 607302805}
   - component: {fileID: 607302806}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 621628324}
   - component: {fileID: 621628325}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GameObject (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,7 +252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 649068123}
   - component: {fileID: 649068124}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GameObject (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,7 +300,7 @@ GameObject:
   m_Component:
   - component: {fileID: 666652519}
   - component: {fileID: 666652520}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GameObject (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -348,7 +348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 965450751}
   - component: {fileID: 965450752}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -396,7 +396,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2089368695}
   - component: {fileID: 2089368696}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -444,7 +444,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2114561411}
   - component: {fileID: 2114561412}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -546,9 +546,9 @@ GameObject:
   - component: {fileID: 3657601214256465958}
   - component: {fileID: 1718676373018082634}
   - component: {fileID: 6251027079592788787}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Detalles_de_arena:textureEditorIsolateSelectSet_Detalles_de_arena:arena
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -645,9 +645,9 @@ GameObject:
   - component: {fileID: 7152546193625291672}
   - component: {fileID: 4051485102909527930}
   - component: {fileID: 4926312526816770157}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Detalles_de_arena:ship_detail
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -746,9 +746,9 @@ GameObject:
   - component: {fileID: 8858165300441969551}
   - component: {fileID: 5714401741740545653}
   - component: {fileID: 4923281924783696185}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Detalles_de_arena:barrel_original4
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -909,9 +909,9 @@ GameObject:
   - component: {fileID: 8073341385119449734}
   - component: {fileID: 8814289443850126155}
   - component: {fileID: 1550553815672667121}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Detalles_de_arena:Container_no_door_original
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -1014,7 +1014,7 @@ GameObject:
   - component: {fileID: 5166958611643863628}
   - component: {fileID: 3072028737146437304}
   - component: {fileID: 6284126604724204424}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Detalles_de_arena:arena
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -1153,9 +1153,9 @@ GameObject:
   - component: {fileID: 2292392250203616380}
   - component: {fileID: 139279456609933246}
   - component: {fileID: 3481978715218006691}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Detalles_de_arena:letter
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
