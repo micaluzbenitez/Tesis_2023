@@ -124,7 +124,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: d67eda568b99b1543821fb2a37af2432, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: aef678e1c1e1974419a5063568083721, type: 2}
 --- !u!1 &7492634
 GameObject:
   m_ObjectHideFlags: 0
@@ -5466,7 +5466,7 @@ PrefabInstance:
     - target: {fileID: 9156693291892429767, guid: 9c2972e33409ad0459452934868b7dbd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9156693291892429767, guid: 9c2972e33409ad0459452934868b7dbd,
         type: 3}
@@ -6359,7 +6359,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1335753068}
-  m_LocalRotation: {x: 0.008044705, y: -0, z: 1.110223e-16, w: 0.9999677}
+  m_LocalRotation: {x: 0.008044705, y: 8.881784e-16, z: -2.220446e-16, w: 0.9999677}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8321,8 +8321,8 @@ Transform:
   m_Children:
   - {fileID: 543450652554583080}
   - {fileID: 543450653694040420}
-  - {fileID: 1231796981}
   - {fileID: 543450652164800698}
+  - {fileID: 1231796981}
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11634,7 +11634,7 @@ PrefabInstance:
     - target: {fileID: 7703514090599861668, guid: 3e73feb05a712e54c8aed702067d6e48,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7703514090599861668, guid: 3e73feb05a712e54c8aed702067d6e48,
         type: 3}
@@ -11644,7 +11644,7 @@ PrefabInstance:
     - target: {fileID: 7703514090599861668, guid: 3e73feb05a712e54c8aed702067d6e48,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.8
+      value: -11.3
       objectReference: {fileID: 0}
     - target: {fileID: 7703514090599861668, guid: 3e73feb05a712e54c8aed702067d6e48,
         type: 3}
