@@ -105,17 +105,40 @@ namespace Entities.Player
                 }
 
                 // Speed of car, Car will move as you will provide the input to it.
-                foreach (var wheel in wheels)
+                if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S)) // SI NO ESTOY APRETANDO NINGUNA FLECHA SE FRENA EL AUTO (W - S)
                 {
-                    float verticalInput = Input.GetAxis("Vertical");
+                    foreach (var wheel in wheels)
+                    {
+                        // Define el valor objetivo de brakeTorque (puedes ajustar este valor según tus necesidades)
+                        float targetBrakeTorque = 100000;
 
-                    // Cambia esta línea para permitir que el auto se mueva hacia atrás inmediatamente al presionar la tecla "S"
-                    wheel.wheelCollider.motorTorque = maxTorque * verticalInput;
+                        // Define la velocidad de frenado (puedes ajustar este valor según tus necesidades)
+                        float brakeLerpSpeed = 100f;
 
-                    // Agrega fuerza hacia adelante o hacia atrás al cuerpo del auto según la entrada vertical
-                    float currentForce = carRigidbody.mass * carRigidbody.velocity.magnitude;
-                    if (currentForce < 1000) carRigidbody.AddForce(transform.forward * maxTorque * verticalInput);
+                        // Interpola suavemente hacia el valor objetivo
+                        wheel.wheelCollider.brakeTorque = Mathf.Lerp(wheel.wheelCollider.brakeTorque, targetBrakeTorque, brakeLerpSpeed);
 
+                        // Asegúrate de que el motor esté apagado
+                        wheel.wheelCollider.motorTorque = 0;
+                    }
+                }
+                else
+                {
+                    foreach (var wheel in wheels) // SI ESTOY APRETANDO ALGUNA FLECHA AVANZA (W - S)
+                    {
+                        float verticalInput = Input.GetAxis("Vertical");
+
+                        // Cambia esta línea para permitir que el auto se mueva hacia atrás inmediatamente al presionar la tecla "S"
+                        wheel.wheelCollider.motorTorque = maxTorque * verticalInput;
+
+                        // Agrega fuerza hacia adelante o hacia atrás al cuerpo del auto según la entrada vertical
+                        float currentForce = carRigidbody.mass * carRigidbody.velocity.magnitude;
+                        if (currentForce < 1000) carRigidbody.AddForce(transform.forward * maxTorque * verticalInput);                        
+                    }
+                }
+
+                foreach (var wheel in wheels) // ROTATION RUEDAS (A - D)
+                {
                     // Changing car direction Here we are changing the steer angle of the front tires of the car so that we can change the car direction.
                     if (wheel.axel == Axel.Front)
                     {
