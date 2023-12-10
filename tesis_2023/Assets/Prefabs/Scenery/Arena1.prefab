@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 68354103110948015}
   m_Layer: 0
   m_Name: Arena_Wall_Sewage_Exit_13
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 4839100733691481605}
   m_Layer: 0
   m_Name: Arena_Wall_Segment_5
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 3216994284459084098}
   m_Layer: 0
   m_Name: Arena_Wall_Segment_3
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -376,7 +376,7 @@ GameObject:
   - component: {fileID: 6786215612242801306}
   m_Layer: 0
   m_Name: Arena_Wall_Segment_6
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -513,7 +513,7 @@ GameObject:
   - component: {fileID: 6856554022354460745}
   m_Layer: 0
   m_Name: Arena_Wall_Inner_Corner_8
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -647,7 +647,7 @@ GameObject:
   - component: {fileID: 31909451424987680}
   m_Layer: 0
   m_Name: Arena_Wall_Segment_14
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -746,7 +746,7 @@ GameObject:
   - component: {fileID: 5716296184119806066}
   m_Layer: 0
   m_Name: Arena_Wall_Sewage_Exit_16
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -845,7 +845,7 @@ GameObject:
   - component: {fileID: 8679559780990441224}
   m_Layer: 0
   m_Name: Arena_Wall_Inner_Corner_9
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -983,7 +983,7 @@ GameObject:
   - component: {fileID: 7189703773069854740}
   m_Layer: 0
   m_Name: Arena_Wall_Sewage_Exit_12
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -1082,7 +1082,7 @@ GameObject:
   - component: {fileID: 854475006627557587}
   m_Layer: 0
   m_Name: Arena_Wall_Segment_4
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -1181,7 +1181,7 @@ GameObject:
   - component: {fileID: 5041138124983688265}
   m_Layer: 0
   m_Name: Arena_Wall_Outer_Corner_6
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -1280,7 +1280,7 @@ GameObject:
   - component: {fileID: 2468169854056422262}
   m_Layer: 0
   m_Name: Arena_Wall_Outer_Corner_4
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -1379,7 +1379,7 @@ GameObject:
   - component: {fileID: 330783606951814473}
   m_Layer: 0
   m_Name: Arena_Wall_Drainage_Tunnel_5
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -1478,7 +1478,7 @@ GameObject:
   - component: {fileID: 4382121544681843012}
   m_Layer: 0
   m_Name: Arena_Wall_Segment_13
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -1577,7 +1577,7 @@ GameObject:
   - component: {fileID: 5239246012635800775}
   m_Layer: 0
   m_Name: Arena_Wall_Outer_Corner_5
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -1756,7 +1756,7 @@ GameObject:
   - component: {fileID: 6679918539953246156}
   m_Layer: 0
   m_Name: Arena_Wall_Drainage_Tunnel_4
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -1855,7 +1855,7 @@ GameObject:
   - component: {fileID: 3737633219081441160}
   m_Layer: 0
   m_Name: Arena_Ground_Center1
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -1954,7 +1954,7 @@ GameObject:
   - component: {fileID: 255102381250859702}
   m_Layer: 0
   m_Name: Arena_Wall_Segment_12
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -2053,7 +2053,7 @@ GameObject:
   - component: {fileID: 1173654380095960525}
   m_Layer: 0
   m_Name: Arena_Wall_Inner_Corner_12
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -2152,7 +2152,7 @@ GameObject:
   - component: {fileID: 299957621526932536}
   m_Layer: 0
   m_Name: Arena_Wall_Segment_7
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -2284,7 +2284,7 @@ GameObject:
   - component: {fileID: 3619493317187610283}
   m_Layer: 0
   m_Name: Arena_Wall_Segment_2
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -2383,7 +2383,7 @@ GameObject:
   - component: {fileID: 528702625795061709}
   m_Layer: 0
   m_Name: Arena_Wall_Outer_Corner_7
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -2482,7 +2482,7 @@ GameObject:
   - component: {fileID: 7960279164321633661}
   m_Layer: 0
   m_Name: Arena_Wall_Sewage_Exit_11
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -2581,7 +2581,7 @@ GameObject:
   - component: {fileID: 9005551699892583929}
   m_Layer: 0
   m_Name: Arena_Sewage_Exit_Barricade
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -2680,7 +2680,7 @@ GameObject:
   - component: {fileID: 6824228481734863529}
   m_Layer: 0
   m_Name: Arena_Wall_Sewage_Exit_9
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -2779,7 +2779,7 @@ GameObject:
   - component: {fileID: 5810632624254275074}
   m_Layer: 0
   m_Name: Arena_Wall_Sewage_Exit_15
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -2878,7 +2878,7 @@ GameObject:
   - component: {fileID: 2560579644786840215}
   m_Layer: 0
   m_Name: Arena_Wall_Segment_8
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -3011,7 +3011,7 @@ GameObject:
   - component: {fileID: 2569036438797564622}
   m_Layer: 0
   m_Name: Arena_Wall_Segment_10
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -3110,7 +3110,7 @@ GameObject:
   - component: {fileID: 2388349590884387768}
   m_Layer: 0
   m_Name: Arena_Wall_Inner_Corner_14
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -3248,7 +3248,7 @@ GameObject:
   - component: {fileID: 2844455246094305534}
   m_Layer: 0
   m_Name: Arena_Wall_Inner_Corner_15
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -3347,7 +3347,7 @@ GameObject:
   - component: {fileID: 4794781116487259785}
   m_Layer: 0
   m_Name: Arena_Wall_Segment_1
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -3446,7 +3446,7 @@ GameObject:
   - component: {fileID: 1960110662936522865}
   m_Layer: 0
   m_Name: Arena_Wall_Segment_9
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -3545,7 +3545,7 @@ GameObject:
   - component: {fileID: 1552947746582389679}
   m_Layer: 0
   m_Name: Arena_Wall_Inner_Corner_10
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -3644,7 +3644,7 @@ GameObject:
   - component: {fileID: 4387601796981469834}
   m_Layer: 0
   m_Name: Arena_Wall_Inner_Corner_13
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -3743,7 +3743,7 @@ GameObject:
   - component: {fileID: 1988064980764637034}
   m_Layer: 0
   m_Name: Arena_Wall_Segment_11
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -3842,7 +3842,7 @@ GameObject:
   - component: {fileID: 497435090406251444}
   m_Layer: 0
   m_Name: Arena_Wall_Sewage_Exit_14
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -3941,7 +3941,7 @@ GameObject:
   - component: {fileID: 193685954372145296}
   m_Layer: 0
   m_Name: Arena_Wall_Inner_Corner_11
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -4040,7 +4040,7 @@ GameObject:
   - component: {fileID: 2326031327231193906}
   m_Layer: 0
   m_Name: Arena_Wall_Sewage_Exit_10
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8

@@ -1016,7 +1016,7 @@ GameObject:
   - component: {fileID: 6284126604724204424}
   m_Layer: 0
   m_Name: Detalles_de_arena:arena
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
