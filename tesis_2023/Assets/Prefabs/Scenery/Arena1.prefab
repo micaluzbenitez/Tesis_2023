@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 8566050806722470689}
   - component: {fileID: 7699475223341208168}
   - component: {fileID: 548050791180827292}
+  - component: {fileID: 4741260828471930291}
   m_Layer: 3
   m_Name: bridge3
   m_TagString: Floor
@@ -148,6 +149,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4741260828471930291
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382380646700788835}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3339622420200865396, guid: 7ca969f785799b04dae6ef0704c28da2, type: 3}
 --- !u!1 &2856083289241046936
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,6 +174,7 @@ GameObject:
   - component: {fileID: 450468886787956362}
   - component: {fileID: 1037760888011119954}
   - component: {fileID: 9032406201737130759}
+  - component: {fileID: 2717739725632093713}
   m_Layer: 3
   m_Name: sewer6
   m_TagString: Floor
@@ -231,6 +247,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2717739725632093713
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2856083289241046936}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6415898907938546733, guid: 7ca969f785799b04dae6ef0704c28da2, type: 3}
 --- !u!1 &4049570340688054330
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,6 +308,7 @@ GameObject:
   - component: {fileID: 7379207378801607622}
   - component: {fileID: 502923063906844624}
   - component: {fileID: 2251406176176143370}
+  - component: {fileID: 5992056793867741161}
   m_Layer: 3
   m_Name: pCube1
   m_TagString: Floor
@@ -350,6 +381,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5992056793867741161
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4407232427886088248}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4068373912626513877, guid: 7ca969f785799b04dae6ef0704c28da2, type: 3}
 --- !u!1 &6880776956962923359
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,6 +406,7 @@ GameObject:
   - component: {fileID: 8840758107775400071}
   - component: {fileID: 747378380191998634}
   - component: {fileID: 1149877168010143712}
+  - component: {fileID: 261231845422880648}
   m_Layer: 3
   m_Name: polySurface1
   m_TagString: Floor
@@ -433,3 +479,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &261231845422880648
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6880776956962923359}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6329158148709259305, guid: 7ca969f785799b04dae6ef0704c28da2, type: 3}
