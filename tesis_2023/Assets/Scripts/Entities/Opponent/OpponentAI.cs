@@ -1,4 +1,3 @@
-using Managers;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -33,7 +32,7 @@ namespace Entities.Opponent
         private State state;
         private NavMeshAgent agent;
         private List<GameObject> waypoints;
-        private int waypointInd;
+        [SerializeField] private int waypointInd;
 
         private GameObject target;
         private Vector3 direction;
@@ -144,6 +143,7 @@ namespace Entities.Opponent
         {
             this.waypoints = waypoints;
             waypointInd = Random.Range(0, waypoints.Count - 1);
+            transform.position = waypoints[waypointInd].transform.position;
         }
 
         public void DisableIA()

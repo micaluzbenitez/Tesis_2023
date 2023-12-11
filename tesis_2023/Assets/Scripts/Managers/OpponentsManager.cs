@@ -38,17 +38,12 @@ namespace Managers
 
             while (count < opponentsQuantity)
             {
-                //int randomOpponent = Random.Range(0, opponentPrefabs.Length);
-
                 GameObject obj = Instantiate(opponentPrefabs[carModelIndex]);
                 carModelIndex++;
                 if (carModelIndex == opponentPrefabs.Length) carModelIndex = 0;
 
-                Transform child = transform.GetChild(Random.Range(0, transform.childCount));
                 obj.GetComponent<OpponentAI>().SetWaypoints(waypoints);
                 obj.GetComponent<OpponentAI>().OnDeath += DeleteWaypoint;
-
-                obj.transform.position = child.position;
 
                 opponentIAs.Add(obj.GetComponent<OpponentAI>());
                 opponentLifes.Add(obj.GetComponent<CarLifeBehaviour>());
