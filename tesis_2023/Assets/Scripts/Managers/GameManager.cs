@@ -19,6 +19,8 @@ namespace Managers
         {
             int arenaIndex = Random.Range(0, arenas.Length);
             arenas[arenaIndex].SetActive(true);
+
+            Application.targetFrameRate = 60;
         }
 
         private void Start()
